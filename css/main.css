@@ -1,0 +1,15 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--economist-grey, black);
+  font-family: sans-serif, Georgia;
+  font-size: 100%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
