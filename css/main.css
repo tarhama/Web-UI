@@ -2,7 +2,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--economist-grey, black);
   font-family: sans-serif, Georgia;
   font-size: 100%;
 }
@@ -12,4 +11,167 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
+}
+
+.footer_links a:link, a:visited, a:active{
+    text-decoration: none;
+    color: lightgray;
+}
+.footer_links a:hover{
+    color: #fff;
+}
+
+.mybody{
+    display: flex;
+    justify-content: center;
+    max-width: 1360px;
+    align-items: center;
+    margin: auto;
+}
+
+#footer{
+    display: block;
+    color: lightgray;
+    background-color: #363b3e;
+    width: 100%;
+}
+
+.container{
+    max-width: 1360px;
+}
+
+.flex{
+    display: flex;;
+}
+
+.justify-content_space-around{
+    justify-content: space-around;
+}
+
+.justify-content_space-between{
+    justify-content: space-between;
+}
+
+.align-ithem_baseline{
+    align-items: baseline;
+}
+
+.align-ithem_center{
+    align-items: center;
+}
+
+.pl-1{
+    padding-left:1rem; ;
+}
+
+.pl-2{
+    padding-left:2rem; ;
+}
+
+.pl-3{
+    padding-left:3rem; ;
+}
+
+.pr-1{
+    padding-right:1rem; ;
+}
+
+.pr-2{
+    padding-right:2rem; ;
+}
+
+.pr-3{
+    padding-right:3rem; ;
+}
+
+.footer_list{
+    list-style: none;
+}
+
+.footer_list li:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer_list li{
+    padding: 2px;
+}
+
+.footer_list li:nth-child(1){
+    text-transform:uppercase;
+    color: #fff;
+    cursor: auto;
+}
+
+.small{
+    font-size: small;
+    font-weight: 400;
+}
+
+.footer_dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: grey;
+    padding: 2px 2px;
+    z-index: 1;
+    overflow-y: auto;
+    margin-top: 15px;
+    border: 1px solid grey;
+}
+
+.footer_dropdown__content ul{
+    padding: 0px;
+    margin: 0px;
+    max-height: 150px;
+}
+
+.footer_dropdown__content li{
+    padding: 4px 10px;
+    border-bottom: 1px solid grey;
+}
+
+.footer_dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.footer_dropdown:hover .footer_dropdown__content {
+    display: block;
+}
+
+.li_no-decoration{
+    list-style: none;
+}
+
+.down_footer{
+    height:90px;
+}
+
+.blue-circle-border{
+    border:1px solid #ffffff;
+    border-radius: 20px;
+}
+
+.blue-circle-border i{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+.footer-social-network{
+    display: inline-flex;
+    color: #ffffff;
+}
+
+.footer-social-network:hover{
+    cursor: pointer;
+}
+
+.footer-social-network span{
+    margin-left: 3px;
+    margin-right: 3px;
 }
