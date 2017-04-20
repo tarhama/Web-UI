@@ -15,6 +15,110 @@ a:active {
     text-decoration: none;
 }
 
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navbar__list a {
+  font-size: 1.125em;
+  color: #666c70;
+}
+
+.navbar__list a:hover {
+  color: #363b3e;
+}
+
+.navbar__container {
+  display: flex;
+  max-width: 1360px;
+  height: 85px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  flex-basis: 80%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__list--left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.navbar__list--left > * {
+  margin-right: 20px;
+}
+
+.navbar__list--center {
+  text-align: center;
+  flex: 1;
+}
+
+.weebly-logo {
+  height: 38px;
+  min-width: 150px;
+}
+
+.weebly-logo:hover {
+  cursor: pointer;
+}
+
+.navbar__list--right {
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.language {
+  font-size: 18px;
+  color: #666c70;
+}
+
+.language:hover {
+  cursor: pointer;
+  color: #363b3e;
+}
+
+.arrow-drop-down {
+  font-size: 18px;
+  color: #666c70;
+}
+
+.arrow-drop-down:hover {
+  cursor: pointer;
+  color: #363b3e;
+}
+
+.navbar__list--right > * {
+  margin-left: 20px;
+}
+
+.navbar__signup-btn {
+  height: 40px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #2990ea;
+  font-size: 1.125em;
+  font-weight: 600;
+  border: 2px solid #c9cdcf;
+  border-radius: 40px;
+}
+
+.navbar__signup-btn:hover {
+  cursor: pointer;
+  border: 2px solid #9ba0a3;
+}
+
 li {
     list-style-type: none;
 }
