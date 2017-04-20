@@ -297,7 +297,9 @@ div {
     min-height: 100%;
 }
 
-.footer_links a:link, a:visited, a:active {
+.footer_links a:link,
+.footer_links a:visited,
+.footer_links a:active {
     text-decoration: none;
     color: lightgray;
 }
