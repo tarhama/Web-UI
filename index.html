@@ -1,125 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/main.css">
-    <meta charset="UTF-8">
     <title>Weebly website Builder: Create a Free Website, Store or Blog</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <meta charset="UTF-8">
 </head>
 <body>
-<div class="container">
 
+<div class="header">
+    <div id="navbar">
 
-    <div class="header">
-        <div id="navbar">
+    </div>
+
+    <div id="section1">
+        <div class="text_animation_container">
+            <div id="text-animation">
+                <script type="text/javascript">
+
+                    var letterFunction = (function(){
+                        var publicMethods={};
+                        var canContinue=true;
+
+                        publicMethods.appendToTheRight = function () {
+                            elem.innerHTML += result[counter];
+                            counter++;
+
+                        };
+                        publicMethods.appendToTheLeft = function () {
+                            result.splice(counter,1);
+                            console.log(result);
+                            /* for (var i = counter; counter >=0; i--){
+                             elem.innerHTML = result[i];
+                             }*/
+
+                            counter--;
+
+                        };
+                        publicMethods.animateText = function () {
+                            /* if(canContinue){
+                             console.log(canContinue);
+                             publicMethods.appendToTheRight();
+                             if(counter == result.length){
+                             canContinue = false;
+                             }
+                             console.log(canContinue);
+                             }
+                             if(!canContinue){
+                             console.log("to the left"+ canContinue);
+                             publicMethods.appendToTheLeft(counter);
+                             if (counter == 0){
+                             console.log("to the left"+ counter);
+                             canContinue = true;
+                             }
+                             }*/
+                            letterFunction.appendToTheRight();
+                            if(counter == result.length){
+                                counter = 0;
+                                elem.innerHTML = "";
+
+                            }
+
+                        };
+
+                        return publicMethods;
+                    })();
+
+                    var elem = document.getElementById("text-animation");
+                    var counter = 0;
+                    var text = "HELLLO ALLL";
+                    var result = text.split("");
+                    setInterval(letterFunction.animateText, 100);
+                </script>
+            </div>
+
 
         </div>
+        <div class="section1_overlay">
+        </div>
+    </div>
 
-        <div id="section1">
-            <div class="text_animation_container">
-                <div id="text-animation">
-                    <script type="text/javascript">
+    <video class="section1_video" autoplay loop muted>
+        <source src="//cdn2.editmysite.com/videos/landing-pages/global/home/masthead/masthead-720.mp4"
+                type="video/mp4">
+    </video>
 
-                        var letterFunction = (function(){
-                            var publicMethods={};
-                            var canContinue=true;
+</div>
 
-                            publicMethods.appendToTheRight = function () {
-                                elem.innerHTML += result[counter];
-                                counter++;
+<div id="section2">
 
-                            };
-                            publicMethods.appendToTheLeft = function () {
-                                result.splice(counter,1);
-                                console.log(result);
-                                /* for (var i = counter; counter >=0; i--){
-                                 elem.innerHTML = result[i];
-                                 }*/
+</div>
 
-                                counter--;
-
-                            };
-                            publicMethods.animateText = function () {
-                                /* if(canContinue){
-                                 console.log(canContinue);
-                                 publicMethods.appendToTheRight();
-                                 if(counter == result.length){
-                                 canContinue = false;
-                                 }
-                                 console.log(canContinue);
-                                 }
-                                 if(!canContinue){
-                                 console.log("to the left"+ canContinue);
-                                 publicMethods.appendToTheLeft(counter);
-                                 if (counter == 0){
-                                 console.log("to the left"+ counter);
-                                 canContinue = true;
-                                 }
-                                 }*/
-                                letterFunction.appendToTheRight();
-                                if(counter == result.length){
-                                    counter = 0;
-                                    elem.innerHTML = "";
-
-                                }
-
-                            };
-
-                            return publicMethods;
-                        })();
-
-                        var elem = document.getElementById("text-animation");
-                        var counter = 0;
-                        var text = "HELLLO ALLL";
-                        var result = text.split("");
-                        setInterval(letterFunction.animateText, 100);
-                    </script>
+<div id="section3">
+    <section class="page-section-3">
+        <div class="page-container">
+            <div class="page-content" style="width: 50%">
+                <h2 class="page-title">Sell more with powerful eCommerce</h2>
+                <ul class="checklist">
+                    <li class="checklist__item">
+                        <strong>Beautiful design </strong> to customize your storefront and showcase your products
+                    </li>
+                    <li class="checklist__item">
+                        <strong>Complete platform</strong> to manage inventory, track orders and handle taxes
+                    </li>
+                    <li class="checklist__item">
+                        <strong>Advanced tools:</strong> real time shipping, abandoned cart, coupons and currencies
+                    </li>
+                </ul>
+                <div class="">
+                    <a class="blue-btn" href="">Get Started</a>
+                    <a class="link-btn pl-1">Learn More</a>
                 </div>
-
-
             </div>
-            <div class="section1_overlay">
+            <div class="image-items item-box">
+                <img src="assets/images/box.jpg" alt="section3_box">
+            </div>
+            <div class="image-items item-orders">
+                <img src="assets/images/orders.png" alt="section3_orders">
+            </div>
+            <div class="image-items item-iphone">
+                <img src="assets/images/iphone.png" alt="section3_iphone">
+            </div>
+            <div class="image-items item-sales">
+                <img src="assets/images/monthly-sales.png" alt="section3_monthly_sales">
             </div>
         </div>
+    </section>
 
-        <video class="section1_video" autoplay loop muted>
-            <source src="//cdn2.editmysite.com/videos/landing-pages/global/home/masthead/masthead-720.mp4"
-                    type="video/mp4">
-        </video>
+</div>
 
+<div id="section4">
+
+</div>
+
+<div id="section5">
+
+</div>
+
+<div id="section6">
+
+</div>
+
+<div id="section7">
+
+</div>
+
+<div id="section8">
+
+</div>
+
+<div id="section9">
+
+</div>
+
+</div>
+
+<div id="footer" class="small">
+    <div class="flex justify-content_space-around align-ithem_baseline ">
+    <span>
+        <ul class="footer_list">
+            <li>Product</li>
+            <li>Features</li>
+            <li>Themes</li>
+            <li>Pricing</li>
+            <li>App Center</li>
+            <li>Mobile Apps</li>
+        </ul>
+    </span>
+    <span>
+        <ul class="footer_list">
+            <li>resource</li>
+            <li>Weebly Blog</li>
+            <li>Inspiration Center</li>
+            <li>Success Stories</li>
+            <li>Developer Docs</li>
+        </ul>
+    </span>
+    <span>
+        <ul class="footer_list">
+            <li>Support</li>
+            <li>Support Center</li>
+            <li>Community</li>
+        </ul>
+    </span>
+    <span>
+        <ul class="footer_list">
+            <li>partners</li>
+            <li>Ambassadors</li>
+            <li>Resellers</li>
+            <li>Affiliates</li>
+            <li>Designers</li>
+            <li>Developer</li>
+            <li>Education</li>
+        </ul>
+    </span>
+    <span>
+        <ul class="footer_list">
+            <li>company</li>
+            <li>About</li>
+            <li>Careers</li>
+            <li>Press</li>
+            <li>Contact</li>
+        </ul>
+    </span>
     </div>
-
-    <div id="section2">
-
+    <hr>
+    <div class="flex justify-content_space-between align-ithem_center down_footer">
+        <span class="footer_links pl-2">
+            <a href="#">© Weebly, Inc.</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy Policy</a>
+        </span>
+        <span class="footer-social-network">
+            <span class="blue-circle-border"><i class="fa fa-twitter"></i></span>
+            <span class="blue-circle-border"><i class="fa fa-facebook"></i></span>
+            <span class="blue-circle-border"><i class="fa fa-youtube-square"></i></span>
+            <span class="blue-circle-border"><i class="fa fa-google-plus"></i></span>
+            <span class="blue-circle-border"><i class="fa fa-instagram"></i></span>
+        </span>
+        <span class="footer_dropdown pr-2">
+            <span class="footer_links"><a href="#">English</a>  <span class="small">&#9660;</span></span>
+            <div class="footer_dropdown__content">
+                <ul class="li_no-decoration">
+                <li>English</li>
+                <li>English</li>
+                <li>English</li>
+                <li>English</li>
+                <li>English</li>
+                    <li>English</li>
+                <li>English</li>
+                    <li>English</li>
+                <li>English</li>
+                    </ul>
+            </div>
+        </span>
     </div>
-
-    <div id="section3">
-
-    </div>
-
-    <div id="section4">
-
-    </div>
-
-    <div id="section5">
-
-    </div>
-
-    <div id="section6">
-
-    </div>
-
-    <div id="section7">
-
-    </div>
-
-    <div id="section8">
-
-    </div>
-
-    <div id="section9">
-
-    </div>
-
 </div>
 
 </body>

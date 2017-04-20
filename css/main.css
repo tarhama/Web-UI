@@ -1,0 +1,292 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background-color: #fff;
+  font-family: sans-serif, Georgia;
+  font-size: 100%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.pl-1 {
+    padding-left: 1rem;
+}
+
+.link-btn {
+    color: #2990ea;
+    text-decoration: underline;
+}
+
+.blue-btn {
+    display: inline-block;
+    padding: 0 40px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 44px;
+    background: #2990ea;
+    text-transform: uppercase;
+    border-radius: 44px;
+}
+
+.checklist .checklist__item ::before {
+    content: ' ';
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url("/Web-UI/assets/images/circle-check.png");
+    background-size: 100%;
+}
+
+.page-section-3 {
+    padding: 180px 0;
+}
+
+.page-container {
+    width: calc(100% - 320px);
+    max-width: 1360px;
+    margin: auto;
+}
+
+.page-title {
+    margin-bottom: 30px;
+    color: #363b3e;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1.2em;
+}
+
+.checklist {
+    margin-bottom: 60px;
+}
+
+.page-section-3 .checklist__item {
+    position: relative;
+    margin: 20px 0;
+    color: #363b3e;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 80px;
+}
+
+.image-items {
+    position: absolute;
+}
+
+.item-iphone {
+    top: calc(50% - 510px);
+    left: 79.25%;
+    width: 408px;
+    height: 709px;
+}
+
+.item-box {
+    top: calc(50% - 334px);
+    left: 75%;
+    width: 506px;
+    height: 668px;
+}
+
+.item-orders {
+    top: calc(50% - 90px);
+    left: 58.5%;
+    width: 803px;
+    height: 363px;
+}
+
+.item-sales {
+    top: calc(50% - 290px);
+    left: 49.75%;
+    width: 583px;
+    height: 348px;
+}
+
+.item-sales:hover {
+    transition: opacity 5s ease-in 5s, transform 0.425s ease-out 0.3s;
+}
+
+
+
+
+.footer_links a:link, a:visited, a:active{
+    text-decoration: none;
+    color: lightgray;
+}
+.footer_links a:hover{
+    color: #fff;
+}
+
+.mybody{
+    display: flex;
+    justify-content: center;
+    max-width: 1360px;
+    align-items: center;
+    margin: auto;
+}
+
+#footer{
+    display: block;
+    color: lightgray;
+    background-color: #363b3e;
+    width: 100%;
+}
+
+.container{
+    max-width: 1360px;
+}
+
+.flex{
+    display: flex;;
+}
+
+.justify-content_space-around{
+    justify-content: space-around;
+}
+
+.justify-content_space-between{
+    justify-content: space-between;
+}
+
+.align-ithem_baseline{
+    align-items: baseline;
+}
+
+.align-ithem_center{
+    align-items: center;
+}
+
+.pl-1{
+    padding-left:1rem; ;
+}
+
+.pl-2{
+    padding-left:2rem; ;
+}
+
+.pl-3{
+    padding-left:3rem; ;
+}
+
+.pr-1{
+    padding-right:1rem; ;
+}
+
+.pr-2{
+    padding-right:2rem; ;
+}
+
+.pr-3{
+    padding-right:3rem; ;
+}
+
+.footer_list{
+    list-style: none;
+}
+
+.footer_list li:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer_list li{
+    padding: 2px;
+}
+
+.footer_list li:nth-child(1){
+    text-transform:uppercase;
+    color: #fff;
+    cursor: auto;
+}
+
+.small{
+    font-size: small;
+    font-weight: 400;
+}
+
+.footer_dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: grey;
+    padding: 2px 2px;
+    z-index: 1;
+    overflow-y: auto;
+    margin-top: 15px;
+    border: 1px solid grey;
+}
+
+.footer_dropdown__content ul{
+    padding: 0px;
+    margin: 0px;
+    max-height: 150px;
+}
+
+.footer_dropdown__content li{
+    padding: 4px 10px;
+    border-bottom: 1px solid grey;
+}
+
+.footer_dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.footer_dropdown:hover .footer_dropdown__content {
+    display: block;
+}
+
+.li_no-decoration{
+    list-style: none;
+}
+
+.down_footer{
+    height:90px;
+}
+
+.blue-circle-border{
+    border:1px solid #ffffff;
+    border-radius: 20px;
+}
+
+.blue-circle-border i{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+.footer-social-network{
+    display: inline-flex;
+    color: #ffffff;
+}
+
+.footer-social-network:hover{
+    cursor: pointer;
+}
+
+.footer-social-network span{
+    margin-left: 3px;
+    margin-right: 3px;
+}
