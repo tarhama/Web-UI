@@ -162,6 +162,8 @@ ul {
 
 .page-section-3 {
     padding: 180px 0;
+    position: relative;
+    background-color: white;
 }
 
 .page-container {
