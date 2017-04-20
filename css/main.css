@@ -6,9 +6,10 @@ body {
     background-color: #fff;
     font-family: sans-serif, Georgia;
     font-size: 100%;
+    overflow-x: hidden;
 }
 
-a:link,
+//a:link,
 a:visited,
 a:hover,
 a:active {
@@ -657,6 +658,7 @@ div {
     position: relative;
     width: 100%;
     max-width: 1136px;
+    margin: auto;
 }
 
 .home-apps__item-bottom {
