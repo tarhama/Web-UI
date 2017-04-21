@@ -133,18 +133,35 @@ ul {
 }
 
 .link-btn {
-    color: #2990ea;
     text-decoration: underline;
 }
 
-.blue-btn {
+.blue {
+    color: #2990ea;
+}
+
+.white {
+    color:white;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-blue {
+    background-color: #2990ea;
+}
+
+.green {
+    color: #56d090;
+}
+
+.btn {
     display: inline-block;
     padding: 0 40px;
-    color: white;
     font-size: 14px;
     font-weight: 600;
     line-height: 44px;
-    background: #2990ea;
     text-transform: uppercase;
     border-radius: 44px;
 }
@@ -157,8 +174,12 @@ ul {
     left: 0;
     width: 45px;
     height: 45px;
-    background-image: url("/assets/images/circle-check.png");
+    background-image: url("../assets/images/circle-check.png");
     background-size: 100%;
+}
+
+.page-section-4 .checklist .checklist__item ::before {
+    background-image: url("../assets/images/circle-check-white.png");
 }
 
 .page-section-3 {
@@ -167,28 +188,50 @@ ul {
     background-color: white;
 }
 
+.page-section-4 {
+    padding: 180px 0;
+    position: relative;
+    background-color: #56d090;
+}
+
 .page-container {
     width: calc(100% - 320px);
     max-width: 1360px;
     margin: auto;
 }
 
+.page-content {
+    max-width: 540px;
+}
+
+.relative {
+    position: relative;
+}
+
+.ml-a {
+    margin-left: auto;
+}
+
 .page-title {
     margin-bottom: 30px;
     color: #363b3e;
-    font-size: 55px;
+    font-size: 53px;
     font-weight: 900;
     line-height: 1.2em;
+    opacity: 0;
+    transform: translateX(20px);
 }
 
 .checklist {
     margin-bottom: 60px;
+    max-width: 400px;
+    opacity: 0;
+    transform: translateX(20px);
 }
 
-.page-section-3 .checklist__item {
+.checklist__item {
     position: relative;
     margin: 20px 0;
-    color: #363b3e;
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
@@ -198,8 +241,22 @@ ul {
 
 .image-items {
     position: absolute;
+    opacity: 0;
+    transform: translateX(50px);
 }
 
+.image-transition {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: opacity 0.425s ease-out 0.2s, transform 0.425s ease-out 0.2s;
+}
+
+.checklist-transition {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s;
+}
 .item-iphone {
     top: calc(50% - 510px);
     left: 79.25%;
@@ -228,8 +285,32 @@ ul {
     height: 348px;
 }
 
-.item-sales:hover {
-    transition: opacity 5s ease-in 5s, transform 0.425s ease-out 0.3s;
+.item-email {
+    width: 513px;
+    height: 900px;
+    top: calc(50% - 350px);
+    right: 45%;
+}
+
+.item-email-roi {
+    top: calc(50% - 140px);
+    right: 57%;
+    width: 522px;
+    height: 348px;
+}
+
+.item-email-performance {
+    top: calc(50% - 250px);
+    right: 63%;
+    width: 522px;
+    height: 348px;
+}
+
+.item-shades {
+    top: calc(50% + 20px);
+    right: 53%;
+    width: 567px;
+    height: 546px;
 }
 
 /*section1*/

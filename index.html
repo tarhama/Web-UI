@@ -5,13 +5,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <meta charset="UTF-8">
 </head>
 <body>
-    <div class="header">
-        <div id="navbar">
-          <div class="navbar__container">
-              <ul class="navbar__list navbar__list--left">
+<div class="header">
+    <div id="navbar">
+        <div class="navbar__container">
+            <ul class="navbar__list navbar__list--left">
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Themes</a></li>
                 <li><a href="#">Pricing</a></li>
@@ -22,32 +23,32 @@
             </div>
             <ul class="navbar__list navbar__list--right">
                 <li class="language-link-top">
-                  <i class="material-icons language">language</i>
-                  <i class="material-icons arrow-drop-down">arrow_drop_down</i>
-              </li>
-              <li class="navbar__login"><a href="#">Log In</a></li>
-              <li class="navbar__signup">
-                  <button class="navbar__signup-btn">Sign Up</button>
-              </li>
-          </ul>
-      </div>
-  </div>
+                    <i class="material-icons language">language</i>
+                    <i class="material-icons arrow-drop-down">arrow_drop_down</i>
+                </li>
+                <li class="navbar__login"><a href="#">Log In</a></li>
+                <li class="navbar__signup">
+                    <button class="navbar__signup-btn">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div id="section1">
         <div class="text_animation_container">
             <div id="text-animation">
                 <script type="text/javascript">
 
-                    var letterFunction = (function(){
-                        var publicMethods={};
-                        var canContinue=true;
+                    var letterFunction = (function () {
+                        var publicMethods = {};
+                        var canContinue = true;
 
                         publicMethods.appendToTheRight = function () {
                             elem.innerHTML += result[counter];
                             counter++;
                         };
                         publicMethods.appendToTheLeft = function () {
-                            result.splice(counter,1);
+                            result.splice(counter, 1);
                             console.log(result);
                             /* for (var i = counter; counter >=0; i--){
                              elem.innerHTML = result[i];
@@ -74,7 +75,7 @@
                              }
                              }*/
                             letterFunction.appendToTheRight();
-                            if(counter == result.length){
+                            if (counter == result.length) {
                                 counter = 0;
                                 elem.innerHTML = "";
 
@@ -108,76 +109,94 @@
 <!-- SECTION 2 -->
 <div id="section2">
     <section class="home-themes">
-            <div class="landing-page-container">
-                <div class="landing-page-content--centered">
-                    <h1 class="landing-page-title">A beautiful website starts here</h1>
-                    <h2 class="landing-page-text">Weebly's powerful drag and drop website builder and guided set up get you to the finish line faster, no coding needed.</h2>
+        <div class="landing-page-container">
+            <div class="landing-page-content--centered">
+                <h1 class="landing-page-title">A beautiful website starts here</h1>
+                <h2 class="landing-page-text">Weebly's powerful drag and drop website builder and guided set up get you
+                    to the finish line faster, no coding needed.</h2>
+            </div>
+            <div class="home-themes-container">
+                <div class="home-themes_tabs-container">
+                    <nav class="tabs">
+                        <a class="tabs_item" href="">featured</a>
+                        <a class="tabs_item" href="">online store</a>
+                        <a class="tabs_item" href="">business</a>
+                        <a class="tabs_item" href="">portfolio</a>
+                        <a class="tabs_item" href="">personal</a>
+                        <a class="tabs_item" href="">event</a>
+                        <a class="tabs_item" href="">blog</a>
+                    </nav>
                 </div>
-                <div class="home-themes-container">
-                    <div class="home-themes_tabs-container">
-                        <nav class="tabs">
-                            <a class="tabs_item" href="">featured</a>
-                            <a class="tabs_item" href="">online store</a>
-                            <a class="tabs_item" href="">business</a>
-                            <a class="tabs_item" href="">portfolio</a>
-                            <a class="tabs_item" href="">personal</a>
-                            <a class="tabs_item" href="">event</a>
-                            <a class="tabs_item" href="">blog</a>
-                        </nav>
-                    </div> 
-                    <div class="home-themes_tabs-content">
-                        <!-- NAV FEATURED -->
-                        <!-- change pics for this section, there are pics from PERSONAL id -->
-                        <div id="featured" class="tab-content_item">
-                            <div class="tab-content_item-container">
-                                <div class="home-themes_theme-container">
-                                    <div class="theme-poster">
-                                        <img src="./assets/images/sect2_1.jpg">
-                                    </div>
-                                </div>
-                                <div class="home-themes_theme-container">
-                                    <div class="theme-poster">
-                                        <img src="./assets/images/sect2_2.jpg">
-                                    </div>
-                                </div>
-                                <div class="home-themes_theme-container">
-                                    <div class="theme-poster">
-                                        <img src="./assets/images/sect2_3.jpg">
-                                    </div>
-                                </div>
-                                <div class="home-themes_theme-container">
-                                    <div class="theme-poster">
-                                        <img src="./assets/images/sect2_4.jpg">
-                                    </div>
-                                </div>
-                                <div class="home-themes_theme-container">
-                                    <div class="theme-poster">
-                                        <img src="./assets/images/sect2_5.jpg">
-                                    </div>
-                                </div>
-                                <div class="home-themes_theme-container">
-                                    <div class="theme-poster">
-                                        <img src="./assets/images/sect2_6.jpg">
-                                    </div>
+                <div class="home-themes_tabs-content">
+                    <!-- NAV FEATURED -->
+                    <!-- change pics for this section, there are pics from PERSONAL id -->
+                    <div id="featured" class="tab-content_item">
+                        <div class="tab-content_item-container">
+                            <div class="home-themes_theme-container">
+                                <div class="theme-poster">
+                                    <img src="./assets/images/sect2_1.jpg">
                                 </div>
                             </div>
-                            <a class="page-btn">More Featured Themes</a>
+                            <div class="home-themes_theme-container">
+                                <div class="theme-poster">
+                                    <img src="./assets/images/sect2_2.jpg">
+                                </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                                <div class="theme-poster">
+                                    <img src="./assets/images/sect2_3.jpg">
+                                </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                                <div class="theme-poster">
+                                    <img src="./assets/images/sect2_4.jpg">
+                                </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                                <div class="theme-poster">
+                                    <img src="./assets/images/sect2_5.jpg">
+                                </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                                <div class="theme-poster">
+                                    <img src="./assets/images/sect2_6.jpg">
+                                </div>
+                            </div>
                         </div>
-                        <!-- END OF NAV FEATURED -->
+                        <a class="page-btn">More Featured Themes</a>
                     </div>
+                    <!-- END OF NAV FEATURED -->
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 </div>
 <!-- END OF SECTION 2 -->
 
 <!-- SECTION 3 -->
 <div id="section3">
+    <script>
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+
+            if (height > 1800) {
+                $('.page-section-3 .checklist').addClass('checklist-transition');
+                $('.page-section-3 .page-title').addClass('checklist-transition');
+                $('.page-section-3 .image-items').addClass('image-transition');
+            }
+
+            if (height > 3000) {
+                $('.page-section-4 .checklist').addClass('checklist-transition');
+                $('.page-section-4 .page-title').addClass('checklist-transition');
+                $('.page-section-4 .image-items').addClass('image-transition');
+            }
+        });
+    </script>
     <section class="page-section-3">
-        <div class="page-container">
-            <div class="page-content" style="width: 50%">
+        <div class="page-container relative">
+            <div class="page-content">
                 <h2 class="page-title">Sell more with powerful eCommerce</h2>
-                <ul class="checklist">
+                <ul class="checklist ">
                     <li class="checklist__item">
                         <strong>Beautiful design </strong> to customize your storefront and showcase your products
                     </li>
@@ -189,8 +208,8 @@
                     </li>
                 </ul>
                 <div class="">
-                    <a class="blue-btn" href="">Get Started</a>
-                    <a class="link-btn pl-1">Learn More</a>
+                    <a class="btn white bg-blue" href="">Get Started</a>
+                    <a class="link-btn pl-1 blue">Learn More</a>
                 </div>
             </div>
             <div class="image-items item-box">
@@ -213,7 +232,42 @@
 
 <!-- SECTION 4 -->
 <div id="section4">
+    <section class="page-section-4">
+        <div class="page-container relative">
+            <div class="page-content ml-a">
+                <h2 class="page-title white-text">Grow faster with built-in marketing</h2>
+                <ul class="checklist white-text">
+                    <li class="checklist__item">
+                        <strong>Simplified email marketing </strong> that syncs with your site and store
+                    </li>
+                    <li class="checklist__item">
+                        <strong>Engage your customers</strong> & promote your brand with emails you design and send in minutes
+                    </li>
+                    <li class="checklist__item">
+                        <strong>Get found on Google: </strong> SEO tools to find customers, climb the ranks & stay on top
+                    </li>
+                </ul>
+                <div class="">
+                    <a class="btn bg-white green" href="">Get Started</a>
+                    <a class="link-btn pl-1 white">Learn More</a>
+                </div>
+            </div>
+            <div class="image-items item-shades">
+                <img src="assets/images/shades.jpg" alt="shades">
+            </div>
+            <div class="image-items item-email-roi">
+                <img src="assets/images/email-roi.png" alt="email-roi">
+            </div>
+            <div class="image-items item-email-performance">
+                <img src="assets/images/email-performance.png" alt="performance">
+            </div>
+            <div class="image-items item-email">
+                <img src="assets/images/email.png" alt="email">
+            </div>
 
+
+        </div>
+    </section>
 </div>
 <!-- END OF SECTION 4 -->
 
@@ -231,30 +285,31 @@
 
 <!-- SECTION 7 -->
 <div id="section7">
-        <section class="home-apps">
-            <div class="landing-page-container">
-                <div class="landing-page-content__centered">
-                    <h1 class="landing-page-title color-text">Apps to connect your world</h1>
-                    <p class="landing-page-text landing-page-text-dark">Choose from over 200high-quality apps that make it simple to add advanced features like appointment scheduling, accounting, live chat and more.
-                        <a href="" class="landing-page-text__link">learn more</a>
-                    </p>
+    <section class="home-apps relative">
+        <div class="landing-page-container">
+            <div class="landing-page-content__centered">
+                <h1 class="landing-page-title color-text">Apps to connect your world</h1>
+                <p class="landing-page-text landing-page-text-dark">Choose from over 200high-quality apps that make it
+                    simple to add advanced features like appointment scheduling, accounting, live chat and more.
+                    <a href="" class="landing-page-text__link">learn more</a>
+                </p>
+            </div>
+            <div class="home-apps__item-container">
+                <div class="home-apps__item home-apps__item-bottom">
+                    <img class="home-apps__img" src="./assets/images/bottom.jpg">
                 </div>
-                <div class="home-apps__item-container">
-                    <div class="home-apps__item home-apps__item-bottom">
-                        <img class="home-apps__img" src="./assets/images/bottom.jpg">
-                    </div>
-                    <div class="home-apps__item home-apps__item-mid">
-                        <img class="home-apps__img" src="./assets/images/mid.png">
-                    </div>
-                    <div class="home-apps__item home-apps__item-top">
-                        <img class="home-apps__img" src="./assets/images/top.png">
-                    </div>
-                    <div class="home-apps__item home-apps__item-featured">
-                        <img class="home-apps__img" src="./assets/images/featured.png">
-                    </div>
+                <div class="home-apps__item home-apps__item-mid">
+                    <img class="home-apps__img" src="./assets/images/mid.png">
+                </div>
+                <div class="home-apps__item home-apps__item-top">
+                    <img class="home-apps__img" src="./assets/images/top.png">
+                </div>
+                <div class="home-apps__item home-apps__item-featured">
+                    <img class="home-apps__img" src="./assets/images/featured.png">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 </div>
 <!-- END OF SECTION 7 -->
 
@@ -329,7 +384,7 @@
             <li>Mobile Apps</li>
         </ul>
     </span>
-    <span>
+        <span>
         <ul class="footer_list">
             <li>resource</li>
             <li>Weebly Blog</li>
@@ -338,14 +393,14 @@
             <li>Developer Docs</li>
         </ul>
     </span>
-    <span>
+        <span>
         <ul class="footer_list">
             <li>Support</li>
             <li>Support Center</li>
             <li>Community</li>
         </ul>
     </span>
-    <span>
+        <span>
         <ul class="footer_list">
             <li>partners</li>
             <li>Ambassadors</li>
@@ -356,7 +411,7 @@
             <li>Education</li>
         </ul>
     </span>
-    <span>
+        <span>
         <ul class="footer_list">
             <li>company</li>
             <li>About</li>
