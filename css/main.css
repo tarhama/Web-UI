@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-//a:link,
+a:link,
 a:visited,
 a:hover,
 a:active {
@@ -120,7 +120,7 @@ a:active {
   border: 2px solid #9ba0a3;
 }
 
-li {
+.checklist li {
     list-style-type: none;
 }
 
@@ -157,7 +157,7 @@ ul {
     left: 0;
     width: 45px;
     height: 45px;
-    background-image: url("/Web-UI/assets/images/circle-check.png");
+    background-image: url("/assets/images/circle-check.png");
     background-size: 100%;
 }
 
@@ -324,6 +324,14 @@ div {
     width: 100%;
 }
 
+.footer-content{
+    max-width: 1360px;
+}
+
+.m-a{
+    margin:auto;
+}
+
 .container {
     max-width: 1360px;
 }
@@ -338,6 +346,10 @@ div {
 
 .justify-content_space-between {
     justify-content: space-between;
+}
+
+.justify-content_center{
+    justify-content: center;
 }
 
 .align-ithem_baseline {
@@ -382,11 +394,13 @@ div {
 }
 
 .footer_list li {
-    padding: 2px;
+    padding: 3px 2px;
+    line-height: 1.5;
 }
 
 .footer_list li:nth-child(1) {
     text-transform: uppercase;
+    padding: 10px 0px;
     color: #fff;
     cursor: auto;
 }
@@ -434,6 +448,7 @@ div {
 
 .down_footer {
     height: 90px;
+    font-size: 14px;
 }
 
 .blue-circle-border {
@@ -687,3 +702,74 @@ div {
 }
 
 /* END OF STYLES FOR SECTION 7 */
+
+/* STYLES FOR SECTION 9 */
+
+#section9{
+    background-color: #363b3e;
+    background-image: url("../assets/images/black-bg.jpg");
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+.section9-container{
+    max-width: 1360px;
+}
+
+.section9-h2{
+    font-size: 55px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.large-35px{
+    font-size: 35px;
+}
+
+.font-weight-700,
+.font-weight-700 h3{
+    font-weight: 700;
+}
+
+.grey-li > li{
+    list-style: none;
+    text-indent: .7rem;
+    margin-bottom: 15px;
+}
+
+.grey-li > li::before{
+    content: "● ";
+    color: grey;
+    margin-right: 2.0rem;
+}
+
+.line-height-1_5-li li{
+    line-height: 1.5;
+}
+
+.weebly-btn{
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 44px;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: 44px;
+}
+
+.weebly-border-blue{
+    border: 2px solid #2990ea;
+}
+
+.white-text{
+    color: #fff;
+}
+
+.weebly-btn:hover{
+    background-color: #2990ea;
+    transition: 0.5s;
+}
+/* END OF STYLES FOR SECTION 9 */
