@@ -796,6 +796,7 @@ div {
 .home-apps__item-bottom {
     z-index: 1;
     position: relative;
+    padding-top: 50px;
 }
 
 .home-apps__item-mid {

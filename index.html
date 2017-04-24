@@ -325,6 +325,30 @@
             </div>
         </div>
     </section>
+  
+    <script>
+
+    $(function(){
+        $(window).on('scroll', function() {
+            var body = document.body,
+                html = document.documentElement;
+            var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                           html.clientHeight, html.scrollHeight, html.offsetHeight );
+            height = height - $(window).height();
+
+            var top = $(window).scrollTop();
+            
+            var scroll = (height - top)/(height);
+            
+            $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
+            $(".home-apps__item-top").css({top: (scroll)*50 + 'px', transitionDuration: '0.6s' });
+            $(".home-apps__item-featured").css({top: (scroll)*320 + 'px', transitionDuration: '0.6s' });
+
+        }).trigger('scroll');
+    });
+
+    </script> 
+
 </div>
 <!-- END OF SECTION 7 -->
 
