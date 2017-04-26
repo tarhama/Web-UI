@@ -803,6 +803,7 @@ div {
     background-color: #807FFF;
     position: relative;
     padding: 280px 0;
+    overflow: hidden;
 }
 
 .landing-page-content {
@@ -862,7 +863,7 @@ div {
 .mobile-iphone {
     z-index: 4;
     display: block;
-    top: -110px;
+    top: 220px;
     left: calc(50% + 100px);
     width: 492px;
     height: 821px;
@@ -871,7 +872,7 @@ div {
 .mobile-iphone02 {
     z-index: 3;
     top: -460px;
-    left: calc(50% - 250px);
+    left: calc(50% - 200px);
     width: 538px;
     height: 795px;
 }
@@ -883,6 +884,7 @@ div {
     left: calc(50% - 10px);
     width: 388px;
     height: 815px;
+    position: absolute;
 }
 
 .mobile-nexus {
