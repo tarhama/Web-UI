@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Weebly website Builder: Create a Free Website, Store or Blog</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <meta charset="UTF-8">
+  <title>Weebly website Builder: Create a Free Website, Store or Blog</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <meta charset="UTF-8">
 </head>
 <body>
-<div class="header">
-    <div id="navbar">
-        <div class="navbar__container">
-            <ul class="navbar__list navbar__list--left">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Themes</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-            <div class="navbar__list--center">
-                <img src="assets/images/weebly-blue.png" alt="weebly-logo" class="weebly-logo">
-            </div>
-            <ul class="navbar__list navbar__list--right">
-                <li class="language-link-top">
-                    <i class="material-icons language">language</i>
-                    <i class="material-icons arrow-drop-down">arrow_drop_down</i>
-                </li>
-                <li class="navbar__login"><a href="#">Log In</a></li>
-                <li class="navbar__signup">
-                    <button class="navbar__signup-btn">Sign Up</button>
-                </li>
-            </ul>
+  <div class="header">
+    <div class="navbar">
+      <div class="navbar__container">
+        <ul class="navbar__list navbar__list--left">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+        <div class="navbar__list--center">
+          <img src="assets/images/weebly-logo-white.svg" alt="weebly-logo" class="weebly-logo">
         </div>
+        <ul class="navbar__list navbar__list--right">
+          <li class="language-link-top">
+            <i class="material-icons language">language</i>
+            <i class="material-icons arrow-drop-down">arrow_drop_down</i>
+            <div class="dropdown-content">
+              <a href="#">Arabic</a>
+              <a href="#">Bengali</a>
+              <a href="#">Chinese</a>
+              <a href="#">English</a>
+              <a href="#">Hindi</a>
+              <a href="#">Japanese</a>
+              <a href="#">Portuguese</a>
+              <a href="#">Punjabi/Lahnda</a>
+              <a href="#">Russian</a>
+              <a href="#">Spanish</a>
+            </div>
+            <img src="assets/images/chevron.svg" alt="chevron" class="dropdown-content__chevron">
+          </li>
+          <li class="navbar__login"><a href="#">Log In</a></li>
+          <li class="navbar__signup">
+            <button class="navbar__signup-btn">Sign Up</button>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div id="section1">
-        <div class="text_animation_container">
-            <div id="text-animation">
-                <script type="text/javascript">
+      <div class="text_animation_container">
+        <div id="text-animation">
+          <script type="text/javascript">
 
-                    var letterFunction = (function () {
-                        var publicMethods = {};
-                        var canContinue = true;
+            var letterFunction = (function () {
+              var publicMethods = {};
+              var canContinue = true;
 
-                        publicMethods.appendToTheRight = function () {
-                            elem.innerHTML += result[counter];
-                            counter++;
-                        };
-                        publicMethods.appendToTheLeft = function () {
-                            result.splice(counter, 1);
-                            console.log(result);
+              publicMethods.appendToTheRight = function () {
+                elem.innerHTML += result[counter];
+                counter++;
+              };
+              publicMethods.appendToTheLeft = function () {
+                result.splice(counter, 1);
+                console.log(result);
                             /* for (var i = counter; counter >=0; i--){
                              elem.innerHTML = result[i];
-                             }*/
+                           }*/
 
-                            counter--;
+                           counter--;
 
-                        };
-                        publicMethods.animateText = function () {
+                         };
+                         publicMethods.animateText = function () {
                             /* if(canContinue){
                              console.log(canContinue);
                              publicMethods.appendToTheRight();
@@ -73,467 +86,686 @@
                              console.log("to the left"+ counter);
                              canContinue = true;
                              }
-                             }*/
-                            letterFunction.appendToTheRight();
-                            if (counter == result.length) {
-                                counter = 0;
-                                elem.innerHTML = "";
+                           }*/
+                           letterFunction.appendToTheRight();
+                           if (counter == result.length) {
+                            counter = 0;
+                            elem.innerHTML = "";
 
-                            }
+                          }
 
                         };
 
                         return publicMethods;
-                    })();
+                      })();
 
-                    var elem = document.getElementById("text-animation");
-                    var counter = 0;
-                    var text = "HELLLO ALLL";
-                    var result = text.split("");
-                    setInterval(letterFunction.animateText, 100);
-                </script>
-            </div>
+                      var elem = document.getElementById("text-animation");
+                      var counter = 0;
+                      var text = "HELLLO ALLL";
+                      var result = text.split("");
+                      setInterval(letterFunction.animateText, 100);
+                    </script>
+                  </div>
 
 
-        </div>
-        <div class="section1_overlay">
-        </div>
-    </div>
+                </div>
+                <div class="section1_overlay">
+                </div>
+              </div>
 
-    <video class="section1_video" autoplay loop muted>
-        <source src="http://cdn2.editmysite.com/videos/landing-pages/global/home/masthead/masthead-720.mp4"
+              <video class="section1_video" autoplay loop muted>
+                <source src="http://cdn2.editmysite.com/videos/landing-pages/global/home/masthead/masthead-720.mp4"
                 type="video/mp4">
-    </video>
+              </video>
 
-</div>
-<!-- SECTION 2 -->
-<div id="section2">
-    <section class="home-themes">
-        <div class="landing-page-container">
-            <div class="landing-page-content__centered">
-                <h1 class="landing-page-title">A beautiful website starts here</h1>
-                <h2 class="landing-page-text">Weebly's powerful drag and drop website builder and guided set up get you
-                    to the finish line faster, no coding needed.</h2>
             </div>
-            <div class="home-themes-container">
-                <div class="home-themes_tabs-container">
-                    <nav class="tabs">
-                        <a class="tabs_item" href="">featured</a>
-                        <a class="tabs_item" href="">online store</a>
-                        <a class="tabs_item" href="">business</a>
-                        <a class="tabs_item" href="">portfolio</a>
-                        <a class="tabs_item" href="">personal</a>
-                        <a class="tabs_item" href="">event</a>
-                        <a class="tabs_item" href="">blog</a>
-                    </nav>
-                </div>
-                <div class="home-themes_tabs-content">
-                    <!-- NAV FEATURED -->
-                    <!-- change pics for this section, there are pics from PERSONAL id -->
-                    <div id="featured" class="tab-content_item">
-                        <div class="tab-content_item-container">
-                            <div class="home-themes_theme-container">
-                                <div class="theme-poster">
-                                    <img src="./assets/images/sect2_1.jpg">
-                                </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                                <div class="theme-poster">
-                                    <img src="./assets/images/sect2_2.jpg">
-                                </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                                <div class="theme-poster">
-                                    <img src="./assets/images/sect2_3.jpg">
-                                </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                                <div class="theme-poster">
-                                    <img src="./assets/images/sect2_4.jpg">
-                                </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                                <div class="theme-poster">
-                                    <img src="./assets/images/sect2_5.jpg">
-                                </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                                <div class="theme-poster">
-                                    <img src="./assets/images/sect2_6.jpg">
-                                </div>
-                            </div>
-                        </div>
-                        <a class="page-btn">More Featured Themes</a>
+            <!-- SECTION 2 -->
+            <div id="section2">
+              <section class="home-themes">
+                <div class="landing-page-container">
+                  <div class="landing-page-content__centered">
+                    <h1 class="landing-page-title">A beautiful website starts here</h1>
+                    <h2 class="landing-page-text">Weebly's powerful drag and drop website builder and guided set up get you
+                      to the finish line faster, no coding needed.</h2>
                     </div>
-                    <!-- END OF NAV FEATURED -->
+                    <div class="home-themes-container">
+                      <div class="home-themes_tabs-container">
+                        <nav class="tabs">
+                          <a class="tabs_item" href="">featured</a>
+                          <a class="tabs_item" href="">online store</a>
+                          <a class="tabs_item" href="">business</a>
+                          <a class="tabs_item" href="">portfolio</a>
+                          <a class="tabs_item" href="">personal</a>
+                          <a class="tabs_item" href="">event</a>
+                          <a class="tabs_item" href="">blog</a>
+                        </nav>
+                      </div>
+                      <div class="home-themes_tabs-content">
+                        <!-- NAV FEATURED -->
+                        <!-- change pics for this section, there are pics from PERSONAL id -->
+                        <div id="featured" class="tab-content_item">
+                          <div class="tab-content_item-container">
+                            <div class="home-themes_theme-container">
+                              <div class="theme-poster">
+                                <img src="./assets/images/sect2_1.jpg">
+                              </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                              <div class="theme-poster">
+                                <img src="./assets/images/sect2_2.jpg">
+                              </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                              <div class="theme-poster">
+                                <img src="./assets/images/sect2_3.jpg">
+                              </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                              <div class="theme-poster">
+                                <img src="./assets/images/sect2_4.jpg">
+                              </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                              <div class="theme-poster">
+                                <img src="./assets/images/sect2_5.jpg">
+                              </div>
+                            </div>
+                            <div class="home-themes_theme-container">
+                              <div class="theme-poster">
+                                <img src="./assets/images/sect2_6.jpg">
+                              </div>
+                            </div>
+                          </div>
+                          <a class="page-btn">More Featured Themes</a>
+                        </div>
+                        <!-- END OF NAV FEATURED -->
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- END OF SECTION 2 -->
+
+              <!-- SECTION 3 -->
+              <div id="section3">
+                <script>
+                  $(window).scroll(function () {
+                    var height = $(window).scrollTop();
+
+                    /* SECTION 2 ANIMATE */
+                    if (height > 500) {
+                      $('.home-themes .home-themes_tabs-container').addClass('tabs-transition');
+                      $('.home-themes_tabs-content').addClass('is-active');
+                    }
+                    /* END OF SECTION 2 ANIMATE */
+
+                    if (height > 1800) {
+                      $('.page-section-3 .checklist').addClass('checklist-transition');
+                      $('.page-section-3 .page-title').addClass('checklist-transition');
+                      $('.page-section-3 .image-items').addClass('image-transition');
+                    }
+
+                    if (height > 3000) {
+                      $('.page-section-4 .checklist').addClass('checklist-transition');
+                      $('.page-section-4 .page-title').addClass('checklist-transition');
+                      $('.page-section-4 .image-items').addClass('image-transition');
+                    }
+
+                    /* SECTION 5 ANIMATE */
+                    if (height > 4000) {
+                      $('.section-5 .landing-page-text.opacity').addClass('is-active');
+                      $('.section-5 .landing-page-title.opacity').addClass('tabs-transition');
+                      $('.section-5 .state-btn.opacity').addClass('btn-active');
+                      $('.section-5 .app-icon.opacity').addClass('app-active');
+                    }
+                    /* END OF SECTION 5 ANIMATE */
+
+                    /* SECTION 7 ANIMATE */
+                    if (height > 4800) {
+                      $('.section-7 .black.opacity').addClass('tabs-transition');
+                      $('.section-7 .gray.opacity').addClass('is-active');
+                    }
+                    /* END OF SECTION 7 ANIMATE */
+
+                  });
+                </script>
+                <section class="page-section-3">
+                  <div class="page-container relative">
+                    <div class="page-content">
+                      <h2 class="page-title">Sell more with powerful eCommerce</h2>
+                      <ul class="checklist ">
+                        <li class="checklist__item">
+                          <strong>Beautiful design </strong> to customize your storefront and showcase your products
+                        </li>
+                        <li class="checklist__item">
+                          <strong>Complete platform</strong> to manage inventory, track orders and handle taxes
+                        </li>
+                        <li class="checklist__item">
+                          <strong>Advanced tools:</strong> real time shipping, abandoned cart, coupons and currencies
+                        </li>
+                      </ul>
+                      <div class="">
+                        <a class="btn white bg-blue" href="">Get Started</a>
+                        <a class="link-btn pl-1 blue">Learn More</a>
+                      </div>
+                    </div>
+                    <div class="image-items item-box">
+                      <img src="assets/images/box.jpg" alt="section3_box">
+                    </div>
+                    <div class="image-items item-orders">
+                      <img src="assets/images/orders.png" alt="section3_orders">
+                    </div>
+                    <div class="image-items item-iphone">
+                      <img src="assets/images/iphone.png" alt="section3_iphone">
+                    </div>
+                    <div class="image-items item-sales">
+                      <img src="assets/images/monthly-sales.png" alt="section3_monthly_sales">
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+              <!-- END OF SECTION 3 -->
+
+              <!-- SECTION 4 -->
+              <div id="section4">
+                <section class="page-section-4">
+                  <div class="page-container relative">
+                    <div class="page-content ml-a">
+                      <h2 class="page-title white-text">Grow faster with built-in marketing</h2>
+                      <ul class="checklist white-text">
+                        <li class="checklist__item">
+                          <strong>Simplified email marketing </strong> that syncs with your site and store
+                        </li>
+                        <li class="checklist__item">
+                          <strong>Engage your customers</strong> & promote your brand with emails you design and send in minutes
+                        </li>
+                        <li class="checklist__item">
+                          <strong>Get found on Google: </strong> SEO tools to find customers, climb the ranks & stay on top
+                        </li>
+                      </ul>
+                      <div class="">
+                        <a class="btn bg-white green" href="">Get Started</a>
+                        <a class="link-btn pl-1 white">Learn More</a>
+                      </div>
+                    </div>
+                    <div class="image-items item-shades">
+                      <img src="assets/images/shades.jpg" alt="shades">
+                    </div>
+                    <div class="image-items item-email-roi">
+                      <img src="assets/images/email-roi.png" alt="email-roi">
+                    </div>
+                    <div class="image-items item-email-performance">
+                      <img src="assets/images/email-performance.png" alt="performance">
+                    </div>
+                    <div class="image-items item-email">
+                      <img src="assets/images/email.png" alt="email">
+                    </div>
+                  </div>
+                </section>
+              </div>
+                <!-- END OF SECTION 4 -->     
+
+              <!-- SECTION 5 -->
+              <div id="section5" class="section-5">
+                <div class="landing-page-container">
+                  <div class="landing-page-content">
+                    <h2 class="landing-page-title opacity">Run your business on&nbsp;the&nbsp;go</h2>
+                    <p class="landing-page-text opacity">Get unchained from your desk. Weebly is the only platform that lets you edit and manage your site or store from any device.</p>
+                    <div class="state-btn opacity">
+                      <a class="raise-btn purple" href="">Get Started</a>
+                    </div>
+                    <div class="app-icon opacity">
+                      <img src="https://cdn2.editmysite.com/images/landing-pages/global/home/mobile/apple@2x.png?v=1" alt="App Store">
+                      <img src="https://cdn2.editmysite.com/images/landing-pages/global/home/mobile/google@2x.png?v=1" alt="Google Play">
+                    </div>
+                  </div>
+                  <div class="mobile-item mobile-iphone">
+                    <img class="home-apps__img" src="assets/images/iphone-03.png" alt="iphone">
+                  </div>
+                  <div class="mobile-item mobile-iphone02">
+                    <img class="home-apps__img" src="assets/images/iphone-02.png" alt="iphone">
+                  </div>
+                  <div class="mobile-item mobile-android">
+                    <img class="home-apps__img" src="assets/images/android.jpg" alt="android">
+                  </div>
+                  <div class="mobile-item mobile-nexus">
+                    <img class="home-apps__img" src="assets/images/nexus.jpg" alt="nexus">
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
-</div>
-<!-- END OF SECTION 2 -->
+              </div>
+              <!-- END OF SECTION 5 -->
 
-<!-- SECTION 3 -->
-<div id="section3">
-    <script>
-        $(window).scroll(function () {
-            var height = $(window).scrollTop();
-            
-            /* SECTION 2 ANIMATE */
-            if (height > 700) {
-                $('.home-themes .home-themes_tabs-container').addClass('tabs-transition');
-                $('.home-themes_tabs-content').addClass('is-active');
-            }
-            /* END OF SECTION 2 ANIMATE */
+              <!-- SECTION 6 -->
+              <div id="section6">
 
-            if (height > 1800) {
-                $('.page-section-3 .checklist').addClass('checklist-transition');
-                $('.page-section-3 .page-title').addClass('checklist-transition');
-                $('.page-section-3 .image-items').addClass('image-transition');
-            }
+              </div>
+              <!-- END OF SECTION 6 -->
 
-            if (height > 3000) {
-                $('.page-section-4 .checklist').addClass('checklist-transition');
-                $('.page-section-4 .page-title').addClass('checklist-transition');
-                $('.page-section-4 .image-items').addClass('image-transition');
-            }
+              <!-- SECTION 7 -->
+              <div id="section7" class="section-7">
+                <section class="home-apps relative">
+                  <div class="landing-page-container">
+                    <div class="landing-page-content__centered">
+                      <h1 class="landing-page-title black opacity">Apps to connect your world</h1>
+                      <p class="landing-page-text gray opacity">Choose from over 200high-quality apps that make it
+                      simple to add advanced features like appointment scheduling, accounting, live chat and more.
+                        <a href="" class="landing-page-text__link">learn more</a>
+                      </p>
+                    </div>
+                    <div class="home-apps__item-container">
+                      <div class="home-apps__item home-apps__item-bottom">
+                        <img class="home-apps__img" src="./assets/images/bottom.jpg">
+                      </div>
+                      <div class="home-apps__item home-apps__item-mid">
+                        <img class="home-apps__img" src="./assets/images/mid.png">
+                      </div>
+                      <div class="home-apps__item home-apps__item-top">
+                        <img class="home-apps__img" src="./assets/images/top.png">
+                      </div>
+                      <div class="home-apps__item home-apps__item-featured">
+                        <img class="home-apps__img" src="./assets/images/featured.png">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                  
+                <script>
 
-            /* SECTION 5 ANIMATE */
-            if (height > 4000) {
-                $('.section-5 .landing-page-text.opacity').addClass('is-active');
-                $('.section-5 .landing-page-title.opacity').addClass('tabs-transition');
-                $('.section-5 .state-btn.opacity').addClass('btn-active');
-                $('.section-5 .app-icon.opacity').addClass('app-active');
-            }
-            /* END OF SECTION 5 ANIMATE */
+                  $(function(){
+                    $(window).on('scroll', function() {
+                      var body = document.body,
+                          html = document.documentElement;
+                      var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+                          height = height - $(window).height();
 
-            /* SECTION 7 ANIMATE */
-            if (height > 4300) {
-                $('.section-7 .black.opacity').addClass('tabs-transition');
-                $('.section-7 .gray.opacity').addClass('is-active');
-            }
-            /* END OF SECTION 7 ANIMATE */
+                      var top = $(window).scrollTop();
+                            
+                      var scroll = (height - top)/(height);
+                            
+                        $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
+                        $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
+                        $(".home-apps__item-featured").css({top: (scroll)*320 + 'px', transitionDuration: '0.6s' });
 
-        });
-    </script>
-    <section class="page-section-3">
-        <div class="page-container relative">
-            <div class="page-content">
-                <h2 class="page-title">Sell more with powerful eCommerce</h2>
-                <ul class="checklist ">
-                    <li class="checklist__item">
-                        <strong>Beautiful design </strong> to customize your storefront and showcase your products
-                    </li>
-                    <li class="checklist__item">
-                        <strong>Complete platform</strong> to manage inventory, track orders and handle taxes
-                    </li>
-                    <li class="checklist__item">
-                        <strong>Advanced tools:</strong> real time shipping, abandoned cart, coupons and currencies
-                    </li>
-                </ul>
-                <div class="">
-                    <a class="btn white bg-blue" href="">Get Started</a>
-                    <a class="link-btn pl-1 blue">Learn More</a>
+                        //SECTION 5
+
+                        $(".mobile-iphone").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s', rotate: (scroll)*105 + 'deg' });
+                        $(".mobile-iphone02").css({top: (scroll)*10 + 'px', transitionDuration: '0.6s' });
+                        $(".mobile-android").css({top: (scroll)*-500 + 'px', transitionDuration: '0.6s' });
+                        $(".mobile-nexus").css({top: (scroll)*850 + 'px', transitionDuration: '0.6s' });
+
+                    }).trigger('scroll');
+                  });
+
+                </script> 
+
+              </div>
+              <!-- END OF SECTION 7 -->
+
+              <!-- SECTION 8 -->
+              <div id="section8">
+                <div id="section8">
+                  <div class="video-container">
+                    <video class="video-container_video" autoplay loop muted>
+                      <source src="http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/olive-aloe.mp4"
+                      type="video/mp4">
+                    </video>
+                    <div class="video-container__mute-icon">
+                      <img src="assets/images/volume-off-48px.svg" alt="volume-off" />
+                    </div>
+                  </div>
+                  <div class="text-container">
+                    <p class="text-container__statement">Join the <strong>millions</strong> of people doing what they love with Weebly</p>
+                    <q class="text-container__quotation">They want you to succeed. They want you to be your own boss.</q>
+                    <p class="text-container__quotation-person">VANESSA</p>
+                    <nav class="navbar-dots">
+                      <a  class="navbar-dots__first active-dot" href="#section8"></a>
+                      <a  class="navbar-dots__second" href="#section8"></a>
+                      <a  class="navbar-dots__third" href="#section8"></a>
+                    </nav>
+                  </div>
                 </div>
-            </div>
-            <div class="image-items item-box">
-                <img src="assets/images/box.jpg" alt="section3_box">
-            </div>
-            <div class="image-items item-orders">
-                <img src="assets/images/orders.png" alt="section3_orders">
-            </div>
-            <div class="image-items item-iphone">
-                <img src="assets/images/iphone.png" alt="section3_iphone">
-            </div>
-            <div class="image-items item-sales">
-                <img src="assets/images/monthly-sales.png" alt="section3_monthly_sales">
-            </div>
-        </div>
-    </section>
+              </div>
+              <!-- END OF SECTION 8 -->
 
-</div>
-<!-- END OF SECTION 3 -->
-
-<!-- SECTION 4 -->
-<div id="section4">
-    <section class="page-section-4">
-        <div class="page-container relative">
-            <div class="page-content ml-a">
-                <h2 class="page-title white-text">Grow faster with built-in marketing</h2>
-                <ul class="checklist white-text">
-                    <li class="checklist__item">
-                        <strong>Simplified email marketing </strong> that syncs with your site and store
-                    </li>
-                    <li class="checklist__item">
-                        <strong>Engage your customers</strong> & promote your brand with emails you design and send in minutes
-                    </li>
-                    <li class="checklist__item">
-                        <strong>Get found on Google: </strong> SEO tools to find customers, climb the ranks & stay on top
-                    </li>
-                </ul>
-                <div class="">
-                    <a class="btn bg-white green" href="">Get Started</a>
-                    <a class="link-btn pl-1 white">Learn More</a>
+              <!-- SECTION 9 -->
+              <div id="section9">
+                <div class="section9-container m-a">
+                  <h2 class="section9-h2 text-center">Features to start, sell & grow</h2>
+                  <div>
+                    <div class="flex justify-content_space-between align-ithem_center font-weight-700">
+                      <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">Website</h3>
+                      <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">eCommerce</h3>
+                      <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">Marketing</h3>
+                    </div>
+                    <div class="flex justify-content_space-between align-ithem_center">
+                      <ul class="grey-li line-height-1_5-li">
+                        <li>Simple drag & drop editor</li>
+                        <li>Step-by-step guidance</li>
+                        <li>Pre-designed layout options</li>
+                        <li>Domain names & professional email</li>
+                        <li>Video backgrounds</li>
+                        <li>Site stats</li>
+                        <li>Create a blog</li>
+                      </ul>
+                      <ul class="grey-li line-height-1_5-li">
+                        <li>Unlimited products</li>
+                        <li>Optimized one-page checkout</li>
+                        <li>Automatic tax calculator</li>
+                        <li>Real time shipping rates</li>
+                        <li>Abandoned cart recovery</li>
+                        <li>Coupon codes</li>
+                        <li>Digital gift cards</li>
+                      </ul>
+                      <ul class="grey-li line-height-1_5-li">
+                        <li>Fully integrated with site & store</li>
+                        <li>Suggested emails created automatically</li>
+                        <li>Email to sales insights</li>
+                        <li>Branded billing emails</li>
+                        <li>Powerful app integrations</li>
+                        <li>SEO Guide & scorecard</li>
+                        <li>Automation for marketing autopilot</li>
+                      </ul>
+                    </div>
+                    <div class="flex justify-content_center align-ithem_center" style="margin-top: 100px; ">
+                      <a href="#" class="weebly-btn weebly-border-blue white-text">See all Features</a>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="image-items item-shades">
-                <img src="assets/images/shades.jpg" alt="shades">
-            </div>
-            <div class="image-items item-email-roi">
-                <img src="assets/images/email-roi.png" alt="email-roi">
-            </div>
-            <div class="image-items item-email-performance">
-                <img src="assets/images/email-performance.png" alt="performance">
-            </div>
-            <div class="image-items item-email">
-                <img src="assets/images/email.png" alt="email">
-            </div>
 
 
-        </div>
-    </section>
-</div>
-<!-- END OF SECTION 4 -->
+              </div>
+              <!-- END OF SECTION 9 -->          
 
-<!-- SECTION 5 -->
-<div id="section5" class="section-5">
-    <div class="landing-page-container">
-        <div class="landing-page-content">
-            <h2 class="landing-page-title opacity">Run your business on&nbsp;the&nbsp;go</h2>
-            <p class="landing-page-text opacity">Get unchained from your desk. Weebly is the only platform that lets you edit and manage your site or store from any device.</p>
-            <div class="state-btn opacity">
-                <a class="raise-btn purple" href="">Get Started</a>
-            </div>
-            <div class="app-icon opacity">
-                <img src="https://cdn2.editmysite.com/images/landing-pages/global/home/mobile/apple@2x.png?v=1" alt="App Store">
-                <img src="https://cdn2.editmysite.com/images/landing-pages/global/home/mobile/google@2x.png?v=1" alt="Google Play">
-            </div>
-        </div>
-        <div class="mobile-item mobile-iphone">
-            <img class="home-apps__img" src="assets/images/iphone-03.png" alt="iphone">
-        </div>
-        <div class="mobile-item mobile-iphone02">
-            <img class="home-apps__img" src="assets/images/iphone-02.png" alt="iphone">
-        </div>
-        <div class="mobile-item mobile-android">
-            <img class="home-apps__img" src="assets/images/android.jpg" alt="android">
-        </div>
-        <div class="mobile-item mobile-nexus">
-            <img class="home-apps__img" src="assets/images/nexus.jpg" alt="nexus">
-        </div>
-    </div>
-</div>
-<!-- END OF SECTION 5 -->
-
-<!-- SECTION 6 -->
-<div id="section6">
-
-</div>
-<!-- END OF SECTION 6 -->
-
-<!-- SECTION 7 -->
-<div id="section7" class="section-7">
-    <section class="home-apps relative">
-        <div class="landing-page-container">
-            <div class="landing-page-content__centered">
-                <h1 class="landing-page-title black opacity">Apps to connect your world</h1>
-                <p class="landing-page-text gray opacity">Choose from over 200high-quality apps that make it
-                    simple to add advanced features like appointment scheduling, accounting, live chat and more.
-                    <a href="" class="landing-page-text__link">learn more</a>
-                </p>
-            </div>
-            <div class="home-apps__item-container">
-                <div class="home-apps__item home-apps__item-bottom">
-                    <img class="home-apps__img" src="./assets/images/bottom.jpg">
-                </div>
-                <div class="home-apps__item home-apps__item-mid">
-                    <img class="home-apps__img" src="./assets/images/mid.png">
-                </div>
-                <div class="home-apps__item home-apps__item-top">
-                    <img class="home-apps__img" src="./assets/images/top.png">
-                </div>
-                <div class="home-apps__item home-apps__item-featured">
-                    <img class="home-apps__img" src="./assets/images/featured.png">
-                </div>
-            </div>
-        </div>
-    </section>
-  
-    <script>
-
-    $(function(){
-        $(window).on('scroll', function() {
-            var body = document.body,
-                html = document.documentElement;
-            var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                           html.clientHeight, html.scrollHeight, html.offsetHeight );
-            height = height - $(window).height();
-
-            var top = $(window).scrollTop();
-            
-            var scroll = (height - top)/(height);
-            
-            $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
-            $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
-            $(".home-apps__item-featured").css({top: (scroll)*320 + 'px', transitionDuration: '0.6s' });
-
-            //SECTION 5
-
-            $(".mobile-iphone").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s', rotate: (scroll)*105 + 'deg' });
-            $(".mobile-iphone02").css({top: (scroll)*10 + 'px', transitionDuration: '0.6s' });
-            $(".mobile-android").css({top: (scroll)*-500 + 'px', transitionDuration: '0.6s' });
-            $(".mobile-nexus").css({top: (scroll)*850 + 'px', transitionDuration: '0.6s' });
-
-        }).trigger('scroll');
-    });
-
-    </script> 
-
-</div>
-<!-- END OF SECTION 7 -->
-
-<!-- SECTION 8 -->
-<div id="section8">
-
-</div>
-<!-- END OF SECTION 8 -->
-
-<!-- SECTION 9 -->
-<div id="section9">
-    <div class="section9-container m-a">
-        <h2 class="section9-h2 text-center">Features to start, sell & grow</h2>
-        <div>
-            <div class="flex justify-content_space-between align-ithem_center font-weight-700">
-                <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">Website</h3>
-                <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">eCommerce</h3>
-                <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">Marketing</h3>
-            </div>
-            <div class="flex justify-content_space-between align-ithem_center">
-                <ul class="grey-li line-height-1_5-li">
-                    <li>Simple drag & drop editor</li>
-                    <li>Step-by-step guidance</li>
-                    <li>Pre-designed layout options</li>
-                    <li>Domain names & professional email</li>
-                    <li>Video backgrounds</li>
-                    <li>Site stats</li>
-                    <li>Create a blog</li>
-                </ul>
-                <ul class="grey-li line-height-1_5-li">
-                    <li>Unlimited products</li>
-                    <li>Optimized one-page checkout</li>
-                    <li>Automatic tax calculator</li>
-                    <li>Real time shipping rates</li>
-                    <li>Abandoned cart recovery</li>
-                    <li>Coupon codes</li>
-                    <li>Digital gift cards</li>
-                </ul>
-                <ul class="grey-li line-height-1_5-li">
-                <li>Fully integrated with site & store</li>
-                <li>Suggested emails created automatically</li>
-                <li>Email to sales insights</li>
-                <li>Branded billing emails</li>
-                <li>Powerful app integrations</li>
-                <li>SEO Guide & scorecard</li>
-                <li>Automation for marketing autopilot</li>
-            </ul>
-                </div>
-            <div class="flex justify-content_center align-ithem_center" style="margin-top: 100px; ">
-                <a href="#" class="weebly-btn weebly-border-blue white-text">See all Features</a>
-            </div>
-        </div>
-    </div>
-
-
-</div>
-<!-- END OF SECTION 9 -->
-
-</div>
-
-<!-- SECTION FOOTER -->
-<footer id="footer" class="small">
-    <div class="footer-content m-a">
-    <div class="flex justify-content_space-around align-ithem_baseline ">
-    <span>
-        <ul class="footer_list">
-            <li>Product</li>
-            <li>Features</li>
-            <li>Themes</li>
-            <li>Pricing</li>
-            <li>App Center</li>
-            <li>Mobile Apps</li>
-        </ul>
-    </span>
-        <span>
-        <ul class="footer_list">
-            <li>resource</li>
-            <li>Weebly Blog</li>
-            <li>Inspiration Center</li>
-            <li>Success Stories</li>
-            <li>Developer Docs</li>
-        </ul>
-    </span>
-        <span>
-        <ul class="footer_list">
-            <li>Support</li>
-            <li>Support Center</li>
-            <li>Community</li>
-        </ul>
-    </span>
-        <span>
-        <ul class="footer_list">
-            <li>partners</li>
-            <li>Ambassadors</li>
-            <li>Resellers</li>
-            <li>Affiliates</li>
-            <li>Designers</li>
-            <li>Developer</li>
-            <li>Education</li>
-        </ul>
-    </span>
-        <span>
-        <ul class="footer_list">
-            <li>company</li>
-            <li>About</li>
-            <li>Careers</li>
-            <li>Press</li>
-            <li>Contact</li>
-        </ul>
-    </span>
-    </div>
-    <hr style="border-bottom-width: 0px;">
-    <div class="flex justify-content_space-between align-ithem_center down_footer">
-        <span class="footer_links pl-2">
-            <a href="#">© Weebly, Inc.</a>
-            <a href="#">Terms</a>
-            <a href="#">Privacy Policy</a>
-        </span>
-        <span class="footer-social-network">
-            <span class="blue-circle-border"><i class="fa fa-twitter"></i></span>
-            <span class="blue-circle-border"><i class="fa fa-facebook"></i></span>
-            <span class="blue-circle-border"><i class="fa fa-youtube-square"></i></span>
-            <span class="blue-circle-border"><i class="fa fa-google-plus"></i></span>
-            <span class="blue-circle-border"><i class="fa fa-instagram"></i></span>
-        </span>
-        <span class="footer_dropdown pr-2">
-            <span class="footer_links"><a href="#">English</a>  <span class="small">&#9660;</span></span>
-            <div class="footer_dropdown__content">
-                <ul class="li_no-decoration">
-                <li>English</li>
-                <li>English</li>
-                <li>English</li>
-                <li>English</li>
-                <li>English</li>
-                    <li>English</li>
-                <li>English</li>
-                    <li>English</li>
-                <li>English</li>
+            <!-- SECTION FOOTER -->
+            <footer id="footer" class="small">
+              <div class="footer-content m-a">
+                <div class="flex justify-content_space-around align-ithem_baseline ">
+                  <span>
+                    <ul class="footer_list">
+                      <li>Product</li>
+                      <li>Features</li>
+                      <li>Themes</li>
+                      <li>Pricing</li>
+                      <li>App Center</li>
+                      <li>Mobile Apps</li>
                     </ul>
-            </div>
-        </span>
-    </div>
-    </div>
-</footer>
-<!-- END OF SECTION FOOTER -->
+                  </span>
+                  <span>
+                    <ul class="footer_list">
+                      <li>resource</li>
+                      <li>Weebly Blog</li>
+                      <li>Inspiration Center</li>
+                      <li>Success Stories</li>
+                      <li>Developer Docs</li>
+                    </ul>
+                  </span>
+                  <span>
+                    <ul class="footer_list">
+                      <li>Support</li>
+                      <li>Support Center</li>
+                      <li>Community</li>
+                    </ul>
+                  </span>
+                  <span>
+                    <ul class="footer_list">
+                      <li>partners</li>
+                      <li>Ambassadors</li>
+                      <li>Resellers</li>
+                      <li>Affiliates</li>
+                      <li>Designers</li>
+                      <li>Developer</li>
+                      <li>Education</li>
+                    </ul>
+                  </span>
+                  <span>
+                    <ul class="footer_list">
+                      <li>company</li>
+                      <li>About</li>
+                      <li>Careers</li>
+                      <li>Press</li>
+                      <li>Contact</li>
+                    </ul>
+                  </span>
+                </div>
+                <hr style="border-bottom-width: 0px;">
+                <div class="flex justify-content_space-between align-ithem_center down_footer">
+                  <span class="footer_links pl-2">
+                    <a href="#">© Weebly, Inc.</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy Policy</a>
+                  </span>
+                  <span class="footer-social-network">
+                    <span class="blue-circle-border"><i class="fa fa-twitter"></i></span>
+                    <span class="blue-circle-border"><i class="fa fa-facebook"></i></span>
+                    <span class="blue-circle-border"><i class="fa fa-youtube-square"></i></span>
+                    <span class="blue-circle-border"><i class="fa fa-google-plus"></i></span>
+                    <span class="blue-circle-border"><i class="fa fa-instagram"></i></span>
+                  </span>
+                  <span class="footer_dropdown pr-2">
+                    <span class="footer_links"><a href="#">English</a>  <span class="small">&#9660;</span></span>
+                    <div class="footer_dropdown__content">
+                      <ul class="li_no-decoration">
+                        <li>English</li>
+                        <li>English</li>
+                        <li>English</li>
+                        <li>English</li>
+                        <li>English</li>
+                        <li>English</li>
+                        <li>English</li>
+                        <li>English</li>
+                        <li>English</li>
+                      </ul>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </footer>
+            <!-- END OF SECTION FOOTER -->
 
-</body>
-</html>
+            <script type="text/javascript">
+
+              $(document).ready(function() {
+                'use strict';
+                var LanguageDropdown = (function(){
+                  var $icons = $('.language, .arrow-drop-down');
+                  var $dropDown = $('.dropdown-content, .dropdown-content__chevron');
+                  var dropdownStuff = '.language,.arrow-drop-down,.dropdown-content,.dropdown-content__chevron';
+
+                  $icons.on('click', function() {
+                    $dropDown.slideToggle();
+                  });
+
+                  $('body').click(function(e){
+                    if ( !$(e.target).is(dropdownStuff)) {
+                      $dropDown.slideUp();
+                    }
+                  });
+                })();
+
+                var NavbarRoller = (function() {
+              // variables definitions
+              var scrollStart = 0;
+              var offsetTop = 86; //navbar height + border
+
+              var pureWhite = '#fff';
+              var almostPureWhite = 'rgba(255,255,255,0.8)';
+              var darkishGrey = '#666c70';
+              var lightishGrey = '#9ba0a3';
+              var darkestGrey = '#363b3e';
+              var navyBlue = '#2990ea';
+              var weeblyBlueUrl = 'assets/images/weebly-logo-blue.svg';
+              var weeblyWhiteUrl = 'assets/images/weebly-logo-white.svg';
+
+              // chaching DOM
+              var $navbar = $('.navbar');
+              var $weeblyLogo = $('.weebly-logo');
+              var $navbarTextItems = $('.navbar__list--left > li > a, .navbar__list .navbar__login > a');
+              var $languageIcon = $('.language');
+              var $arrowDown = $('.arrow-drop-down');
+              var $signupBtn = $('.navbar__signup-btn');
+
+              $( document ).ready(function() {
+                scrollStart = $(this).scrollTop();
+                if(scrollStart > offsetTop) {
+                  $navbar.slideDown('slow', depictWhiteNavbar);
+                } else {
+                  depictTransparentNavbar();
+                }
+              });
+
+              function depictWhiteNavbar(){
+                $navbar.css('background-color', pureWhite);
+                $weeblyLogo.attr('src', weeblyBlueUrl);
+                $navbarTextItems.css('color', darkishGrey);
+                $languageIcon.css('color', darkishGrey);
+                $arrowDown.css('color', darkishGrey);
+                $signupBtn.css({'color': '#2990ea',
+                  'border': '1px solid #666c70'
+                });
+                $navbarTextItems.hover(
+                  function() {
+                    $(this).css('color', darkestGrey);
+                  }, function() {
+                    $(this).css('color', darkishGrey);
+                  });
+                $languageIcon.hover(
+                  function() {
+                    $(this).css('color', darkestGrey);
+                  }, function() {
+                    $(this).css('color', darkishGrey);
+                  });
+                $arrowDown.hover(
+                  function() {
+                    $(this).css('color', darkestGrey);
+                  }, function() {
+                    $(this).css('color', darkishGrey);
+                  });
+                $signupBtn.hover(
+                  function() {
+                    $(this).css('box-shadow', 'inset 0 0 5px #666c70');
+                  }, function() {
+                    $(this).css({ 'border': '1px solid #666c70', 'box-shadow': 'none' });
+                  });
+              }
+
+              function depictTransparentNavbar() {
+                $navbar.css('background-color', 'transparent');
+                $weeblyLogo.attr('src', weeblyWhiteUrl);
+                $navbarTextItems.css('color', pureWhite);
+                $languageIcon.css('color', pureWhite);
+                $arrowDown.css('color', pureWhite);
+                $signupBtn.css({'color': pureWhite,
+                  'border': '2px solid #fff'
+                });
+
+                $navbarTextItems.hover(
+                  function() {
+                    $(this).css('color', pureWhite);
+                  }, function() {
+                    $(this).css('color', almostPureWhite);
+                  });
+                $languageIcon.hover(
+                  function() {
+                    $(this).css('color', pureWhite);
+                  }, function() {
+                    $(this).css('color', almostPureWhite);
+                  });
+                $arrowDown.hover(
+                  function() {
+                    $(this).css('color', pureWhite);
+                  }, function() {
+                    $(this).css('color', almostPureWhite);
+                  });
+                $signupBtn.hover(
+                  function() {
+                    $(this).css('box-shadow', 'inset 0 0 5px #fff');
+                  }, function() {
+                    $(this).css('border', '2px solid rgba(255,255,255,0.8)');
+                  });
+              }
+
+              $(document).scroll(function() {
+                scrollStart = $(this).scrollTop();
+                if(scrollStart > offsetTop) {
+                  $navbar.slideDown('slow', depictWhiteNavbar);
+                } else {
+                  depictTransparentNavbar();
+                }
+              });
+            })();
+
+            var VolumeSpeakersControl = (function() {
+              // chaching DOM
+              var $section8 = $('#section8');
+              var $videoContainer = $('.video-container');
+              var $video = $videoContainer.find('video');
+              var $videoSrc = $video.find('source');
+              var $sentence = $('.text-container__statement');
+              var $quotation = $('.text-container__quotation');
+              var $speakerName = $('.text-container__quotation-person');
+              var $volumeIcon = $videoContainer.find('img');
+              var $navbarDots = $('.navbar-dots');
+              var $firstDot = $('.navbar-dots__first');
+              var $secondDot = $('.navbar-dots__second');
+              var $thirdDot = $('.navbar-dots__third');
+
+              // string variables definitions
+              var volumeUpIconPath = 'assets/images/volume-up-48px.svg';
+              var volumeOffIconPath = 'assets/images/volume-off-48px.svg';
+              var firstVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/olive-aloe.mp4';
+              var secondVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/montainer.mp4';
+              var thirdVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/alibi.mp4';
+              var firstQuotation = 'They want you to succeed.They want you to be your own boss.';
+              var secondQuotation = 'Weebly gives our customers confidence in our company.';
+              var thirdQuotation = 'You have exposure to millions and millions of people.';
+              var firstSpeakerName = 'VANESSA';
+              var secondSpeakerName = 'PATRICK';
+              var thirdSpeakerName = 'Chris';
+
+              // function definitions
+              function switchVolume() {
+                if ($volumeIcon.attr('src') === volumeOffIconPath) {
+                  $volumeIcon.attr('src', volumeUpIconPath);
+                  $video.prop('muted', false);
+                } else {
+                  $volumeIcon.attr('src', volumeOffIconPath);
+                  $video.prop('muted', true);
+                }
+              }
+
+              function renderContent(videoUrl, quotation, speaker) {
+                if (!$(this).hasClass('active-dot')) {
+                  $video.add($quotation).add($sentence).add($speakerName).fadeOut(function() {
+                    $video[0].load();
+                    $videoSrc.attr('src', videoUrl);
+                    $(this).addClass('active-dot');
+                    $(this).siblings().removeClass('active-dot');
+                    $quotation.text(quotation);
+                    $speakerName.text(speaker);
+                  }.bind(this)).fadeIn();
+                }
+              }
+
+              // event handlers
+              $videoContainer.on('click', switchVolume);
+
+              $firstDot.on('click', function(event) {
+                event.preventDefault();
+                renderContent.call(this, firstVideoUrl, firstQuotation, firstSpeakerName);
+              });
+
+              $secondDot.on('click', function(event) {
+                event.preventDefault();
+                renderContent.call(this, secondVideoUrl, secondQuotation, secondSpeakerName);
+              });
+              $thirdDot.on('click', function(event) {
+                event.preventDefault();
+                renderContent.call(this, thirdVideoUrl, thirdQuotation, thirdSpeakerName);
+              });
+            })();
+          });
+        </script>
+
+      </body>
+      </html>
