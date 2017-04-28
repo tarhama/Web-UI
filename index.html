@@ -131,13 +131,13 @@
                     <div class="home-themes-container">
                       <div class="home-themes_tabs-container">
                         <nav class="tabs">
-                          <a class="tabs_item" href="">featured</a>
-                          <a class="tabs_item" href="">online store</a>
-                          <a class="tabs_item" href="">business</a>
-                          <a class="tabs_item" href="">portfolio</a>
-                          <a class="tabs_item" href="">personal</a>
-                          <a class="tabs_item" href="">event</a>
-                          <a class="tabs_item" href="">blog</a>
+                          <a class="tabs_item" href="#featured" title="featured">featured</a>
+                          <a class="tabs_item" href="#store" title="store">online store</a>
+                          <a class="tabs_item" href="#business" title="business">business</a>
+                          <a class="tabs_item" href="#portfolio" title="portfolio">portfolio</a>
+                          <a class="tabs_item" href="#personal" title="personal">personal</a>
+                          <a class="tabs_item" href="#event" title="event">event</a>
+                          <a class="tabs_item" href="#blog" title="blog">blog</a>
                         </nav>
                       </div>
                       <div class="home-themes_tabs-content">
@@ -145,36 +145,6 @@
                         <!-- change pics for this section, there are pics from PERSONAL id -->
                         <div id="featured" class="tab-content_item">
                           <div class="tab-content_item-container">
-                            <div class="home-themes_theme-container">
-                              <div class="theme-poster">
-                                <img src="./assets/images/sect2_1.jpg">
-                              </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                              <div class="theme-poster">
-                                <img src="./assets/images/sect2_2.jpg">
-                              </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                              <div class="theme-poster">
-                                <img src="./assets/images/sect2_3.jpg">
-                              </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                              <div class="theme-poster">
-                                <img src="./assets/images/sect2_4.jpg">
-                              </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                              <div class="theme-poster">
-                                <img src="./assets/images/sect2_5.jpg">
-                              </div>
-                            </div>
-                            <div class="home-themes_theme-container">
-                              <div class="theme-poster">
-                                <img src="./assets/images/sect2_6.jpg">
-                              </div>
-                            </div>
                           </div>
                           <a class="page-btn">More Featured Themes</a>
                         </div>
@@ -184,6 +154,56 @@
                   </div>
                 </section>
               </div>
+
+              <script>
+
+                $(function() {  
+
+                  var featured = [
+                    'assets/images/sect2_1.jpg',
+                    'assets/images/sect2_2.jpg',
+                    'assets/images/sect2_3.jpg',
+                    'assets/images/sect2_4.jpg',
+                    'assets/images/sect2_5.jpg',
+                    'assets/images/sect2_6.jpg'
+                    ];
+                                
+
+                    var frag = document.createDocumentFragment();
+
+                    $.each(featured, function (i, value) {
+                      var div1 = document.createElement("div");
+                      div1.className = "home-themes_theme-container";
+                      var div2 = document.createElement("div");
+                      div2.className = "theme-poster";
+                      var itemImg = document.createElement("img");
+                      itemImg.src = value;
+
+                      div2.appendChild (itemImg );
+                      div1.appendChild( div2 );
+                      frag.appendChild( div1 );
+
+                    });
+
+                    $(".tab-content_item-container")[ 0 ].appendChild( frag );
+
+                  
+
+                  // !!! RATHER USE CODE ABOVE, WHERE APPEND ALL ELEMENTS TO THE DOM AT ONCE !!!!!
+
+                    // $.each(featured, function (i, value) {
+                    //   $(".tab-content_item-container").append('<div class="home-themes_theme-container">\
+                    //     <div class="theme-poster">\
+                    //     <img src=' + value + '>\
+                    //     </div>\
+                    //     </div>\
+                    //     ');
+                    // }); 
+                  }
+                  );
+
+              </script>
+
               <!-- END OF SECTION 2 -->
 
               <!-- SECTION 3 -->
@@ -193,7 +213,7 @@
                     var height = $(window).scrollTop();
 
                     //TO FIND OUT THE HEIGHT OF AN ELEMENT
-                    console.log($(this).scrollTop());
+                    //console.log("height scrollTop: " + $(this).scrollTop());
 
                    /* SECTION 2 ANIMATE */
                    if (height > 500) {
@@ -211,11 +231,11 @@
                   }
 
                   if (height > 2800) {
-                      $('.page-section-4 .page-content').addClass('checklist-transition');
-                      $('.page-section-4 .item-shades').addClass('image-transition');
-                      $('.page-section-4 .item-email-roi').addClass('image-transition1');
-                      $('.page-section-4 .item-email-performance').addClass('image-transition2');
-                      $('.page-section-4 .item-email').addClass('image-transition3');
+                    $('.page-section-4 .page-content').addClass('checklist-transition');
+                    $('.page-section-4 .item-shades').addClass('image-transition');
+                    $('.page-section-4 .item-email-roi').addClass('image-transition1');
+                    $('.page-section-4 .item-email-performance').addClass('image-transition2');
+                    $('.page-section-4 .item-email').addClass('image-transition3');
 
                   }
                   /* SECTION 5 ANIMATE */
@@ -229,9 +249,9 @@
 
                   /* SECTION 5 ANIMATE */
                   if (height > 4660) {
-                      $('.page-section-6 .page-text.opacity').addClass('is-active');
-                      $('.page-section-6 .page-title.opacity').addClass('tabs-transition');
-                      $('.page-section-6 .page-btns.opacity').addClass('btn-active');
+                    $('.page-section-6 .page-text.opacity').addClass('is-active');
+                    $('.page-section-6 .page-title.opacity').addClass('tabs-transition');
+                    $('.page-section-6 .page-btns.opacity').addClass('btn-active');
                   }
                   /* END OF SECTION 7 ANIMATE */
 
@@ -406,11 +426,17 @@
                       html = document.documentElement;
                       var height = Math.max( body.scrollHeight, body.offsetHeight,
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+                      // console.log("height math: " + height);
+
                       height = height - $(window).height();
 
                       var top = $(window).scrollTop();
 
                       var scroll = (height - top)/(height);
+                      // console.log("scroll: " + scroll);
+                      // console.log("top(height scrollTop): " + top);
+                      // console.log("height: " + height);
 
                       $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
                       $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
@@ -420,11 +446,9 @@
                         $(".mobile-iphone").css({
                           'transform': 'translateY(' + (scroll - 0.4) *200 + 'vh) rotate('+ (scroll - 1) *-30 + 'deg)',
                           'transitionDuration': '0.6s'
-                          //'transform': 'rotate('+ scroll *-15 + 'deg)'
                         });
-                        // $(".mobile-iphone").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s', transform: 'rotate('+scroll *20 + 'deg)' });
                         $(".mobile-iphone02").css({
-                          'transform': 'translateY(' + (scroll - 0.1) *120 + 'vh) rotate('+ scroll *-15 + 'deg)',
+                          'transform': 'translateY(' + (scroll - 0.1) *120 + 'vh) rotate('+ scroll *-15 + 'deg) ',
                           'transitionDuration': '0.6s'
                         });
                         $(".mobile-android").css({

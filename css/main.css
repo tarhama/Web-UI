@@ -987,7 +987,7 @@ div {
 
 /* STYLES FOR SECTION 7 */
 
-.landing-page-text__link {
+.landing-page-text .landing-page-text__link {
     text-decoration: underline;
     text-transform: uppercase;
     color: #666c70;
