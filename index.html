@@ -403,7 +403,6 @@
               <!-- END OF SECTION 7 -->
 
               <!-- SECTION 8 -->
-              <div id="section8">
                 <div id="section8">
                   <div class="video-container">
                     <video class="video-container_video" autoplay loop muted>
@@ -425,7 +424,6 @@
                     </nav>
                   </div>
                 </div>
-              </div>
               <!-- END OF SECTION 8 -->
 
               <!-- SECTION 9 -->
@@ -434,9 +432,9 @@
                   <h2 class="section9-h2 text-center">Features to start, sell & grow</h2>
                   <div>
                     <div class="flex justify-content_space-between align-ithem_center font-weight-700">
-                      <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">Website</h3>
-                      <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">eCommerce</h3>
-                      <h3 class="large-35px flex align-ithem_center"><img src="assets/images/circle-check.svg" class="pr-2">Marketing</h3>
+                      <h3 class="large-35px flex align-ithem_center"><img src="./assets/images/circle-check.svg" class="pr-2">Website</h3>
+                      <h3 class="large-35px flex align-ithem_center"><img src="./assets/images/circle-check.svg" class="pr-2">eCommerce</h3>
+                      <h3 class="large-35px flex align-ithem_center" style="transform: translateX(-103px);"><img src="./assets/images/circle-check.svg" class="pr-2">Marketing</h3>
                     </div>
                     <div class="flex justify-content_space-between align-ithem_center">
                       <ul class="grey-li line-height-1_5-li">
@@ -543,7 +541,7 @@
                     <span class="blue-circle-border"><i class="fa fa-instagram"></i></span>
                   </span>
                   <span class="footer_dropdown pr-2">
-                    <span class="footer_links"><a href="#">English</a>  <span class="small">&#9660;</span></span>
+                    <span class="footer_links footer_dropdown_links pointer"><a>English</a>  <span class="small">&#9660;</span></span>
                     <div class="footer_dropdown__content">
                       <ul class="li_no-decoration">
                         <li>English</li>
@@ -565,7 +563,26 @@
 
             <script type="text/javascript">
 
+
+
               $(document).ready(function() {
+
+                function toggle_dropdown_opacity(){
+                  $('.footer_dropdown__content').animate({
+                    opacity: "toggle"
+                  },200);
+                }
+
+                $(document).on('click', function (e) {
+                  if((!$(e.target).is('.footer_dropdown_links a') && !$(e.target).is('.footer_dropdown_links .small')) && $('.footer_dropdown__content').is(":visible")){
+                    toggle_dropdown_opacity();
+                  }
+                });
+
+                $('.footer_dropdown_links').on('click',function() {
+                  toggle_dropdown_opacity();
+                });
+
                 'use strict';
                 var LanguageDropdown = (function(){
                   var $icons = $('.language, .arrow-drop-down');
@@ -581,7 +598,8 @@
                       $dropDown.slideUp();
                     }
                   });
-                })();
+
+                });
 
                 var NavbarRoller = (function() {
               // variables definitions
