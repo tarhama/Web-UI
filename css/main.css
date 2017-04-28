@@ -16,7 +16,10 @@ a:active {
     text-decoration: none;
 }
 
-/* start of bavigation bar part */
+.no-decoration {
+    text-decoration: none;
+}
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -217,6 +220,11 @@ ul {
 
 .link-btn {
     text-decoration: underline;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .blue {
@@ -224,7 +232,7 @@ ul {
 }
 
 .white {
-    color:white;
+    color:white!important;
 }
 
 .bg-white {
@@ -237,6 +245,10 @@ ul {
 
 .green {
     color: #56d090;
+}
+
+.orange{
+    color: #F1C40F;
 }
 
 .btn {
@@ -277,18 +289,31 @@ ul {
     background-color: #56d090;
 }
 
+.page-content{
+    max-width: 550px;
+    opacity: 0;
+}
+
+
 .page-container {
     width: calc(100% - 320px);
     max-width: 1360px;
     margin: auto;
 }
 
-.page-content {
-    max-width: 540px;
-}
-
 .relative {
     position: relative;
+}
+
+.video {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    top: -200px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
 }
 
 .ml-a {
@@ -301,15 +326,23 @@ ul {
     font-size: 53px;
     font-weight: 900;
     line-height: 1.2em;
-    opacity: 0;
-    transform: translateX(20px);
 }
 
 .checklist {
     margin-bottom: 60px;
     max-width: 400px;
-    opacity: 0;
-    transform: translateX(20px);
+}
+
+.transform-X_1 {
+    transform: translateX(50px);
+}
+
+.transform-X_2 {
+    transform: translateX(-50px);
+}
+
+.transform-Y_1 {
+    transform: translateY(50px);
 }
 
 .checklist__item {
@@ -328,11 +361,35 @@ ul {
     transform: translateX(50px);
 }
 
+.image-items2 {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
 .image-transition {
     opacity: 1;
     transform: translateX(0px);
     transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1);
     transition: opacity 0.425s ease-out 0.2s, transform 0.425s ease-out 0.2s;
+}
+
+.image-transition1 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.3s, transform 0.425s ease-out 0.3s;
+}
+
+.image-transition2 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.35s, transform 0.425s ease-out 0.35s;
+}
+
+.image-transition3 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.4s, transform 0.425s ease-out 0.4s;
 }
 
 .checklist-transition {
@@ -494,6 +551,10 @@ div {
 
 .m-a{
     margin:auto;
+}
+
+.m-0 {
+    margin: 0;
 }
 
 .container {
@@ -809,12 +870,14 @@ div {
 
 /* END OF STYLES FOR SECTION 2 */
 
+
 /* STYLES FOR SECTION 5 */
 
 .section-5 {
     background-color: #807FFF;
     position: relative;
     padding: 280px 0;
+    overflow: hidden;
 }
 
 .landing-page-content {
@@ -874,7 +937,7 @@ div {
 .mobile-iphone {
     z-index: 4;
     display: block;
-    top: -110px;
+    top: 220px;
     left: calc(50% + 100px);
     width: 492px;
     height: 821px;
@@ -883,7 +946,7 @@ div {
 .mobile-iphone02 {
     z-index: 3;
     top: -460px;
-    left: calc(50% - 250px);
+    left: calc(50% - 200px);
     width: 538px;
     height: 795px;
 }
@@ -895,6 +958,7 @@ div {
     left: calc(50% - 10px);
     width: 388px;
     height: 815px;
+    position: absolute;
 }
 
 .mobile-nexus {
@@ -906,6 +970,32 @@ div {
 }
 
 /* END OF STYLES FOR SECTION 5 */
+
+/* STYLES FOR SECTION 6 */
+#section6 {
+    height: 80vh;
+    overflow-y: hidden;
+    z-index: 1
+}
+
+.content-text {
+    max-width: 1150px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.75
+}
+
+.page-text {
+    font-size: 20px;
+    line-height: 1.75em;
+    font-weight: 300;
+}
+
+/*.page-title h2 {*/
+    /*padding-bottom: 60px;*/
+/*}*/
+/* END OF STYLES FOR SECTION 6 */
+
 
 /* STYLES FOR SECTION 7 */
 
