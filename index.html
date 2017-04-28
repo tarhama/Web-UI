@@ -186,7 +186,6 @@
                     });
 
                     $(".tab-content_item-container")[ 0 ].appendChild( frag );
-
                   
 
                   // !!! RATHER USE CODE ABOVE, WHERE APPEND ALL ELEMENTS TO THE DOM AT ONCE !!!!!
@@ -211,9 +210,6 @@
                 <script>
                   $(window).scroll(function () {
                     var height = $(window).scrollTop();
-
-                    //TO FIND OUT THE HEIGHT OF AN ELEMENT
-                    //console.log("height scrollTop: " + $(this).scrollTop());
 
                    /* SECTION 2 ANIMATE */
                    if (height > 500) {
@@ -427,16 +423,11 @@
                       var height = Math.max( body.scrollHeight, body.offsetHeight,
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-                      // console.log("height math: " + height);
-
                       height = height - $(window).height();
 
                       var top = $(window).scrollTop();
 
-                      var scroll = (height - top)/(height);
-                      // console.log("scroll: " + scroll);
-                      // console.log("top(height scrollTop): " + top);
-                      // console.log("height: " + height);
+                      var scroll = (height - top)/(height); 
 
                       $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
                       $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
