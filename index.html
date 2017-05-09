@@ -160,12 +160,12 @@
                 $(function() {  
 
                   var featured = [
-                    'assets/images/sect2_1.jpg',
-                    'assets/images/sect2_2.jpg',
-                    'assets/images/sect2_3.jpg',
-                    'assets/images/sect2_4.jpg',
-                    'assets/images/sect2_5.jpg',
-                    'assets/images/sect2_6.jpg'
+                    'assets/images/featured_1.jpg',
+                    'assets/images/featured_2.jpg',
+                    'assets/images/featured_3.jpg',
+                    'assets/images/featured_4.jpg',
+                    'assets/images/featured_5.jpg',
+                    'assets/images/featured_6.jpg'
                     ];
                                 
 
@@ -179,7 +179,7 @@
                       var itemImg = document.createElement("img");
                       itemImg.src = value;
 
-                      div2.appendChild (itemImg );
+                      div2.appendChild( itemImg );
                       div1.appendChild( div2 );
                       frag.appendChild( div1 );
 
@@ -187,17 +187,6 @@
 
                     $(".tab-content_item-container")[ 0 ].appendChild( frag );
                   
-
-                  // !!! RATHER USE CODE ABOVE, WHERE APPEND ALL ELEMENTS TO THE DOM AT ONCE !!!!!
-
-                    // $.each(featured, function (i, value) {
-                    //   $(".tab-content_item-container").append('<div class="home-themes_theme-container">\
-                    //     <div class="theme-poster">\
-                    //     <img src=' + value + '>\
-                    //     </div>\
-                    //     </div>\
-                    //     ');
-                    // }); 
                   }
                   );
 
@@ -235,7 +224,7 @@
 
                   }
                   /* SECTION 5 ANIMATE */
-                  if (height > 4100) {
+                  if (height > 3800) {
                     $('.section-5 .landing-page-text.opacity').addClass('is-active');
                     $('.section-5 .landing-page-title.opacity').addClass('tabs-transition');
                     $('.section-5 .state-btn.opacity').addClass('btn-active');
@@ -243,13 +232,13 @@
                   }
                   /* END OF SECTION 5 ANIMATE */
 
-                  /* SECTION 5 ANIMATE */
+                  /* SECTION 6 ANIMATE */
                   if (height > 4660) {
                     $('.page-section-6 .page-text.opacity').addClass('is-active');
                     $('.page-section-6 .page-title.opacity').addClass('tabs-transition');
                     $('.page-section-6 .page-btns.opacity').addClass('btn-active');
                   }
-                  /* END OF SECTION 7 ANIMATE */
+                  /* END OF SECTION 6 ANIMATE */
 
                   /* SECTION 7 ANIMATE */
                   if (height > 5300) {
