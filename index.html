@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="data/navbar.js" /></script>
+  <script src="data/section8.js" /></script>
   <meta charset="UTF-8">
 </head>
 <body>
@@ -25,18 +27,7 @@
           <li class="language-link-top">
             <i class="material-icons language">language</i>
             <i class="material-icons arrow-drop-down">arrow_drop_down</i>
-            <div class="dropdown-content">
-              <a href="#">Arabic</a>
-              <a href="#">Bengali</a>
-              <a href="#">Chinese</a>
-              <a href="#">English</a>
-              <a href="#">Hindi</a>
-              <a href="#">Japanese</a>
-              <a href="#">Portuguese</a>
-              <a href="#">Punjabi/Lahnda</a>
-              <a href="#">Russian</a>
-              <a href="#">Spanish</a>
-            </div>
+            <div class="dropdown-content"></div>
             <img src="assets/images/chevron.svg" alt="chevron" class="dropdown-content__chevron">
           </li>
           <li class="navbar__login"><a href="#">Log In</a></li>
@@ -157,7 +148,7 @@
 
               <script>
 
-                $(function() {  
+                $(function() {
 
                   var featured = [
                     'assets/images/featured_1.jpg',
@@ -167,7 +158,7 @@
                     'assets/images/featured_5.jpg',
                     'assets/images/featured_6.jpg'
                     ];
-                                
+
 
                     var frag = document.createDocumentFragment();
 
@@ -186,7 +177,7 @@
                     });
 
                     $(".tab-content_item-container")[ 0 ].appendChild( frag );
-                  
+
                   }
                   );
 
@@ -416,7 +407,7 @@
 
                       var top = $(window).scrollTop();
 
-                      var scroll = (height - top)/(height); 
+                      var scroll = (height - top)/(height);
 
                       $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
                       $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
@@ -519,7 +510,7 @@
 
 
               </div>
-              <!-- END OF SECTION 9 -->          
+              <!-- END OF SECTION 9 -->
 
             <!-- SECTION FOOTER -->
             <footer id="footer" class="small">
@@ -608,8 +599,7 @@
             <!-- END OF SECTION FOOTER -->
 
             <script type="text/javascript">
-
-
+              'use strict';
 
               $(document).ready(function() {
 
@@ -629,11 +619,18 @@
                   toggle_dropdown_opacity();
                 });
 
-                'use strict';
-                var LanguageDropdown = (function(){
+                var LanguageDropdown = (function(nav) {
+                  var dropdownString ='';
                   var $icons = $('.language, .arrow-drop-down');
+                  var $dropdownWrapper = $('.dropdown-content');
                   var $dropDown = $('.dropdown-content, .dropdown-content__chevron');
                   var dropdownStuff = '.language,.arrow-drop-down,.dropdown-content,.dropdown-content__chevron';
+                  var LanguagesArray = nav.languages;
+
+                  LanguagesArray.forEach(function(currLang, index, all) {
+                    dropdownString += '<a href="#">' + currLang.language + '</a>';
+                  });
+                  $dropdownWrapper.html(dropdownString);
 
                   $icons.on('click', function() {
                     $dropDown.slideToggle();
@@ -644,9 +641,9 @@
                       $dropDown.slideUp();
                     }
                   });
-                })();
+                })(NavbarData);
 
-                var NavbarRoller = (function() {
+              var NavbarRoller = (function() {
               // variables definitions
               var scrollStart = 0;
               var offsetTop = 86; //navbar height + border
@@ -677,7 +674,7 @@
                 }
               });
 
-              function depictWhiteNavbar(){
+              function depictWhiteNavbar() {
                 $navbar.css('background-color', pureWhite);
                 $weeblyLogo.attr('src', weeblyBlueUrl);
                 $navbarTextItems.css('color', darkishGrey);
@@ -758,7 +755,7 @@
               });
             })();
 
-            var VolumeSpeakersControl = (function() {
+            var VolumeSpeakersControl = (function(data8) {
               // chaching DOM
               var $section8 = $('#section8');
               var $videoContainer = $('.video-container');
@@ -773,26 +770,55 @@
               var $secondDot = $('.navbar-dots__second');
               var $thirdDot = $('.navbar-dots__third');
 
+              // variables with data from section8.js
+              var people = data8.people;
+              var icons = data8.icons;
+
+              var iconUrls = icons.map(function(icon) {
+                return icon.url;
+              });
+              var videoUrls = people.map(function(person) {
+                return person.video_url;
+              });
+              var quotations = people.map(function(person) {
+                return person.quotation;
+              });
+              var names = people.map(function(person) {
+                return person.name;
+              });
+
+              var volumeUpIcon = iconUrls[0];
+              var volumeDownIcon = iconUrls[1];
+              var videoUrl1 = videoUrls[0];
+              var videoUrl2 = videoUrls[1];
+              var videoUrl3 = videoUrls[2];
+              var quotation1 = quotations[0];
+              var quotation2 = quotations[1];
+              var quotation3 = quotations[2];
+              var name1 = names[0];
+              var name2 = names[1];
+              var name3 = names[2];
+
               // string variables definitions
-              var volumeUpIconPath = 'assets/images/volume-up-48px.svg';
-              var volumeOffIconPath = 'assets/images/volume-off-48px.svg';
-              var firstVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/olive-aloe.mp4';
-              var secondVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/montainer.mp4';
-              var thirdVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/alibi.mp4';
-              var firstQuotation = 'They want you to succeed.They want you to be your own boss.';
-              var secondQuotation = 'Weebly gives our customers confidence in our company.';
-              var thirdQuotation = 'You have exposure to millions and millions of people.';
-              var firstSpeakerName = 'VANESSA';
-              var secondSpeakerName = 'PATRICK';
-              var thirdSpeakerName = 'Chris';
+              // var volumeUpIconPath = 'assets/images/volume-up-48px.svg';
+              // var volumeOffIconPath = 'assets/images/volume-off-48px.svg';
+              // var firstVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/olive-aloe.mp4';
+              // var secondVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/montainer.mp4';
+              // var thirdVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/alibi.mp4';
+              // var firstQuotation = 'They want you to succeed.They want you to be your own boss.';
+              // var secondQuotation = 'Weebly gives our customers confidence in our company.';
+              // var thirdQuotation = 'You have exposure to millions and millions of people.';
+              // var firstSpeakerName = 'VANESSA';
+              // var secondSpeakerName = 'PATRICK';
+              // var thirdSpeakerName = 'Chris';
 
               // function definitions
               function switchVolume() {
-                if ($volumeIcon.attr('src') === volumeOffIconPath) {
-                  $volumeIcon.attr('src', volumeUpIconPath);
+                if ($volumeIcon.attr('src') === volumeDownIcon) {
+                  $volumeIcon.attr('src', volumeUpIcon);
                   $video.prop('muted', false);
                 } else {
-                  $volumeIcon.attr('src', volumeOffIconPath);
+                  $volumeIcon.attr('src', volumeDownIcon);
                   $video.prop('muted', true);
                 }
               }
@@ -800,12 +826,12 @@
               function renderContent(videoUrl, quotation, speaker) {
                 if (!$(this).hasClass('active-dot')) {
                   $video.add($quotation).add($sentence).add($speakerName).fadeOut(function() {
-                    $video[0].load();
-                    $videoSrc.attr('src', videoUrl);
-                    $(this).addClass('active-dot');
-                    $(this).siblings().removeClass('active-dot');
-                    $quotation.text(quotation);
-                    $speakerName.text(speaker);
+                      $video[0].load();
+                      $videoSrc.attr('src', videoUrl);
+                      $(this).addClass('active-dot');
+                      $(this).siblings().removeClass('active-dot');
+                      $quotation.text(quotation);
+                      $speakerName.text(speaker);
                   }.bind(this)).fadeIn();
                 }
               }
@@ -815,18 +841,19 @@
 
               $firstDot.on('click', function(event) {
                 event.preventDefault();
-                renderContent.call(this, firstVideoUrl, firstQuotation, firstSpeakerName);
+                renderContent.call(this, videoUrl1, quotation1, name1);
               });
 
               $secondDot.on('click', function(event) {
                 event.preventDefault();
-                renderContent.call(this, secondVideoUrl, secondQuotation, secondSpeakerName);
+                renderContent.call(this, videoUrl2, quotation2, name2);
               });
               $thirdDot.on('click', function(event) {
                 event.preventDefault();
-                renderContent.call(this, thirdVideoUrl, thirdQuotation, thirdSpeakerName);
+                renderContent.call(this, videoUrl3, quotation3, name3);
               });
-            })();
+
+            })(Section8Data);
           });
         </script>
 
