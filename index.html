@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="data/navbar.js"></script>
+  <script src="data/section8.js"></script>
+
   <meta charset="UTF-8">
 </head>
 <body>
@@ -25,18 +28,7 @@
           <li class="language-link-top">
             <i class="material-icons language">language</i>
             <i class="material-icons arrow-drop-down">arrow_drop_down</i>
-            <div class="dropdown-content">
-              <a href="#">Arabic</a>
-              <a href="#">Bengali</a>
-              <a href="#">Chinese</a>
-              <a href="#">English</a>
-              <a href="#">Hindi</a>
-              <a href="#">Japanese</a>
-              <a href="#">Portuguese</a>
-              <a href="#">Punjabi/Lahnda</a>
-              <a href="#">Russian</a>
-              <a href="#">Spanish</a>
-            </div>
+            <div class="dropdown-content"></div>
             <img src="assets/images/chevron.svg" alt="chevron" class="dropdown-content__chevron">
           </li>
           <li class="navbar__login"><a href="#">Log In</a></li>
@@ -157,7 +149,7 @@
 
               <script>
 
-                $(function() {  
+                $(function() {
 
                   var featured = [
                     'assets/images/featured_1.jpg',
@@ -167,7 +159,7 @@
                     'assets/images/featured_5.jpg',
                     'assets/images/featured_6.jpg'
                     ];
-                                
+
 
                     var frag = document.createDocumentFragment();
 
@@ -186,7 +178,7 @@
                     });
 
                     $(".tab-content_item-container")[ 0 ].appendChild( frag );
-                  
+
                   }
                   );
 
@@ -416,7 +408,7 @@
 
                       var top = $(window).scrollTop();
 
-                      var scroll = (height - top)/(height); 
+                      var scroll = (height - top)/(height);
 
                       $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
                       $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
@@ -519,7 +511,7 @@
 
 
               </div>
-              <!-- END OF SECTION 9 -->          
+              <!-- END OF SECTION 9 -->
 
             <!-- SECTION FOOTER -->
             <footer id="footer" class="small">
@@ -608,8 +600,7 @@
             <!-- END OF SECTION FOOTER -->
 
             <script type="text/javascript">
-
-
+              'use strict';
 
               $(document).ready(function() {
 
@@ -629,206 +620,17 @@
                   toggle_dropdown_opacity();
                 });
 
-                'use strict';
-                var LanguageDropdown = (function(){
-                  var $icons = $('.language, .arrow-drop-down');
-                  var $dropDown = $('.dropdown-content, .dropdown-content__chevron');
-                  var dropdownStuff = '.language,.arrow-drop-down,.dropdown-content,.dropdown-content__chevron';
 
-                  $icons.on('click', function() {
-                    $dropDown.slideToggle();
-                  });
+                // LanguageDropdown and NavbarRoller here
 
-                  $('body').click(function(e){
-                    if ( !$(e.target).is(dropdownStuff)) {
-                      $dropDown.slideUp();
-                    }
-                  });
-                })();
 
-                var NavbarRoller = (function() {
-              // variables definitions
-              var scrollStart = 0;
-              var offsetTop = 86; //navbar height + border
 
-              var pureWhite = '#fff';
-              var almostPureWhite = 'rgba(255,255,255,0.8)';
-              var darkishGrey = '#666c70';
-              var lightishGrey = '#9ba0a3';
-              var darkestGrey = '#363b3e';
-              var navyBlue = '#2990ea';
-              var weeblyBlueUrl = 'assets/images/weebly-logo-blue.svg';
-              var weeblyWhiteUrl = 'assets/images/weebly-logo-white.svg';
-
-              // chaching DOM
-              var $navbar = $('.navbar');
-              var $weeblyLogo = $('.weebly-logo');
-              var $navbarTextItems = $('.navbar__list--left > li > a, .navbar__list .navbar__login > a');
-              var $languageIcon = $('.language');
-              var $arrowDown = $('.arrow-drop-down');
-              var $signupBtn = $('.navbar__signup-btn');
-
-              $( document ).ready(function() {
-                scrollStart = $(this).scrollTop();
-                if(scrollStart > offsetTop) {
-                  $navbar.slideDown('slow', depictWhiteNavbar);
-                } else {
-                  depictTransparentNavbar();
-                }
-              });
-
-              function depictWhiteNavbar(){
-                $navbar.css('background-color', pureWhite);
-                $weeblyLogo.attr('src', weeblyBlueUrl);
-                $navbarTextItems.css('color', darkishGrey);
-                $languageIcon.css('color', darkishGrey);
-                $arrowDown.css('color', darkishGrey);
-                $signupBtn.css({'color': '#2990ea',
-                  'border': '1px solid #666c70'
-                });
-                $navbarTextItems.hover(
-                  function() {
-                    $(this).css('color', darkestGrey);
-                  }, function() {
-                    $(this).css('color', darkishGrey);
-                  });
-                $languageIcon.hover(
-                  function() {
-                    $(this).css('color', darkestGrey);
-                  }, function() {
-                    $(this).css('color', darkishGrey);
-                  });
-                $arrowDown.hover(
-                  function() {
-                    $(this).css('color', darkestGrey);
-                  }, function() {
-                    $(this).css('color', darkishGrey);
-                  });
-                $signupBtn.hover(
-                  function() {
-                    $(this).css('box-shadow', 'inset 0 0 5px #666c70');
-                  }, function() {
-                    $(this).css({ 'border': '1px solid #666c70', 'box-shadow': 'none' });
-                  });
-              }
-
-              function depictTransparentNavbar() {
-                $navbar.css('background-color', 'transparent');
-                $weeblyLogo.attr('src', weeblyWhiteUrl);
-                $navbarTextItems.css('color', pureWhite);
-                $languageIcon.css('color', pureWhite);
-                $arrowDown.css('color', pureWhite);
-                $signupBtn.css({'color': pureWhite,
-                  'border': '2px solid #fff'
-                });
-
-                $navbarTextItems.hover(
-                  function() {
-                    $(this).css('color', pureWhite);
-                  }, function() {
-                    $(this).css('color', almostPureWhite);
-                  });
-                $languageIcon.hover(
-                  function() {
-                    $(this).css('color', pureWhite);
-                  }, function() {
-                    $(this).css('color', almostPureWhite);
-                  });
-                $arrowDown.hover(
-                  function() {
-                    $(this).css('color', pureWhite);
-                  }, function() {
-                    $(this).css('color', almostPureWhite);
-                  });
-                $signupBtn.hover(
-                  function() {
-                    $(this).css('box-shadow', 'inset 0 0 5px #fff');
-                  }, function() {
-                    $(this).css('border', '2px solid rgba(255,255,255,0.8)');
-                  });
-              }
-
-              $(document).scroll(function() {
-                scrollStart = $(this).scrollTop();
-                if(scrollStart > offsetTop) {
-                  $navbar.slideDown('slow', depictWhiteNavbar);
-                } else {
-                  depictTransparentNavbar();
-                }
-              });
-            })();
-
-            var VolumeSpeakersControl = (function() {
-              // chaching DOM
-              var $section8 = $('#section8');
-              var $videoContainer = $('.video-container');
-              var $video = $videoContainer.find('video');
-              var $videoSrc = $video.find('source');
-              var $sentence = $('.text-container__statement');
-              var $quotation = $('.text-container__quotation');
-              var $speakerName = $('.text-container__quotation-person');
-              var $volumeIcon = $videoContainer.find('img');
-              var $navbarDots = $('.navbar-dots');
-              var $firstDot = $('.navbar-dots__first');
-              var $secondDot = $('.navbar-dots__second');
-              var $thirdDot = $('.navbar-dots__third');
-
-              // string variables definitions
-              var volumeUpIconPath = 'assets/images/volume-up-48px.svg';
-              var volumeOffIconPath = 'assets/images/volume-off-48px.svg';
-              var firstVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/olive-aloe.mp4';
-              var secondVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/montainer.mp4';
-              var thirdVideoUrl = 'http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/alibi.mp4';
-              var firstQuotation = 'They want you to succeed.They want you to be your own boss.';
-              var secondQuotation = 'Weebly gives our customers confidence in our company.';
-              var thirdQuotation = 'You have exposure to millions and millions of people.';
-              var firstSpeakerName = 'VANESSA';
-              var secondSpeakerName = 'PATRICK';
-              var thirdSpeakerName = 'Chris';
-
-              // function definitions
-              function switchVolume() {
-                if ($volumeIcon.attr('src') === volumeOffIconPath) {
-                  $volumeIcon.attr('src', volumeUpIconPath);
-                  $video.prop('muted', false);
-                } else {
-                  $volumeIcon.attr('src', volumeOffIconPath);
-                  $video.prop('muted', true);
-                }
-              }
-
-              function renderContent(videoUrl, quotation, speaker) {
-                if (!$(this).hasClass('active-dot')) {
-                  $video.add($quotation).add($sentence).add($speakerName).fadeOut(function() {
-                    $video[0].load();
-                    $videoSrc.attr('src', videoUrl);
-                    $(this).addClass('active-dot');
-                    $(this).siblings().removeClass('active-dot');
-                    $quotation.text(quotation);
-                    $speakerName.text(speaker);
-                  }.bind(this)).fadeIn();
-                }
-              }
-
-              // event handlers
-              $videoContainer.on('click', switchVolume);
-
-              $firstDot.on('click', function(event) {
-                event.preventDefault();
-                renderContent.call(this, firstVideoUrl, firstQuotation, firstSpeakerName);
-              });
-
-              $secondDot.on('click', function(event) {
-                event.preventDefault();
-                renderContent.call(this, secondVideoUrl, secondQuotation, secondSpeakerName);
-              });
-              $thirdDot.on('click', function(event) {
-                event.preventDefault();
-                renderContent.call(this, thirdVideoUrl, thirdQuotation, thirdSpeakerName);
-              });
-            })();
           });
         </script>
+
+        <script src="js_parts/navbar/language_dropdown.js"></script>
+        <script src="js_parts/navbar/navbar_roller.js"></script>
+        <script src="js_parts/section8/volume_speaker_control.js"></script>
 
       </body>
       </html>
