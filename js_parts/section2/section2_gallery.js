@@ -22,10 +22,10 @@ $(function () {
 
       });
     };
-
+    
+    //GALLERY BUTTONS
     const gallButtons = (galleryBtn, myBtn) => {
 
-      //GALLERY BUTTON
       var gallBtnAnchor = document.createElement("a");
       gallBtnAnchor.className = "page-btn";      
       gallBtnAnchor.append( galleryBtn );
@@ -35,7 +35,6 @@ $(function () {
     
     var featuredFrag = document.createDocumentFragment();
     var featuredBtn = gall.gallery[ 0 ].btn_name;
-     console.log(featuredBtn);
 
     gallButtons (featuredBtn, featuredFrag);
 
@@ -68,7 +67,7 @@ $(function () {
 
     //GALLERY BUTTON
     var myBtn = document.createDocumentFragment();
-     var galleryBtn = gall.gallery[ myTitle ].btn_name;
+    var galleryBtn = gall.gallery[ myTitle ].btn_name;
 
     gallButtons (galleryBtn, myBtn);
 

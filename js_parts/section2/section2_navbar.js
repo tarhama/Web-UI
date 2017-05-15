@@ -1,10 +1,21 @@
-'use strict';
+'use strict';///
 
 $(function () {
 
+  //TITLE + TEXT
+  var ShowText = (function (txt) {
+
+    var showTitle = txt.titleSec2;
+    var showHeading = txt.headingSec2;
+
+    $("#section2 .landing-page-title").append(showTitle);
+    $("#section2 .landing-page-text").append(showHeading);
+  })(TextSec2);
+
+  //NAVBAR
   var ShowNavbar = (function (navb) {
-    var NavArray = navb.buttons;
-    var btnNavbar = document.createDocumentFragment();
+  var NavArray = navb.buttons;
+  var btnNavbar = document.createDocumentFragment();
 
     $.each( NavArray, function ( i, val ) {
 
@@ -15,10 +26,13 @@ $(function () {
       anchor.title = val.title;
       anchor.id = val.id;
 
-      btnNavbar.appendChild(anchor);
+      btnNavbar.append(anchor);
     })
 
-    $(".tabs")[ 0 ].appendChild(btnNavbar);
+    $(".tabs").append(btnNavbar);
+
+    //HIGHLIGHT FIRST NAVBAR BUTTON
+    $("a:first-child").addClass('active_class');
 
   })(NavbarSec2);  
 

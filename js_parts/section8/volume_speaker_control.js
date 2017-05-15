@@ -73,7 +73,6 @@ var VolumeSpeakersControl = (function(data8) {
     event.preventDefault();
     renderContent.call(this, videoUrl1, quotation1, name1);
   });
-
   $secondDot.on('click', function(event) {
     event.preventDefault();
     renderContent.call(this, videoUrl2, quotation2, name2);
