@@ -100,8 +100,4 @@ window.onload = function () {
     document.getElementsByClassName("section9-h2")[0].innerHTML = section9JSON.Header.HeaderText;
     document.getElementById('ActualLanguage').innerHTML = actualLanguage;
 
-
-
-
-
 };
