@@ -1,5 +1,15 @@
 'use strict';
 
+//TITLE
+var TextSec2 = (function () {
+  return {
+    titleSec2: 'A beautiful website starts here',
+    headingSec2: "Weebly's powerful drag and drop website builder" + 
+             "and guided set up get you" +
+             "to the finish line faster, no coding needed."
+  };
+})();
+
 //NAVBAR
 var NavbarSec2 = (function () {
   return {
