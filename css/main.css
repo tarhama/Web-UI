@@ -273,6 +273,25 @@ ul {
     background-size: 100%;
 }
 
+#section9-list-head h3 span::before {
+    content: ' ';
+    transform: translate(-150%,0);
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-image: url("../assets/images/circle-check.svg");
+    background-size: 100%;
+}
+
+#section9-list-head h3 span {
+    padding-left: 4rem;
+}
+
+#section9-list-head > h3:nth-child(3) > span{
+    transform: translate(-50%,0);
+}
+
+
 .page-section-4 .checklist .checklist__item ::before {
     background-image: url("../assets/images/circle-check-white.png");
 }
@@ -1295,5 +1314,14 @@ div {
 .weebly-btn:hover{
     background-color: #2990ea;
     transition: 0.5s;
+}
+
+.pl-4{
+    padding-right: 4rem;
+}
+
+#Footer_Links a{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
 }
 /* END OF STYLES FOR SECTION 9 */

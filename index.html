@@ -9,6 +9,7 @@
   <script src="data/navbar.js"></script>
   <script src="data/section8.js"></script>
   <script src="data/section2.js"></script>
+  <script src="data/section9.js"></script>
 
   <meta charset="UTF-8">
 </head>
@@ -415,49 +416,17 @@
               <!-- SECTION 9 -->
               <div id="section9">
                 <div class="section9-container m-a">
-                  <h2 class="section9-h2 text-center">Features to start, sell & grow</h2>
+                  <h2 class="section9-h2 text-center"></h2>
                   <div>
-                    <div class="flex justify-content_space-between align-ithem_center font-weight-700">
-                      <h3 class="large-35px flex align-ithem_center"><img src="./assets/images/circle-check.svg" class="pr-2">Website</h3>
-                      <h3 class="large-35px flex align-ithem_center"><img src="./assets/images/circle-check.svg" class="pr-2">eCommerce</h3>
-                      <h3 class="large-35px flex align-ithem_center" style="transform: translateX(-103px);"><img src="./assets/images/circle-check.svg" class="pr-2">Marketing</h3>
-                    </div>
+                    <div class="flex justify-content_space-between align-ithem_center font-weight-700" id="section9-list-head"></div>
                     <div class="flex justify-content_space-between align-ithem_center">
-                      <ul class="grey-li line-height-1_5-li">
-                        <li>Simple drag & drop editor</li>
-                        <li>Step-by-step guidance</li>
-                        <li>Pre-designed layout options</li>
-                        <li>Domain names & professional email</li>
-                        <li>Video backgrounds</li>
-                        <li>Site stats</li>
-                        <li>Create a blog</li>
-                      </ul>
-                      <ul class="grey-li line-height-1_5-li">
-                        <li>Unlimited products</li>
-                        <li>Optimized one-page checkout</li>
-                        <li>Automatic tax calculator</li>
-                        <li>Real time shipping rates</li>
-                        <li>Abandoned cart recovery</li>
-                        <li>Coupon codes</li>
-                        <li>Digital gift cards</li>
-                      </ul>
-                      <ul class="grey-li line-height-1_5-li">
-                        <li>Fully integrated with site & store</li>
-                        <li>Suggested emails created automatically</li>
-                        <li>Email to sales insights</li>
-                        <li>Branded billing emails</li>
-                        <li>Powerful app integrations</li>
-                        <li>SEO Guide & scorecard</li>
-                        <li>Automation for marketing autopilot</li>
-                      </ul>
+                      <ul id="LeftList" class="grey-li line-height-1_5-li"></ul>
+                      <ul id="CenterList" class="grey-li line-height-1_5-li"></ul>
+                      <ul id="RightList" class="grey-li line-height-1_5-li"></ul>
                     </div>
-                    <div class="flex justify-content_center align-ithem_center" style="margin-top: 100px; ">
-                      <a href="#" class="weebly-btn weebly-border-blue white-text">See all Features</a>
-                    </div>
+                    <div class="flex justify-content_center align-ithem_center" style="margin-top: 100px;" id="secetion9Btn"></div>
                   </div>
                 </div>
-
-
               </div>
               <!-- END OF SECTION 9 -->
 
@@ -466,59 +435,25 @@
               <div class="footer-content m-a">
                 <div class="flex justify-content_space-around align-ithem_baseline ">
                   <span>
-                    <ul class="footer_list">
-                      <li>Product</li>
-                      <li>Features</li>
-                      <li>Themes</li>
-                      <li>Pricing</li>
-                      <li>App Center</li>
-                      <li>Mobile Apps</li>
-                    </ul>
+                    <ul class="footer_list" id="Product"></ul>
                   </span>
                   <span>
-                    <ul class="footer_list">
-                      <li>resource</li>
-                      <li>Weebly Blog</li>
-                      <li>Inspiration Center</li>
-                      <li>Success Stories</li>
-                      <li>Developer Docs</li>
-                    </ul>
+                    <ul class="footer_list" id="Resources"></ul>
                   </span>
                   <span>
-                    <ul class="footer_list">
-                      <li>Support</li>
-                      <li>Support Center</li>
-                      <li>Community</li>
-                    </ul>
+                    <ul class="footer_list" id="Support"></ul>
                   </span>
                   <span>
-                    <ul class="footer_list">
-                      <li>partners</li>
-                      <li>Ambassadors</li>
-                      <li>Resellers</li>
-                      <li>Affiliates</li>
-                      <li>Designers</li>
-                      <li>Developer</li>
-                      <li>Education</li>
-                    </ul>
+                    <ul class="footer_list" id="Partners"></ul>
                   </span>
                   <span>
-                    <ul class="footer_list">
-                      <li>company</li>
-                      <li>About</li>
-                      <li>Careers</li>
-                      <li>Press</li>
-                      <li>Contact</li>
+                    <ul class="footer_list" id="Company">
                     </ul>
                   </span>
                 </div>
-                <hr style="border-bottom-width: 0px;">
+                <hr style="border-bottom-width: 0">
                 <div class="flex justify-content_space-between align-ithem_center down_footer">
-                  <span class="footer_links pl-2">
-                    <a href="#">© Weebly, Inc.</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Privacy Policy</a>
-                  </span>
+                  <span class="footer_links pl-2" id="Footer_Links"></span>
                   <span class="footer-social-network">
                     <span class="blue-circle-border"><i class="fa fa-twitter"></i></span>
                     <span class="blue-circle-border"><i class="fa fa-facebook"></i></span>
@@ -527,19 +462,9 @@
                     <span class="blue-circle-border"><i class="fa fa-instagram"></i></span>
                   </span>
                   <span class="footer_dropdown pr-2">
-                    <span class="footer_links footer_dropdown_links pointer"><a>English</a>  <span class="small">&#9660;</span></span>
+                    <span class="footer_links footer_dropdown_links pointer"><a id="ActualLanguage"></a><span class="small">&#9660;</span></span>
                     <div class="footer_dropdown__content">
-                      <ul class="li_no-decoration">
-                        <li>English</li>
-                        <li>English</li>
-                        <li>English</li>
-                        <li>English</li>
-                        <li>English</li>
-                        <li>English</li>
-                        <li>English</li>
-                        <li>English</li>
-                        <li>English</li>
-                      </ul>
+                      <ul class="li_no-decoration" id="LanguageList"></ul>
                     </div>
                   </span>
                 </div>
