@@ -11,8 +11,8 @@ var LanguageDropdown = (function(nav) {
   var LanguagesArray = nav.languages;
 
   // rendering DOM
-  LanguagesArray.forEach(function(currLang, index, all) {
-    dropdownString += '<a href="">' + currLang.language + '</a>';
+  LanguagesArray.forEach(function(language) {
+    dropdownString += '<a href="">' + language.language + '</a>';
   });
 
   $dropdownWrapper.html(dropdownString);
@@ -22,7 +22,7 @@ var LanguageDropdown = (function(nav) {
     $dropDown.slideToggle();
   });
 
-  $('body').click(function(e){
+  $('body').click(function(e) {
     if ( !$(e.target).is(dropdownStuff)) {
       $dropDown.slideUp();
     }
