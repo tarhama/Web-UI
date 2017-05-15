@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><script src="data/navbar.js"></script>
   <script src="data/section8.js"></script>
+  <script src="data/section2.js"></script>
 
   <meta charset="UTF-8">
 </head>
@@ -123,67 +124,14 @@
                     <div class="home-themes-container">
                       <div class="home-themes_tabs-container">
                         <nav class="tabs">
-                          <a class="tabs_item" href="#featured" title="featured">featured</a>
-                          <a class="tabs_item" href="#store" title="store">online store</a>
-                          <a class="tabs_item" href="#business" title="business">business</a>
-                          <a class="tabs_item" href="#portfolio" title="portfolio">portfolio</a>
-                          <a class="tabs_item" href="#personal" title="personal">personal</a>
-                          <a class="tabs_item" href="#event" title="event">event</a>
-                          <a class="tabs_item" href="#blog" title="blog">blog</a>
-                        </nav>
+                        </nav> 
                       </div>
                       <div class="home-themes_tabs-content">
-                        <!-- NAV FEATURED -->
-                        <!-- change pics for this section, there are pics from PERSONAL id -->
-                        <div id="featured" class="tab-content_item">
-                          <div class="tab-content_item-container">
-                          </div>
-                          <a class="page-btn">More Featured Themes</a>
-                        </div>
-                        <!-- END OF NAV FEATURED -->
                       </div>
                     </div>
                   </div>
                 </section>
               </div>
-
-              <script>
-
-                $(function() {
-
-                  var featured = [
-                    'assets/images/featured_1.jpg',
-                    'assets/images/featured_2.jpg',
-                    'assets/images/featured_3.jpg',
-                    'assets/images/featured_4.jpg',
-                    'assets/images/featured_5.jpg',
-                    'assets/images/featured_6.jpg'
-                    ];
-
-
-                    var frag = document.createDocumentFragment();
-
-                    $.each(featured, function (i, value) {
-                      var div1 = document.createElement("div");
-                      div1.className = "home-themes_theme-container";
-                      var div2 = document.createElement("div");
-                      div2.className = "theme-poster";
-                      var itemImg = document.createElement("img");
-                      itemImg.src = value;
-
-                      div2.appendChild( itemImg );
-                      div1.appendChild( div2 );
-                      frag.appendChild( div1 );
-
-                    });
-
-                    $(".tab-content_item-container")[ 0 ].appendChild( frag );
-
-                  }
-                  );
-
-              </script>
-
               <!-- END OF SECTION 2 -->
 
               <!-- SECTION 3 -->
@@ -537,6 +485,10 @@
         <script src="js_parts/navbar/language_dropdown.js"></script>
         <script src="js_parts/navbar/navbar_roller.js"></script>
         <script src="js_parts/section8/volume_speaker_control.js"></script>
+        <!-- SECTION 2 -->
+        <script src="js_parts/section2/section2_navbar.js"></script>
+        <script src="js_parts/section2/section2_gallery.js"></script>
+        <!-- END OF SECTION 2 -->
 
       </body>
       </html>

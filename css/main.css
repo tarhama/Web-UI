@@ -793,6 +793,10 @@ div {
     transition: color 0.2s ease-in-out;
 }
 
+.active_class {
+    color: #fff;
+}
+
 .tabs_item:last-child {
     margin-right: 0;
 }
@@ -858,6 +862,7 @@ div {
     border-radius: 25px;
     /* HOVER OFF */
     transition-duration: 0.75s;
+    margin: 0 auto;
 }
 
 .page-btn:hover {
