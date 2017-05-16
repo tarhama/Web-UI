@@ -1,3 +1,5 @@
+'use strict';
+
 var NavbarRoller = (function() {
 
   // variables definitions
