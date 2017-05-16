@@ -11,11 +11,11 @@ function loadJSON(callback, JSONpath) {
 
 loadJSON(function(response) {
     section9JSON = JSON.parse(response);
-},JSONpath =  "https://github.com/tarhama/Web-UI/blob/master/data/section9.json" );
+},JSONpath =  "./data/section9.json" );
 
 loadJSON(function(response) {
     footerJSON = JSON.parse(response);
-},JSONpath =  'https://github.com/tarhama/Web-UI/blob/master/data/footer.json' );
+},JSONpath =  './data/footer.json' );
 
 window.onload = function () {
 
