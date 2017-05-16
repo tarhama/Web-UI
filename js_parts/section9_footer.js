@@ -1,7 +1,23 @@
-window.onload = function () {
+function loadJSON(callback, JSONpath) {
 
-    var section9JSON = {"Header":{"HeaderText":"Features to start, sell & grow,","TextColor":"#fff"},"Lists":{"ListImg":"./assets/images/circle-check.svg","ListLeft":{"SheetList":["Simple drag & drop editor","Step-by-step guidance","Pre-designed layout options","Domain names & professional email","Video backgrounds","Site stats","Create a blog"],"ListHeader":"Website"},"ListCenter":{"ListImg":"./assets/images/circle-check.svg","SheetList":["Unlimited products","Optimized one-page checkout","Automatic tax calculator","Real time shipping rates","Abandoned cart recovery","Coupon codes","Digital gift cards"],"ListHeader":"eCommerce"},"ListRight":{"ListImg":"./assets/images/circle-check.svg","SheetList":["Fully integrated with site & store","Suggested emails created automatically","Email to sales insights","Branded billing emails","Powerful app integrations","SEO Guide & scorecard","Automation for marketing autopilot"],"ListHeader":"Marketing"}},"Button":{"Text":"See all Features\n\n","Class":"weebly-btn weebly-border-blue white-text"}};
-    var footerJSON = {"Footer":{"HeaderText":"Features to start, sell & grow,"},"Lists":{"PRODUCT":{"SheetList":["Product","Features","Themes","Pricing","App Center","Mobile Apps"]},"RESOURCE":{"SheetList":["resource","Weebly Blog","Inspiration Center","Success Stories","Developer Docs"]},"SUPPORT":{"SheetList":["Support","Support Center","Community"]},"PARTNERS":{"SheetList":["partners","Ambassadors","Resellers","Affiliates","Designers","Developer","Education"]},"COMPANY":{"SheetList":["company","About","Careers","Press","Contact"]},"LANGUAGE":{"SheetList":["Dansk","Deutsch","Español","Français","Italiano","日本語","한국어","Nederlands","Norsk","Polski","Português","Pусский","Svenska","Türkçe","中文 (繁體)","中文 (简体)"]}},"Links":{"Links":["© Weebly, Inc.","Terms","Privacy Policy"]}};
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', JSONpath, true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") callback(xobj.responseText);
+    };
+    xobj.send(null);
+}
+
+loadJSON(function(response) {
+    section9JSON = JSON.parse(response);
+},JSONpath =  "https://github.com/tarhama/Web-UI/blob/master/data/section9.json" );
+
+loadJSON(function(response) {
+    footerJSON = JSON.parse(response);
+},JSONpath =  'https://github.com/tarhama/Web-UI/blob/master/data/footer.json' );
+
+window.onload = function () {
 
     var leftList = section9JSON.Lists.ListLeft.SheetList;
     var centerList = section9JSON.Lists.ListCenter.SheetList;
@@ -17,12 +33,19 @@ window.onload = function () {
     var partnersList = footerJSON.Lists.PARTNERS.SheetList;
     var companyList = footerJSON.Lists.COMPANY.SheetList;
 
+    var footerArrayList  = [productList, resourcesList, supportList, partnersList, companyList];
+    var footerArrayStringList = ["Product", "Resources", "Support", "Partners", "Company"];
+
     var langugageList = footerJSON.Lists.LANGUAGE.SheetList;
     var actualLanguage = footerJSON.Lists.LANGUAGE.SheetList[0];
     var footerLinks = footerJSON.Links.Links;
 
-    var elementIdHead = "section9-list-head";
+    var footerSocialLinks = footerJSON.Links.SocialLink;
 
+    var elementIdHead = "section9-list-head";
+    var footerSocialLinkstag = "FooterSocialLinks";
+
+    var circleBorderClass = "blue-circle-border";
 
     function addLiToUl(elementList, elementId, elementHead, elementHeadId) {
 
@@ -61,7 +84,6 @@ window.onload = function () {
         button.appendChild(a).innerHTML = elementText;
         button.appendChild(a).className += elementClass;
         button.appendChild(a).href = "#";
-
     }
 
     function addLink(elementList, elementId, elementLink ) {
@@ -81,17 +103,33 @@ window.onload = function () {
         elementList.forEach(addLinks);
     }
 
+    function addCircleSocialLinks(elementSocialNetwork, elementTagID){
+
+        function addSocialLink(element) {
+            var span = document.createElement('span');
+            var i = document.createElement('i');
+            var spanTag = document.getElementById(elementTagID);
+            var childrenI = span.children;
+            elementSocialNetwork = element;
+
+            spanTag.appendChild(span).appendChild(i);
+            spanTag.lastChild.className += circleBorderClass;
+            childrenI[0].className += 'fa fa-' + elementSocialNetwork;
+            //document.querySelector('#' + footerSocialLinkstag + " span i").className += 'fa fa-' + elementSocialNetwork;
+        }
+
+        elementSocialNetwork.forEach(addSocialLink);
+    }
+
     addLiToUl(elementList = leftList, elementId = "LeftList", elementHead = leftListHead, elementHeadId = elementIdHead);
-    addLiToUl(centerList,"CenterList", elementHead = centerListHead, elementHeadId = elementIdHead);
-    addLiToUl(rightList,"RightList", elementHead = rightListHead, elementHeadId = elementIdHead);
+    addLiToUl(elementList = centerList, elementId = "CenterList", elementHead = centerListHead, elementHeadId = elementIdHead);
+    addLiToUl(elementList = rightList, elementId = "RightList", elementHead = rightListHead, elementHeadId = elementIdHead);
 
-    addLiToUl(elementList = productList, elementId = "Product");
-    addLiToUl(elementList = resourcesList, elementId = "Resources");
-    addLiToUl(elementList = supportList, elementId = "Support");
-    addLiToUl(elementList = partnersList, elementId = "Partners");
-    addLiToUl(elementList = companyList, elementId = "Company");
+    for (i=0; i< footerArrayList.length; i++){
+        addLiToUl(elementList = footerArrayList[i] , elementId = footerArrayStringList[i]);
+    }
 
-    addLiToUl(elementList = langugageList, 'LanguageList')
+    addLiToUl(elementList = langugageList, 'LanguageList');
 
     addButton(elementId = "secetion9Btn", elementClass = section9JSON.Button.Class, elementText = section9JSON.Button.Text);
 
@@ -100,4 +138,5 @@ window.onload = function () {
     document.getElementsByClassName("section9-h2")[0].innerHTML = section9JSON.Header.HeaderText;
     document.getElementById('ActualLanguage').innerHTML = actualLanguage;
 
+    addCircleSocialLinks(elementSocialNetwork = footerSocialLinks, elementTagID = footerSocialLinkstag);
 };

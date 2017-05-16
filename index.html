@@ -5,12 +5,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="./data/section3_4_6.js"></script>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/section9.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><script src="data/navbar.js"></script>
   <script src="data/section8.js"></script>
   <script src="data/section2.js"></script>
-  <script src="data/section9.js"></script>
+  <script src="js_parts/section9_footer.js"></script>
   <script src="data/section5.js"></script>
+
 
   <meta charset="UTF-8">
 </head>
@@ -338,19 +341,13 @@
                     <ul class="footer_list" id="Partners"></ul>
                   </span>
                   <span>
-                    <ul class="footer_list" id="Company">
-                    </ul>
+                    <ul class="footer_list" id="Company"></ul>
                   </span>
                 </div>
                 <hr style="border-bottom-width: 0">
                 <div class="flex justify-content_space-between align-ithem_center down_footer">
                   <span class="footer_links pl-2" id="Footer_Links"></span>
-                  <span class="footer-social-network">
-                    <span class="blue-circle-border"><i class="fa fa-twitter"></i></span>
-                    <span class="blue-circle-border"><i class="fa fa-facebook"></i></span>
-                    <span class="blue-circle-border"><i class="fa fa-youtube-square"></i></span>
-                    <span class="blue-circle-border"><i class="fa fa-google-plus"></i></span>
-                    <span class="blue-circle-border"><i class="fa fa-instagram"></i></span>
+                  <span class="footer-social-network" id="FooterSocialLinks">
                   </span>
                   <span class="footer_dropdown pr-2">
                     <span class="footer_links footer_dropdown_links pointer"><a id="ActualLanguage"></a><span class="small">&#9660;</span></span>
@@ -383,8 +380,6 @@
                 $('.footer_dropdown_links').on('click',function() {
                   toggle_dropdown_opacity();
                 });
-
-
                 // LanguageDropdown and NavbarRoller here
 
           });
