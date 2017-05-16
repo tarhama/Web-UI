@@ -13,6 +13,7 @@
   <script src="data/section2.js"></script>
   <script src="js_parts/section9_footer.js"></script>
   <script src="data/section5.js"></script>
+  <script src="data/section7.js"></script>
 
 
   <meta charset="UTF-8">
@@ -21,17 +22,10 @@
   <div class="header">
     <div class="navbar">
       <div class="navbar__container">
-        <ul class="navbar__list navbar__list--left">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Themes</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">More</a></li>
-        </ul>
-        <div class="navbar__list--center">
-          <img src="assets/images/weebly-logo-white.svg" alt="weebly-logo" class="weebly-logo">
-        </div>
+        <ul class="navbar__list navbar__list--left"></ul>
+        <div class="navbar__list--center"></div>
         <ul class="navbar__list navbar__list--right">
-          <li class="language-link-top">
+<!--           <li class="language-link-top">
             <i class="material-icons language">language</i>
             <i class="material-icons arrow-drop-down">arrow_drop_down</i>
             <div class="dropdown-content"></div>
@@ -40,7 +34,7 @@
           <li class="navbar__login"><a href="#">Log In</a></li>
           <li class="navbar__signup">
             <button class="navbar__signup-btn">Sign Up</button>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -128,7 +122,7 @@
                     <div class="home-themes-container">
                       <div class="home-themes_tabs-container">
                         <nav class="tabs">
-                        </nav> 
+                        </nav>
                       </div>
                       <div class="home-themes_tabs-content">
                       </div>
@@ -215,71 +209,14 @@
                 <section class="home-apps relative">
                   <div class="landing-page-container">
                     <div class="landing-page-content__centered">
-                      <h1 class="landing-page-title black opacity">Apps to connect your world</h1>
-                      <p class="landing-page-text gray opacity">Choose from over 200high-quality apps that make it
-                        simple to add advanced features like appointment scheduling, accounting, live chat and more.
-                        <a href="" class="landing-page-text__link">learn more</a>
+                      <h1 class="landing-page-title black opacity"></h1>
+                      <p class="landing-page-text gray opacity">
                       </p>
                     </div>
                     <div class="home-apps__item-container">
-                      <div class="home-apps__item home-apps__item-bottom">
-                        <img class="home-apps__img" src="./assets/images/bottom.jpg">
-                      </div>
-                      <div class="home-apps__item home-apps__item-mid">
-                        <img class="home-apps__img" src="./assets/images/mid.png">
-                      </div>
-                      <div class="home-apps__item home-apps__item-top">
-                        <img class="home-apps__img" src="./assets/images/top.png">
-                      </div>
-                      <div class="home-apps__item home-apps__item-featured">
-                        <img class="home-apps__img" src="./assets/images/featured.png">
-                      </div>
                     </div>
                   </div>
                 </section>
-
-                <script>
-
-                  $(function(){
-                    $(window).on('scroll', function() {
-                      var body = document.body,
-                      html = document.documentElement;
-                      var height = Math.max( body.scrollHeight, body.offsetHeight,
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-                      height = height - $(window).height();
-
-                      var top = $(window).scrollTop();
-
-                      var scroll = (height - top)/(height);
-
-                      $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
-                      $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
-                      $(".home-apps__item-featured").css({top: (scroll)*320 + 'px', transitionDuration: '0.6s' });
-
-                        //SECTION 5 ANIMATION
-                        $(".mobile-iphone").css({
-                          'transform': 'translateY(' + (scroll - 0.4) *200 + 'vh) rotate('+ (scroll - 1) *-30 + 'deg)',
-                          'transitionDuration': '0.6s'
-                        });
-                        $(".mobile-iphone02").css({
-                          'transform': 'translateY(' + (scroll - 0.1) *120 + 'vh) rotate('+ scroll *-15 + 'deg) ',
-                          'transitionDuration': '0.6s'
-                        });
-                        $(".mobile-android").css({
-                          'transform': 'translateY(' + (scroll - 0.2) *150 + 'vh) rotate('+ scroll *-15 + 'deg)',
-                          'transitionDuration': '0.6s'
-                        });
-                        $(".mobile-nexus").css({
-                          'transform': 'translateY(' + (scroll - 0.7) *70 + 'vh) rotate('+ (scroll - 0.5) *-25 + 'deg)',
-                          'transitionDuration': '0.6s'
-                        });
-
-                      }).trigger('scroll');
-                });
-
-                </script>
-
               </div>
               <!-- END OF SECTION 7 -->
 
@@ -385,18 +322,26 @@
           });
         </script>
 
+        <script src="js_parts/navbar/navbar_links.js"></script>
         <script src="js_parts/navbar/language_dropdown.js"></script>
         <script src="js_parts/navbar/navbar_roller.js"></script>
         <script src="js_parts/section8/volume_speaker_control.js"></script>
+
         <!-- SECTION 2 -->
-        <script src="js_parts/section2/section2_navbar.js"></script>
+        <!-- <script src="js_parts/section2/section2_navbar.js"></script>-->
         <script src="js_parts/section2/section2_gallery.js"></script>
+        <!-- pure javascript -->
+        <script src="js_parts/section2/section2_purejs.js"></script>
         <!-- END OF SECTION 2 -->
 
         <!-- SECTION 5 -->
         <script src="js_parts/section5/section5_text.js"></script>
         <script src="js_parts/section5/section5_background.js"></script>
         <!-- END OF SECTION 5 -->
+
+        <!-- SECTION 7 -->
+        <script src="js_parts/section7/section7_render.js"></script>
+        <!-- END OF SECTION 7 -->
 
       </body>
       </html>

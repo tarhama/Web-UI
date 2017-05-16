@@ -1,8 +1,11 @@
+'use strict';
+
 var LanguageDropdown = (function(nav) {
 
   // cahing DOM
   var $icons = $('.language, .arrow-drop-down');
   var $dropdownWrapper = $('.dropdown-content');
+  var $chevronTop = $('.dropdown-content__chevron');
   var $dropDown = $('.dropdown-content, .dropdown-content__chevron');
 
   // variables definitions
@@ -19,12 +22,18 @@ var LanguageDropdown = (function(nav) {
 
   // event handlers
   $icons.on('click', function() {
-    $dropDown.slideToggle();
+    if ($chevronTop.hasClass('rolled_down')) {
+      $dropDown.slideUp();
+    } else {
+      $chevronTop.addClass('rolled_down');
+      $dropDown.slideDown();
+    }
   });
 
   $('body').click(function(e) {
     if ( !$(e.target).is(dropdownStuff)) {
       $dropDown.slideUp();
+      $chevronTop.removeClass('rolled_down');
     }
   });
 
