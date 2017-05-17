@@ -1,0 +1,17 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background-color: #fff;
+  font-family: sans-serif, Georgia;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}

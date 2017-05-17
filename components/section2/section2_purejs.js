@@ -6,8 +6,8 @@
     var showTitle = val.titleSec2;
     var showHeading = val.headingSec2;
 
-    var titlSec2 = document.getElementById('section2').getElementsByClassName('landing-page-title');  
-    var headSec2 = document.getElementById('section2').getElementsByClassName('landing-page-text');
+    var titlSec2 = document.getElementById('section2').getElementsByClassName('section2-title');  
+    var headSec2 = document.getElementById('section2').getElementsByClassName('section2-text');
 
     titlSec2[0].innerHTML = showTitle;
     headSec2[0].innerHTML = showHeading;
@@ -42,3 +42,15 @@
     
 
   })(NavbarSec2);
+
+  $(window).scroll(function () {
+    var height = $(window).scrollTop();
+
+    /* SECTION 2 ANIMATE */
+    if (height > 500) {
+        $('.home-themes .tabs-container').addClass('tabs-transition');
+        $('.tabs-content').addClass('is-active');
+    }
+    /* END OF SECTION 2 ANIMATE */
+
+});

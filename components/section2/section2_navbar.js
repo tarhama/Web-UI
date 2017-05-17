@@ -2,14 +2,26 @@
 
 $(function () {
 
+  $(window).scroll(function () {
+    var height = $(window).scrollTop();
+
+    /* SECTION 2 ANIMATE */
+    if (height > 500) {
+        $('.home-themes .tabs-container').addClass('tabs-transition');
+        $('.tabs-content').addClass('is-active');
+    }
+    /* END OF SECTION 2 ANIMATE */
+
+});
+
   //TITLE + TEXT
   var ShowText = (function (txt) {
 
     var showTitle = txt.titleSec2;
     var showHeading = txt.headingSec2;
 
-    $("#section2 .landing-page-title").append(showTitle);
-    $("#section2 .landing-page-text").append(showHeading);
+    $("#section2 .section2-title").append(showTitle);
+    $("#section2 .section2-text").append(showHeading);
   })(TextSec2);
 
   //NAVBAR

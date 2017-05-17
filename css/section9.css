@@ -1,0 +1,79 @@
+/* STYLES FOR SECTION 9 */
+
+#section9{
+    background-color: #363b3e;
+    background-image: url("../assets/images/black-bg.jpg");
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+.section9-container{
+    max-width: 1360px;
+}
+
+.section9-h2{
+    font-size: 55px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.large-35px{
+    font-size: 35px;
+}
+
+.font-weight-700,
+.font-weight-700 h3{
+    font-weight: 700;
+}
+
+.grey-li > li{
+    list-style: none;
+    text-indent: .7rem;
+    margin-bottom: 15px;
+}
+
+.grey-li > li::before{
+    content: "● ";
+    color: grey;
+    margin-right: 2.0rem;
+}
+
+.line-height-1_5-li li{
+    line-height: 1.5;
+}
+
+.weebly-btn{
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 44px;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: 44px;
+}
+
+.weebly-border-blue{
+    border: 2px solid #2990ea;
+}
+
+.white-text{
+    color: #fff;
+}
+
+.weebly-btn:hover{
+    background-color: #2990ea;
+    transition: 0.5s;
+}
+
+.pl-4{
+    padding-right: 4rem;
+}
+
+#Footer_Links a{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+/* END OF STYLES FOR SECTION 9 */

@@ -1,0 +1,88 @@
+{
+  "Footer": {
+    "HeaderText": "Features to start, sell & grow,"
+  },
+  "Lists": {
+    "PRODUCT": {
+      "SheetList": [
+        "Product",
+        "Features",
+        "Themes",
+        "Pricing",
+        "App Center",
+        "Mobile Apps"
+      ]
+    },
+    "RESOURCE": {
+      "SheetList": [
+        "resource",
+        "Weebly Blog",
+        "Inspiration Center",
+        "Success Stories",
+        "Developer Docs"
+      ]
+    },
+    "SUPPORT": {
+      "SheetList": [
+        "Support",
+        "Support Center",
+        "Community"
+      ]
+    },
+    "PARTNERS": {
+      "SheetList": [
+        "partners",
+        "Ambassadors",
+        "Resellers",
+        "Affiliates",
+        "Designers",
+        "Developer",
+        "Education"
+      ]
+    },
+    "COMPANY": {
+      "SheetList": [
+        "company",
+        "About",
+        "Careers",
+        "Press",
+        "Contact"
+      ]
+    },
+    "LANGUAGE": {
+      "SheetList": [
+        "English",
+        "Dansk",
+        "Deutsch",
+        "Español",
+        "Français",
+        "Italiano",
+        "日本語",
+        "한국어",
+        "Nederlands",
+        "Norsk",
+        "Polski",
+        "Português",
+        "Pусский",
+        "Svenska",
+        "Türkçe",
+        "中文 (繁體)",
+        "中文 (简体)"
+      ]
+    }
+  },
+  "Links": {
+    "Links": [
+      "© Weebly, Inc.",
+      "Terms",
+      "Privacy Policy"
+    ],
+    "SocialLink": [
+      "twitter",
+      "facebook",
+      "youtube-square",
+      "google-plus",
+      "instagram"
+    ]
+  }
+}

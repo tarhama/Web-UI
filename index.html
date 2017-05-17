@@ -3,14 +3,25 @@
 <head>
   <title>Weebly website Builder: Create a Free Website, Store or Blog</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="./data/section3_4_6.js"></script>
+  <link rel="stylesheet" href="components/main/main.css">
+  <link rel="stylesheet" href="components/navbar/css/navbar.css"></link>
+  <link rel="stylesheet" href="components/section2/section2.css">
+  <link rel="stylesheet" href="components/section5/section5.css">
+  <link rel="stylesheet" href="components/section7/section7.css">
+  <link rel="stylesheet" href="components/section8/css/section8.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/section9.css">
+  <link rel="stylesheet" href="css/footer.css">
+
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><script src="data/navbar.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="data/section3.js"></script>
+  <script src="data/section4.js"></script>
+  <script src="data/section6.js"></script>
+  <script src="data/navbar.js"></script>
   <script src="data/section8.js"></script>
-  <script src="js_parts/section1/section1-data.js"></script>
   <script src="data/section2.js"></script>
-  <script src="data/section9.js"></script>
+  <script src="js_parts/section9_footer.js"></script>
   <script src="data/section5.js"></script>
   <script src="data/section7.js"></script>
 
@@ -19,20 +30,27 @@
 <body>
   <div class="header">
     <div class="navbar">
-      <div class="navbar__container">
-        <ul class="navbar__list navbar__list--left"></ul>
-        <div class="navbar__list--center"></div>
-        <ul class="navbar__list navbar__list--right">
-<!--           <li class="language-link-top">
+      <div class="container">
+        <ul class="list list-left">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+        <div class="list-center">
+          <img src="assets/images/weebly-logo-white.svg" alt="weebly-logo" class="weebly-logo" />
+        </div>
+        <ul class="list list-right">
+          <li class="language-link-top">
             <i class="material-icons language">language</i>
             <i class="material-icons arrow-drop-down">arrow_drop_down</i>
             <div class="dropdown-content"></div>
-            <img src="assets/images/chevron.svg" alt="chevron" class="dropdown-content__chevron">
+            <img src="assets/images/chevron.svg" alt="chevron" class="chevron-up">
           </li>
-          <li class="navbar__login"><a href="#">Log In</a></li>
-          <li class="navbar__signup">
-            <button class="navbar__signup-btn">Sign Up</button>
-          </li> -->
+          <li class="login"><a href="#">Log In</a></li>
+          <li class="signup">
+            <button class="signup-btn">Sign Up</button>
+          </li>
         </ul>
       </div>
     </div>
@@ -50,27 +68,27 @@
         <video id="section1_video" class="section1_video" autoplay loop muted>
         </video>
 
+
             </div>
             <!-- SECTION 2 -->
             <div id="section2">
               <section class="home-themes">
-                <div class="landing-page-container">
-                  <div class="landing-page-content__centered">
-                    <h1 class="landing-page-title"></h1>
-                    <h2 class="landing-page-text"></h2>
+                <div class="section2-container">
+                  <div class="section2-content-centered">
+                    <h1 class="section2-title"></h1>
+                    <h2 class="section2-text"></h2>
+                  </div>
+                  <div class="home-themes-container">
+                    <div class="tabs-container">
+                      <nav class="tabs"></nav>
                     </div>
-                    <div class="home-themes-container">
-                      <div class="home-themes_tabs-container">
-                        <nav class="tabs">
-                        </nav>
-                      </div>
-                      <div class="home-themes_tabs-content">
-                      </div>
+                    <div class="tabs-content">
                     </div>
                   </div>
-                </section>
-              </div>
-              <!-- END OF SECTION 2 -->
+                </div>
+              </section>
+            </div>
+            <!-- END OF SECTION 2 -->
 
               <!-- SECTION 3 -->
               <div id="section3">
@@ -78,7 +96,7 @@
                 <div class="page-container relative">
                   <div class="page-content transform-X_1">
                     <h2 class="page-title"></h2>
-                    <ul class="checklist">
+                    <ul id="checklist-section3" class="checklist">
                     </ul>
                     <div class="buttons">
                       <a class="btn white bg-blue" href=""></a>
@@ -98,7 +116,7 @@
                 <div class="page-container relative">
                   <div class="page-content ml-a transform-X_2">
                     <h2 class="page-title white-text "></h2>
-                    <ul class="checklist white-text">
+                    <ul id="checklist-section4" class="checklist white-text">
                     </ul>
                     <div class="buttons">
                       <a class="btn bg-white green" href=""></a>
@@ -113,11 +131,11 @@
             <!-- END OF SECTION 4 -->
 
             <!-- SECTION 5 -->
-            <div id="section5" class="section-5">
-              <div class="landing-page-container">
+            <div id="section5" class="section5">
+              <div class="section5-container">
                 <div class="landing-page-content">
-                  <h2 class="landing-page-title opacity"></h2>
-                  <p class="landing-page-text opacity"></p>
+                  <h2 class="section5-title opacity"></h2>
+                  <p class="section5-text opacity"></p>
                   <div class="state-btn opacity">
                   </div>
                   <div class="app-icon opacity">
@@ -145,15 +163,15 @@
             <!-- END OF SECTION 6 -->
 
               <!-- SECTION 7 -->
-              <div id="section7" class="section-7">
+              <div id="section7" class="section7">
                 <section class="home-apps relative">
-                  <div class="landing-page-container">
-                    <div class="landing-page-content__centered">
-                      <h1 class="landing-page-title black opacity"></h1>
-                      <p class="landing-page-text gray opacity">
+                  <div class="section7-container">
+                    <div class="section7-content-centered">
+                      <h1 class="section7-title black opacity"></h1>
+                      <p class="section7-text gray opacity">
                       </p>
                     </div>
-                    <div class="home-apps__item-container">
+                    <div class="item-container">
                     </div>
                   </div>
                 </section>
@@ -163,22 +181,22 @@
               <!-- SECTION 8 -->
               <div id="section8">
                   <div class="video-container">
-                    <video class="video-container_video" autoplay loop muted>
-                      <source src="http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/olive-aloe.mp4"
+                    <video class="video" autoplay loop muted>
+                      <source src=""
                       type="video/mp4">
                     </video>
-                    <div class="video-container__mute-icon">
+                    <div class="mute-icon">
                       <img src="assets/images/volume-off-48px.svg" alt="volume-off" />
                     </div>
                   </div>
                   <div class="text-container">
-                    <p class="text-container__statement">Join the <strong>millions</strong> of people doing what they love with Weebly</p>
-                    <q class="text-container__quotation">They want you to succeed. They want you to be your own boss.</q>
-                    <p class="text-container__quotation-person">VANESSA</p>
+                    <p class="statement">Join the <strong>millions</strong> of people doing what they love with Weebly</p>
+                    <q class="quotation"></q>
+                    <p class="speaker"></p>
                     <nav class="navbar-dots">
-                      <a  class="navbar-dots__first active-dot" href="#section8"></a>
-                      <a  class="navbar-dots__second" href="#section8"></a>
-                      <a  class="navbar-dots__third" href="#section8"></a>
+                      <a  class="first active-dot" href="#section8"></a>
+                      <a  class="second" href="#section8"></a>
+                      <a  class="third" href="#section8"></a>
                     </nav>
                   </div>
               </div>
@@ -218,19 +236,13 @@
                     <ul class="footer_list" id="Partners"></ul>
                   </span>
                   <span>
-                    <ul class="footer_list" id="Company">
-                    </ul>
+                    <ul class="footer_list" id="Company"></ul>
                   </span>
                 </div>
                 <hr style="border-bottom-width: 0">
                 <div class="flex justify-content_space-between align-ithem_center down_footer">
                   <span class="footer_links pl-2" id="Footer_Links"></span>
-                  <span class="footer-social-network">
-                    <span class="blue-circle-border"><i class="fa fa-twitter"></i></span>
-                    <span class="blue-circle-border"><i class="fa fa-facebook"></i></span>
-                    <span class="blue-circle-border"><i class="fa fa-youtube-square"></i></span>
-                    <span class="blue-circle-border"><i class="fa fa-google-plus"></i></span>
-                    <span class="blue-circle-border"><i class="fa fa-instagram"></i></span>
+                  <span class="footer-social-network" id="FooterSocialLinks">
                   </span>
                   <span class="footer_dropdown pr-2">
                     <span class="footer_links footer_dropdown_links pointer"><a id="ActualLanguage"></a><span class="small">&#9660;</span></span>
@@ -263,33 +275,38 @@
                 $('.footer_dropdown_links').on('click',function() {
                   toggle_dropdown_opacity();
                 });
-
-
                 // LanguageDropdown and NavbarRoller here
 
           });
         </script>
-        <script src="js_parts/navbar/navbar_links.js"></script>
-        <script src="js_parts/navbar/language_dropdown.js"></script>
-        <script src="js_parts/navbar/navbar_roller.js"></script>
-        <script src="js_parts/section8/volume_speaker_control.js"></script>
+        <!-- NAVBAR -->
+        <script src="components/navbar/js/navbar_links.js"></script>
+        <script src="components/navbar/js/language_dropdown.js"></script>
+        <script src="components/navbar/js/navbar_roller.js"></script>
+        <!-- END OF NAVBAR -->
         <script src="js_parts/section1/section1Scripts.js"></script>
 
+        <!-- SECTION 8 -->
+        <script src="components/section8/js/volume_speaker_control.js"></script>
+        <!-- END OF SECTION 8 -->
+
         <!-- SECTION 2 -->
-        <!-- <script src="js_parts/section2/section2_navbar.js"></script>-->
-        <script src="js_parts/section2/section2_gallery.js"></script>
+        <!-- <script src="components/section2/section2_navbar.js"></script>-->
+        <script src="components/section2/section2_gallery.js"></script>
         <!-- pure javascript -->
-        <script src="js_parts/section2/section2_purejs.js"></script>
+        <script src="components/section2/section2_purejs.js"></script>
         <!-- END OF SECTION 2 -->
 
         <!-- SECTION 5 -->
-        <script src="js_parts/section5/section5_text.js"></script>
-        <script src="js_parts/section5/section5_background.js"></script>
+        <script src="components/section5/section5_text.js"></script>
+        <script src="components/section5/section5_background.js"></script>
         <!-- END OF SECTION 5 -->
 
         <!-- SECTION 7 -->
-        <script src="js_parts/section7/section7_render.js"></script>
+        <script src="components/section7/section7_render.js"></script>
         <!-- END OF SECTION 7 -->
 
+        <script src="js_parts/scroll_effects.js"></script>
+        <script src="js_parts/section3/section3.js"></script>
       </body>
       </html>
