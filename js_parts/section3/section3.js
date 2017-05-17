@@ -68,4 +68,6 @@ $(function () {
     renderSection.generateTextEl('section6', '<h2 class="white m-0">' + section6_data.title + '</h2>', 'page-title');
     renderSection.generateTextEl('section6', section6_data.subText, 'subText');
     renderSection.generateVideo('section6', section6_data.videoLink);
+    renderSection.generateButton('section6', section6_data.buttons[0].btn_text, 'btn');
+    renderSection.generateButton('section6', section6_data.buttons[0].btn_link_text, 'btn-link');
 });
