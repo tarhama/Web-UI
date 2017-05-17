@@ -1,0 +1,51 @@
+{
+  "Header": {
+    "HeaderText": "Features to start, sell & grow,",
+    "TextColor": "#fff"
+  },
+  "Lists": {
+    "ListImg": "./assets/images/circle-check.svg",
+    "ListLeft": {
+      "SheetList": [
+        "Simple drag & drop editor",
+        "Step-by-step guidance",
+        "Pre-designed layout options",
+        "Domain names & professional email",
+        "Video backgrounds",
+        "Site stats",
+        "Create a blog"
+      ],
+      "ListHeader": "Website"
+    },
+    "ListCenter": {
+      "ListImg": "./assets/images/circle-check.svg",
+      "SheetList": [
+        "Unlimited products",
+        "Optimized one-page checkout",
+        "Automatic tax calculator",
+        "Real time shipping rates",
+        "Abandoned cart recovery",
+        "Coupon codes",
+        "Digital gift cards"
+      ],
+      "ListHeader": "eCommerce"
+    },
+    "ListRight": {
+      "ListImg": "./assets/images/circle-check.svg",
+      "SheetList": [
+        "Fully integrated with site & store",
+        "Suggested emails created automatically",
+        "Email to sales insights",
+        "Branded billing emails",
+        "Powerful app integrations",
+        "SEO Guide & scorecard",
+        "Automation for marketing autopilot"
+      ],
+      "ListHeader": "Marketing"
+    }
+  },
+  "Button": {
+    "Text": "See all Features",
+    "Class": "weebly-btn weebly-border-blue white-text"
+  }
+}
