@@ -84,13 +84,6 @@ var Images = {
 $(window).scroll(function () {
     var height = $(window).scrollTop();
 
-    /* SECTION 2 ANIMATE */
-    if (height > 500) {
-        $('.home-themes .home-themes_tabs-container').addClass('tabs-transition');
-        $('.home-themes_tabs-content').addClass('is-active');
-    }
-    /* END OF SECTION 2 ANIMATE */
-
     if (height > 1800) {
         $('.page-section-3 .page-content').addClass('checklist-transition');
         $('.page-section-3 .image-items').addClass('image-transition');
@@ -107,14 +100,6 @@ $(window).scroll(function () {
         $('.page-section-4 .item-email').addClass('image-transition3');
 
     }
-    /* SECTION 5 ANIMATE */
-    if (height > 3800) {
-        $('.section-5 .landing-page-text.opacity').addClass('is-active');
-        $('.section-5 .landing-page-title.opacity').addClass('tabs-transition');
-        $('.section-5 .state-btn.opacity').addClass('btn-active');
-        $('.section-5 .app-icon.opacity').addClass('app-active');
-    }
-    /* END OF SECTION 5 ANIMATE */
 
     /* SECTION 6 ANIMATE */
     if (height > 4660) {
@@ -123,13 +108,6 @@ $(window).scroll(function () {
         $('.page-section-6 .page-btns.opacity').addClass('btn-active');
     }
     /* END OF SECTION 6 ANIMATE */
-
-    /* SECTION 7 ANIMATE */
-    if (height > 5300) {
-        $('.section-7 .black.opacity').addClass('tabs-transition');
-        $('.section-7 .gray.opacity').addClass('is-active');
-    }
-    /* END OF SECTION 7 ANIMATE */
 
 });
 

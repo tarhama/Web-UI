@@ -6,7 +6,7 @@ var FeaturesSec7 = (function () {
     titleSec7: 'Apps to connect your world',
     headingSec7: "Choose from over 200high-quality apps that make it " +
                   "simple to add advanced features like appointment " +
-                  "scheduling, accounting, live chat and more.",
+                  "scheduling, accounting, live chat and more. ",
     pictures: [
       { id: 0,
         url: 'assets/images/bottom.jpg',
