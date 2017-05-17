@@ -3,9 +3,12 @@
 <head>
   <title>Weebly website Builder: Create a Free Website, Store or Blog</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="components/main/main.css">
+  <link rel="stylesheet" href="components/navbar/css/navbar.css"></link>
   <link rel="stylesheet" href="components/section2/section2.css">
   <link rel="stylesheet" href="components/section5/section5.css">
   <link rel="stylesheet" href="components/section7/section7.css">
+  <link rel="stylesheet" href="components/section8/css/section8.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/section9.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -22,26 +25,32 @@
   <script src="data/section5.js"></script>
   <script src="data/section7.js"></script>
 
-
   <meta charset="UTF-8">
 </head>
 <body>
   <div class="header">
     <div class="navbar">
-      <div class="navbar__container">
-        <ul class="navbar__list navbar__list--left"></ul>
-        <div class="navbar__list--center"></div>
-        <ul class="navbar__list navbar__list--right">
-<!--           <li class="language-link-top">
+      <div class="container">
+        <ul class="list list-left">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+        <div class="list-center">
+          <img src="assets/images/weebly-logo-white.svg" alt="weebly-logo" class="weebly-logo" />
+        </div>
+        <ul class="list list-right">
+          <li class="language-link-top">
             <i class="material-icons language">language</i>
             <i class="material-icons arrow-drop-down">arrow_drop_down</i>
             <div class="dropdown-content"></div>
-            <img src="assets/images/chevron.svg" alt="chevron" class="dropdown-content__chevron">
+            <img src="assets/images/chevron.svg" alt="chevron" class="chevron-up">
           </li>
-          <li class="navbar__login"><a href="#">Log In</a></li>
-          <li class="navbar__signup">
-            <button class="navbar__signup-btn">Sign Up</button>
-          </li> -->
+          <li class="login"><a href="#">Log In</a></li>
+          <li class="signup">
+            <button class="signup-btn">Sign Up</button>
+          </li>
         </ul>
       </div>
     </div>
@@ -229,22 +238,22 @@
               <!-- SECTION 8 -->
               <div id="section8">
                   <div class="video-container">
-                    <video class="video-container_video" autoplay loop muted>
-                      <source src="http://cdn2.editmysite.com/videos/landing-pages/global/home-weebly4/v2/testimonials/olive-aloe.mp4"
+                    <video class="video" autoplay loop muted>
+                      <source src=""
                       type="video/mp4">
                     </video>
-                    <div class="video-container__mute-icon">
+                    <div class="mute-icon">
                       <img src="assets/images/volume-off-48px.svg" alt="volume-off" />
                     </div>
                   </div>
                   <div class="text-container">
-                    <p class="text-container__statement">Join the <strong>millions</strong> of people doing what they love with Weebly</p>
-                    <q class="text-container__quotation">They want you to succeed. They want you to be your own boss.</q>
-                    <p class="text-container__quotation-person">VANESSA</p>
+                    <p class="statement">Join the <strong>millions</strong> of people doing what they love with Weebly</p>
+                    <q class="quotation"></q>
+                    <p class="speaker"></p>
                     <nav class="navbar-dots">
-                      <a  class="navbar-dots__first active-dot" href="#section8"></a>
-                      <a  class="navbar-dots__second" href="#section8"></a>
-                      <a  class="navbar-dots__third" href="#section8"></a>
+                      <a  class="first active-dot" href="#section8"></a>
+                      <a  class="second" href="#section8"></a>
+                      <a  class="third" href="#section8"></a>
                     </nav>
                   </div>
               </div>
@@ -328,10 +337,15 @@
           });
         </script>
 
-        <script src="js_parts/navbar/navbar_links.js"></script>
-        <script src="js_parts/navbar/language_dropdown.js"></script>
-        <script src="js_parts/navbar/navbar_roller.js"></script>
-        <script src="js_parts/section8/volume_speaker_control.js"></script>
+        <!-- NAVBAR -->
+        <script src="components/navbar/js/navbar_links.js"></script>
+        <script src="components/navbar/js/language_dropdown.js"></script>
+        <script src="components/navbar/js/navbar_roller.js"></script>
+        <!-- END OF NAVBAR -->
+
+        <!-- SECTION 8 -->
+        <script src="components/section8/js/volume_speaker_control.js"></script>
+        <!-- END OF SECTION 8 -->
 
         <!-- SECTION 2 -->
         <!-- <script src="components/section2/section2_navbar.js"></script>-->

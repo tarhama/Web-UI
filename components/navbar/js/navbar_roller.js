@@ -16,11 +16,11 @@ var NavbarRoller = (function() {
 
   // chaching DOM
   var $navbar = $('.navbar');
-  var $weeblyLogo = $('.weebly-logo');
-  var $navbarTextItems = $('.navbar__list--left > li > a, .navbar__list .navbar__login > a');
-  var $languageIcon = $('.language');
-  var $arrowDown = $('.arrow-drop-down');
-  var $signupBtn = $('.navbar__signup-btn');
+  var $weeblyLogo = $('.header .navbar .weebly-logo');
+  var $navbarTextItems = $('.header .navbar .list-left > li > a, .header .navbar .list .login > a');
+  var $languageIcon = $('.header .navbar .list-right .language');
+  var $arrowDown = $('.header .navbar .list-right .arrow-drop-down');
+  var $signupBtn = $('.header .navbar .list-right .signup-btn');
 
   $( document ).ready(function() {
     scrollStart = $(this).scrollTop();
@@ -70,11 +70,12 @@ var NavbarRoller = (function() {
   function depictTransparentNavbar() {
     $navbar.css('background-color', 'transparent');
     $weeblyLogo.attr('src', weeblyWhiteUrl);
-    $navbarTextItems.css('color', pureWhite);
-    $languageIcon.css('color', pureWhite);
-    $arrowDown.css('color', pureWhite);
-    $signupBtn.css({'color': pureWhite,
-      'border': '2px solid #fff'
+    $navbarTextItems.css('color', almostPureWhite);
+    $languageIcon.css('color', almostPureWhite);
+    $arrowDown.css('color', almostPureWhite);
+    $signupBtn.css({'color': almostPureWhite,
+      'border': '2px solid #fff',
+      'box-shadow': 'none'
     });
 
     $navbarTextItems.hover(

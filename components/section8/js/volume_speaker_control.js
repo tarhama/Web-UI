@@ -1,17 +1,18 @@
 var VolumeSpeakersControl = (function(data8) {
   // chaching DOM
   var $section8 = $('#section8');
-  var $videoContainer = $('.video-container');
+  var $videoContainer = $('#section8 .video-container');
   var $video = $videoContainer.find('video');
   var $videoSrc = $video.find('source');
-  var $sentence = $('.text-container__statement');
-  var $quotation = $('.text-container__quotation');
-  var $speakerName = $('.text-container__quotation-person');
+  var $textContainer = $('#section8 .text-container');
+  var $sentence = $textContainer.find('.statement');
+  var $quotation = $textContainer.find('.quotation');
+  var $speakerName = $textContainer.find('.speaker');
   var $volumeIcon = $videoContainer.find('img');
   var $navbarDots = $('.navbar-dots');
-  var $firstDot = $('.navbar-dots__first');
-  var $secondDot = $('.navbar-dots__second');
-  var $thirdDot = $('.navbar-dots__third');
+  var $firstDot = $navbarDots.find('.first');
+  var $secondDot = $navbarDots.find('.second');
+  var $thirdDot = $navbarDots.find('.third');
 
   // variables with data from section8.js
   var people = data8.people;
@@ -65,6 +66,8 @@ var VolumeSpeakersControl = (function(data8) {
       }.bind(this)).fadeIn();
     }
   }
+
+  renderContent(videoUrl1, quotation1, name1);
 
   // event handlers
   $videoContainer.on('click', switchVolume);
