@@ -347,24 +347,22 @@ ul {
     line-height: 1.2em;
 }
 
-.checklist {
+.page-section-3.checklist,
+.page-section-4.checklist{
     margin-bottom: 60px;
     max-width: 400px;
 }
 
-.transform-X_1 {
+.page-section-3. page-container. transform-X_1 {
     transform: translateX(50px);
 }
 
-.transform-X_2 {
+.page-section-4. page-container. transform-X_2 {
     transform: translateX(-50px);
 }
 
-.transform-Y_1 {
-    transform: translateY(50px);
-}
-
-.checklist__item {
+.page-section-3 .checklist .checklist__item,
+.page-section-4 .checklist .checklist__item {
     position: relative;
     margin: 20px 0;
     font-size: 18px;
