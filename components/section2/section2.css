@@ -37,7 +37,7 @@
     margin-right: auto;
 }
 
-.home-themes_tabs-container {
+.tabs-container {
     height: 55px;
     margin-bottom: 15px;
     opacity: 0;
@@ -102,7 +102,7 @@
     max-width: 1050px;
 }
 
-.home-themes_tabs-content {
+.tabs-content {
     opacity: 0;
     transform: translateY(60px);
 }

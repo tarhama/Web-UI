@@ -26,7 +26,7 @@ $(function () {
       var mobileDiv = document.createElement("div");
       mobileDiv.className = "mobile-item" + " " + value.class;
       var mobilImg = document.createElement("img");
-      mobilImg.className = "home-apps__img";
+      mobilImg.className = "home-apps-img";
       mobilImg.src = value.url;
 
       mobileDiv.append(mobilImg);
@@ -51,9 +51,9 @@ $(function(){
 
     var scroll = (height - top)/(height);
 
-    $(".home-apps__item-mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
-    $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
-    $(".home-apps__item-featured").css({top: (scroll)*320 + 'px', transitionDuration: '0.6s' });
+    $(".mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });
+    $(".top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
+    $(".featured").css({top: (scroll)*320 + 'px', transitionDuration: '0.6s' });
 
     //SECTION 5 ANIMATION WHEN SCROLLING
     $(".mobile-iphone").css({

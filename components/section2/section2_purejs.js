@@ -48,8 +48,8 @@
 
     /* SECTION 2 ANIMATE */
     if (height > 500) {
-        $('.home-themes .home-themes_tabs-container').addClass('tabs-transition');
-        $('.home-themes_tabs-content').addClass('is-active');
+        $('.home-themes .tabs-container').addClass('tabs-transition');
+        $('.tabs-content').addClass('is-active');
     }
     /* END OF SECTION 2 ANIMATE */
 

@@ -22,7 +22,7 @@ $(function () {
 
     var anchorFrag = document.createDocumentFragment();
     var anchor = document.createElement("a");
-    anchor.className = "landing-page-text__link";
+    anchor.className = "text-link";
     anchor.text = "learn more";
     anchor.href = "#";
 
@@ -35,9 +35,9 @@ $(function () {
     $.each( backgPic, function (i, value) {
 
       var picDiv = document.createElement("div");
-      picDiv.className = "home-apps__item" + " " + value.class;
+      picDiv.className = "home-apps-item" + " " + value.class;
       var picImg = document.createElement("img");
-      picImg.className = "home-apps__img";
+      picImg.className = "home-apps-img";
       picImg.src = value.url;
 
       picDiv.append(picImg);
@@ -48,7 +48,7 @@ $(function () {
     //RENDERING
     $("#section7 .section7-title").append(showTitle); 
     $("#section7 .section7-text").append(showHeading).append(anchorFrag);
-    $("#section7 .home-apps__item-container").append(picFrag);
+    $("#section7 .item-container").append(picFrag);
 
   })(FeaturesSec7);
 

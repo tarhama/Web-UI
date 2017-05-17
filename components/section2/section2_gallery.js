@@ -46,7 +46,7 @@ $(function () {
     galleryFunc (featuredGall, galleryFrag);
 
     //CREATE GALLERY ELEMENTS
-    var homeThemeClass = $(".home-themes_tabs-content");
+    var homeThemeClass = $(".tabs-content");
     var tabContentItemClass = document.createElement("div");
     tabContentItemClass.className = "tab-content_item";
     var tabContentItemContainer = document.createElement("div");
