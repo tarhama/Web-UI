@@ -2,46 +2,41 @@
 
 $(function () {
 
-  var Section7Features = (function (val) {
+  $(window).scroll(function () {
+    var height = $(window).scrollTop();
+    
+    //AFTER LOAD OR REFRESH PAGE AND SCROLLING TO THIS SECTION
+    /* SECTION 5 ANIMATE */
+    if (height > 3800) {
+        $('.section5 .section5-text.opacity').addClass('is-active');
+        $('.section5 .section5-title.opacity').addClass('tabs-transition');
+        $('.section5 .state-btn.opacity').addClass('btn-active');
+        $('.section5 .app-icon.opacity').addClass('app-active');
+    }
+    /* END OF SECTION 5 ANIMATE */
+});
 
-    //TEXT
-    var showTitle = val.titleSec7;
-    var showHeading = val.headingSec7;
+  var PhonesSec5 = (function (val) {
 
-    var anchorFrag = document.createDocumentFragment();
-    var anchor = document.createElement("a");
-    anchor.className = "landing-page-text__link";
-    anchor.text = "learn more";
-    anchor.href = "#";
+    var backgPhones = val.phones;
+    var phoneFrag = document.createDocumentFragment();
 
-    anchorFrag.append(anchor);
+    $.each( backgPhones, function (i, value) {
 
-    //BACKGROUND IMAGES => PARALAX
-    var backgPic = val.pictures;
-    var picFrag = document.createDocumentFragment();
+      var mobileDiv = document.createElement("div");
+      mobileDiv.className = "mobile-item" + " " + value.class;
+      var mobilImg = document.createElement("img");
+      mobilImg.className = "home-apps__img";
+      mobilImg.src = value.url;
 
-    $.each( backgPic, function (i, value) {
-
-      var picDiv = document.createElement("div");
-      picDiv.className = "home-apps__item" + " " + value.class;
-      var picImg = document.createElement("img");
-      picImg.className = "home-apps__img";
-      picImg.src = value.url;
-
-      picDiv.append(picImg);
-      picFrag.append(picDiv);
+      mobileDiv.append(mobilImg);
+      phoneFrag.append(mobileDiv);
 
     });
 
-    //RENDERING
-    $("#section7 .landing-page-title").append(showTitle); 
-    $("#section7 .landing-page-text").append(showHeading).append(anchorFrag);
-    $("#section7 .home-apps__item-container").append(picFrag);
-
-  })(FeaturesSec7);
-
+    $(".section5 .section5-container").append(phoneFrag);
+  })(FeaturesSec5);
 });
-
 
 $(function(){
   $(window).on('scroll', function() {
@@ -60,7 +55,7 @@ $(function(){
     $(".home-apps__item-top").css({top: (scroll)*150 + 'px', transitionDuration: '0.6s' });
     $(".home-apps__item-featured").css({top: (scroll)*320 + 'px', transitionDuration: '0.6s' });
 
-    //SECTION 5 ANIMATION
+    //SECTION 5 ANIMATION WHEN SCROLLING
     $(".mobile-iphone").css({
       'transform': 'translateY(' + (scroll - 0.4) *200 + 'vh) rotate('+ (scroll - 1) *-30 + 'deg)',
       'transitionDuration': '0.6s'

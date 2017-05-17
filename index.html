@@ -3,12 +3,19 @@
 <head>
   <title>Weebly website Builder: Create a Free Website, Store or Blog</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="./data/section3_4_6.js"></script>
+  <link rel="stylesheet" href="components/section2/section2.css">
+  <link rel="stylesheet" href="components/section5/section5.css">
+  <link rel="stylesheet" href="components/section7/section7.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/section9.css">
   <link rel="stylesheet" href="css/footer.css">
+
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><script src="data/navbar.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="data/section3.js"></script>
+  <script src="data/section4.js"></script>
+  <script src="data/section6.js"></script>
+  <script src="data/navbar.js"></script>
   <script src="data/section8.js"></script>
   <script src="data/section2.js"></script>
   <script src="js_parts/section9_footer.js"></script>
@@ -120,23 +127,22 @@
             <!-- SECTION 2 -->
             <div id="section2">
               <section class="home-themes">
-                <div class="landing-page-container">
-                  <div class="landing-page-content__centered">
-                    <h1 class="landing-page-title"></h1>
-                    <h2 class="landing-page-text"></h2>
+                <div class="section2-container">
+                  <div class="section2-content-centered">
+                    <h1 class="section2-title"></h1>
+                    <h2 class="section2-text"></h2>
+                  </div>
+                  <div class="home-themes-container">
+                    <div class="home-themes_tabs-container">
+                      <nav class="tabs"></nav>
                     </div>
-                    <div class="home-themes-container">
-                      <div class="home-themes_tabs-container">
-                        <nav class="tabs">
-                        </nav>
-                      </div>
-                      <div class="home-themes_tabs-content">
-                      </div>
+                    <div class="home-themes_tabs-content">
                     </div>
                   </div>
-                </section>
-              </div>
-              <!-- END OF SECTION 2 -->
+                </div>
+              </section>
+            </div>
+            <!-- END OF SECTION 2 -->
 
               <!-- SECTION 3 -->
               <div id="section3">
@@ -144,7 +150,7 @@
                 <div class="page-container relative">
                   <div class="page-content transform-X_1">
                     <h2 class="page-title"></h2>
-                    <ul class="checklist">
+                    <ul id="checklist-section3" class="checklist">
                     </ul>
                     <div class="buttons">
                       <a class="btn white bg-blue" href=""></a>
@@ -164,7 +170,7 @@
                 <div class="page-container relative">
                   <div class="page-content ml-a transform-X_2">
                     <h2 class="page-title white-text "></h2>
-                    <ul class="checklist white-text">
+                    <ul id="checklist-section4" class="checklist white-text">
                     </ul>
                     <div class="buttons">
                       <a class="btn bg-white green" href=""></a>
@@ -179,11 +185,11 @@
             <!-- END OF SECTION 4 -->
 
             <!-- SECTION 5 -->
-            <div id="section5" class="section-5">
-              <div class="landing-page-container">
+            <div id="section5" class="section5">
+              <div class="section5-container">
                 <div class="landing-page-content">
-                  <h2 class="landing-page-title opacity"></h2>
-                  <p class="landing-page-text opacity"></p>
+                  <h2 class="section5-title opacity"></h2>
+                  <p class="section5-text opacity"></p>
                   <div class="state-btn opacity">
                   </div>
                   <div class="app-icon opacity">
@@ -211,12 +217,12 @@
             <!-- END OF SECTION 6 -->
 
               <!-- SECTION 7 -->
-              <div id="section7" class="section-7">
+              <div id="section7" class="section7">
                 <section class="home-apps relative">
-                  <div class="landing-page-container">
-                    <div class="landing-page-content__centered">
-                      <h1 class="landing-page-title black opacity"></h1>
-                      <p class="landing-page-text gray opacity">
+                  <div class="section7-container">
+                    <div class="section7-content-centered">
+                      <h1 class="section7-title black opacity"></h1>
+                      <p class="section7-text gray opacity">
                       </p>
                     </div>
                     <div class="home-apps__item-container">
@@ -334,20 +340,22 @@
         <script src="js_parts/section8/volume_speaker_control.js"></script>
 
         <!-- SECTION 2 -->
-        <!-- <script src="js_parts/section2/section2_navbar.js"></script>-->
-        <script src="js_parts/section2/section2_gallery.js"></script>
+        <!-- <script src="components/section2/section2_navbar.js"></script>-->
+        <script src="components/section2/section2_gallery.js"></script>
         <!-- pure javascript -->
-        <script src="js_parts/section2/section2_purejs.js"></script>
+        <script src="components/section2/section2_purejs.js"></script>
         <!-- END OF SECTION 2 -->
 
         <!-- SECTION 5 -->
-        <script src="js_parts/section5/section5_text.js"></script>
-        <script src="js_parts/section5/section5_background.js"></script>
+        <script src="components/section5/section5_text.js"></script>
+        <script src="components/section5/section5_background.js"></script>
         <!-- END OF SECTION 5 -->
 
         <!-- SECTION 7 -->
-        <script src="js_parts/section7/section7_render.js"></script>
+        <script src="components/section7/section7_render.js"></script>
         <!-- END OF SECTION 7 -->
 
+        <script src="js_parts/scroll_effects.js"></script>
+        <script src="js_parts/section3/section3.js"></script>
       </body>
       </html>

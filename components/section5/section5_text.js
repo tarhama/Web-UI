@@ -30,8 +30,8 @@ var Section5Features = (function (val) {
     });
 
     //RENDERING
-    $("#section5 .landing-page-title").append(showTitle); 
-    $("#section5 .landing-page-text").append(showHeading);
+    $("#section5 .section5-title").append(showTitle); 
+    $("#section5 .section5-text").append(showHeading);
     $("#section5 .state-btn").append(BtnFragment);
     $("#section5 .app-icon").append(logoFrag);
 
