@@ -95,7 +95,7 @@
     display: block;
 }
 
-.tab-content_item-container {
+.section2-item-container {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto 20px auto;
@@ -107,7 +107,7 @@
     transform: translateY(60px);
 }
 
-.home-themes_theme-container {
+.theme-container {
     flex: 0 0 50%;
 }
 
@@ -118,11 +118,11 @@
     transition-duration: 0.75s;
 }
 
-.tab-content_item-container:hover .theme-poster {
+.section2-item-container:hover .theme-poster {
     opacity: 0.5;
 }
 
-.tab-content_item-container .theme-poster:hover {
+.section2-item-container .theme-poster:hover {
     opacity: 1;
     transform: scale(1.05);
     cursor: pointer;

@@ -2,18 +2,6 @@
 
 $(function () {
 
-  $(window).scroll(function () {
-    var height = $(window).scrollTop();
-
-    /* SECTION 7 ANIMATE */
-    if (height > 5300) {
-        $('.section7 .black.opacity').addClass('tabs-transition');
-        $('.section7 .gray.opacity').addClass('is-active');
-    }
-    /* END OF SECTION 7 ANIMATE */
-
-});
-
   var Section7Features = (function (val) {
 
     //TEXT

@@ -38,20 +38,10 @@ $(function () {
       var height = Math.max( body.scrollHeight, body.offsetHeight,
       html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-      height = height - $(window).height();
+      height -= $(window).height();
 
       var top = $(window).scrollTop();
       var scroll = (height - top)/(height);
-
-    //AFTER LOAD OR REFRESH PAGE AND SCROLLING TO THIS SECTION
-    /* SECTION 5 ANIMATE */
-    if (top > 3800) {
-      $('.section5 .section5-text.opacity').addClass('is-active');
-      $('.section5 .section5-title.opacity').addClass('tabs-transition');
-      $('.section5 .state-btn.opacity').addClass('btn-active');
-      $('.section5 .app-icon.opacity').addClass('app-active');
-    }
-    /* END OF SECTION 5 ANIMATE */
 
     //SECTION 7
     $(".mid").css({top: (scroll)*220 + 'px', transitionDuration: '0.6s' });

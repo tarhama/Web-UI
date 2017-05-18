@@ -10,7 +10,7 @@ $(function () {
 
       //IMAGE ELEMENTS IN GALLERY
       var div1 = document.createElement("div");
-      div1.className = "home-themes_theme-container";
+      div1.className = "theme-container";
       var div2 = document.createElement("div");
       div2.className = "theme-poster";
       var itemImg = document.createElement("img");
@@ -36,13 +36,14 @@ $(function () {
     var featuredFrag = document.createDocumentFragment();
     var featuredBtn = gall.gallery[ 0 ].btn_name;
 
+    //CALL FUNCTION TO SHOW BUTTONS
     gallButtons (featuredBtn, featuredFrag);
 
     //GALLERY VARIABLES
     var featuredGall = gall.gallery[ 0 ].images;
     var galleryFrag = document.createDocumentFragment();
 
-    //CALL FUNCTION
+    //CALL FUNCTION TO SHOW FIRST GALLERY
     galleryFunc (featuredGall, galleryFrag);
 
     //CREATE GALLERY ELEMENTS
@@ -50,7 +51,7 @@ $(function () {
     var tabContentItemClass = document.createElement("div");
     tabContentItemClass.className = "tab-content_item";
     var tabContentItemContainer = document.createElement("div");
-    tabContentItemContainer.className = "tab-content_item-container";
+    tabContentItemContainer.className = "section2-item-container";
 
     tabContentItemContainer.append( galleryFrag, featuredFrag );
     tabContentItemClass.append( tabContentItemContainer );
@@ -75,10 +76,10 @@ $(function () {
     $("a").removeClass('active_class');
     $(this).addClass('active_class');
 
-    //CALL FUNCTION
+    //CALL FUNCTION TO SHOW THIS GALLERY WHICH BUTTON WAS CLICKED
     galleryFunc (showGallery, myGall);
     
-    $(".tab-content_item-container").html( myGall ).append(myBtn);
+    $(".section2-item-container").html( myGall ).append(myBtn);
   });
   })(Section2Gallery);
 
