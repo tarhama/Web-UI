@@ -91,35 +91,6 @@ ul {
     transform: translate(-50%,0);
 }
 
-
-.page-section-4 .checklist .checklist__item ::before {
-    background-image: url("../assets/images/circle-check-white.png");
-}
-
-.page-section-3 {
-    padding: 180px 0;
-    position: relative;
-    background-color: white;
-}
-
-.page-section-4 {
-    padding: 180px 0;
-    position: relative;
-    background-color: #56d090;
-}
-
-.page-content{
-    max-width: 550px;
-    opacity: 0;
-}
-
-
-.page-container {
-    width: calc(100% - 320px);
-    max-width: 1360px;
-    margin: auto;
-}
-
 .relative {
     position: relative;
 }
@@ -137,137 +108,6 @@ ul {
 
 .ml-a {
     margin-left: auto;
-}
-
-.page-title {
-    margin-bottom: 30px;
-    color: #363b3e;
-    font-size: 53px;
-    font-weight: 900;
-    line-height: 1.2em;
-}
-
-.page-section-3.checklist,
-.page-section-4.checklist{
-    margin-bottom: 60px;
-    max-width: 400px;
-}
-
-.page-section-3. page-container. transform-X_1 {
-    transform: translateX(50px);
-}
-
-.page-section-4. page-container. transform-X_2 {
-    transform: translateX(-50px);
-}
-
-.page-section-3 .checklist .checklist__item,
-.page-section-4 .checklist .checklist__item {
-    position: relative;
-    margin: 20px 0;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: left;
-    padding-left: 80px;
-}
-
-.image-items {
-    position: absolute;
-    opacity: 0;
-    transform: translateX(50px);
-}
-
-.image-items2 {
-    position: absolute;
-    opacity: 0;
-    transform: translateX(-50px);
-}
-
-.image-transition {
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: opacity 0.425s ease-out 0.2s, transform 0.425s ease-out 0.2s;
-}
-
-.image-transition1 {
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 0.425s ease-out 0.3s, transform 0.425s ease-out 0.3s;
-}
-
-.image-transition2 {
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 0.425s ease-out 0.35s, transform 0.425s ease-out 0.35s;
-}
-
-.image-transition3 {
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 0.425s ease-out 0.4s, transform 0.425s ease-out 0.4s;
-}
-
-.checklist-transition {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s;
-}
-.item-iphone {
-    top: calc(50% - 510px);
-    left: 79.25%;
-    width: 408px;
-    height: 709px;
-}
-
-.item-box {
-    top: calc(50% - 334px);
-    left: 75%;
-    width: 506px;
-    height: 668px;
-}
-
-.item-orders {
-    top: calc(50% - 90px);
-    left: 58.5%;
-    width: 803px;
-    height: 363px;
-}
-
-.item-sales {
-    top: calc(50% - 290px);
-    left: 49.75%;
-    width: 583px;
-    height: 348px;
-}
-
-.item-email {
-    width: 513px;
-    height: 900px;
-    top: calc(50% - 350px);
-    right: 45%;
-}
-
-.item-email-roi {
-    top: calc(50% - 140px);
-    right: 57%;
-    width: 522px;
-    height: 348px;
-}
-
-.item-email-performance {
-    top: calc(50% - 250px);
-    right: 63%;
-    width: 522px;
-    height: 348px;
-}
-
-.item-shades {
-    top: calc(50% + 20px);
-    right: 53%;
-    width: 567px;
-    height: 546px;
 }
 
 /*section1*/
@@ -395,27 +235,6 @@ div {
 
 .pr-3 {
     padding-right: 3rem;;
-}
-
-
-/* STYLES FOR SECTION 6 */
-#section6 {
-    height: 80vh;
-    overflow-y: hidden;
-    z-index: 1
-}
-
-.content-text {
-    max-width: 1150px;
-    margin: auto;
-    text-align: center;
-    line-height: 1.75
-}
-
-.page-text {
-    font-size: 20px;
-    line-height: 1.75em;
-    font-weight: 300;
 }
 
 /*.page-title h2 {*/

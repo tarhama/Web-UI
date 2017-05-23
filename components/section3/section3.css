@@ -1,0 +1,125 @@
+/* STYLES FOR SECTION 3 */
+.page-section-3 {
+    padding: 180px 0;
+    position: relative;
+    background-color: white;
+}
+
+.page-section-3. page-container. transform-X {
+    transform: translateX(50px);
+}
+
+.page-section-3 .item-iphone {
+    top: calc(50% - 510px);
+    left: 79.25%;
+    width: 408px;
+    height: 709px;
+}
+
+.page-section-3 .item-box {
+    top: calc(50% - 334px);
+    left: 75%;
+    width: 506px;
+    height: 668px;
+}
+
+.page-section-3 .item-orders {
+    top: calc(50% - 90px);
+    left: 58.5%;
+    width: 803px;
+    height: 363px;
+}
+
+.page-section-3 .item-sales {
+    top: calc(50% - 290px);
+    left: 49.75%;
+    width: 583px;
+    height: 348px;
+}
+
+.image-items {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+
+/* CSS FOR SEC3 AND SEC4 and SEC6*/
+
+
+.page-section-3 .page-container,
+.page-section-4 .page-container,
+.page-section-6.page-container{
+    width: calc(100% - 320px);
+    max-width: 1360px;
+    margin: auto;
+}
+
+.page-section-3 .page-content,
+.page-section-4 .page-content{
+    max-width: 550px;
+    opacity: 0;
+}
+
+.page-section-4 .page-title,
+.page-section-3 .page-title,
+.page-section-6 .page-title{
+    margin-bottom: 30px;
+    color: #363b3e;
+    font-size: 53px;
+    font-weight: 900;
+    line-height: 1.2em;
+}
+
+.page-section-3.checklist,
+.page-section-4.checklist{
+    margin-bottom: 60px;
+    max-width: 400px;
+}
+
+.page-section-3 .checklist .checklist__item,
+.page-section-4 .checklist .checklist__item {
+    position: relative;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 80px;
+}
+
+.page-section-3 .image-transition,
+.page-section-4 .image-transition{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: opacity 0.425s ease-out 0.2s, transform 0.425s ease-out 0.2s;
+}
+
+.page-section-3 .image-transition1,
+.page-section-4 .image-transition1{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.3s, transform 0.425s ease-out 0.3s;
+}
+
+.page-section-3 .image-transition2,
+.page-section-4 .image-transition2{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.35s, transform 0.425s ease-out 0.35s;
+}
+
+.page-section-3 .image-transition3,
+.page-section-4 .image-transition3 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.4s, transform 0.425s ease-out 0.4s;
+}
+
+.page-section-3 .checklist-transition,
+.page-section-4 .checklist-transition{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s;
+}

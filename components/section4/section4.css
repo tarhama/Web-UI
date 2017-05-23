@@ -1,0 +1,48 @@
+.page-section-4 {
+    padding: 180px 0;
+    position: relative;
+    background-color: #56d090;
+}
+
+.page-section-4. page-container. transform-X {
+    transform: translateX(-50px);
+}
+
+.image-items2 {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.page-section-4 .item-email {
+    width: 513px;
+    height: 900px;
+    top: calc(50% - 350px);
+    right: 45%;
+}
+
+.page-section-4 .item-email-roi {
+    top: calc(50% - 140px);
+    right: 57%;
+    width: 522px;
+    height: 348px;
+}
+
+.page-section-4 .item-email-performance {
+    top: calc(50% - 250px);
+    right: 63%;
+    width: 522px;
+    height: 348px;
+}
+
+.page-section-4 .item-shades {
+    top: calc(50% + 20px);
+    right: 53%;
+    width: 567px;
+    height: 546px;
+}
+
+.page-section-4 .checklist .checklist__item ::before {
+    background-image: url("../../assets/images/circle-check-white.png");
+}
+
