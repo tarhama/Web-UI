@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
   <title>Weebly website Builder: Create a Free Website, Store or Blog</title>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous"
+  >
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
   <link rel="stylesheet" href="components/main/main.css">
   <link rel="stylesheet" href="components/navbar/css/navbar.css">
   <link rel="stylesheet" href="components/section2/section2.css">
@@ -18,6 +25,22 @@
 
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+    integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+    integrity="        sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+    integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous">
+  </script>
+
   <script src="components/section1/section1-data.js"></script>
   <script src="components/section1/section1Scripts.js"></script>
   <script src="data/section3.js"></script>
@@ -33,32 +56,61 @@
   <meta charset="UTF-8">
 </head>
 <body>
+
   <div class="header">
-    <div class="navbar">
-      <div class="container">
-        <ul class="list list-left">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Themes</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">More</a></li>
-        </ul>
-        <div class="list-center">
-          <img src="assets/images/weebly-logo-white.svg" alt="weebly-logo" class="weebly-logo" />
-        </div>
-        <ul class="list list-right">
-          <li class="language-link-top">
-            <i class="material-icons language">language</i>
-            <i class="material-icons arrow-drop-down">arrow_drop_down</i>
-            <div class="dropdown-content"></div>
-            <img src="assets/images/chevron.svg" alt="chevron" class="chevron-up">
+    <nav class="navbar navbar-fixed-top navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Navbar</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Features<span class="sr-only">(current)</span></a>
           </li>
-          <li class="login"><a href="#">Log In</a></li>
-          <li class="signup">
-            <button class="signup-btn">Sign Up</button>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Themes<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Pricing<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">More<span class="sr-only">(current)</span></a>
           </li>
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
+    </nav>
+
+<!--   <div class="navbar">
+    <div class="container">
+      <ul class="list list-left">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">More</a></li>
+      </ul>
+      <div class="list-center">
+        <img src="assets/images/weebly-logo-white.svg" alt="weebly-logo" class="weebly-logo" />
+      </div>
+      <ul class="list list-right">
+        <li class="language-link-top">
+          <i class="material-icons language">language</i>
+          <i class="material-icons arrow-drop-down">arrow_drop_down</i>
+          <div class="dropdown-content"></div>
+          <img src="assets/images/chevron.svg" alt="chevron" class="chevron-up">
+        </li>
+        <li class="login"><a href="#">Log In</a></li>
+        <li class="signup">
+          <button class="signup-btn">Sign Up</button>
+        </li>
+      </ul>
     </div>
+  </div> -->
 
     <!-- SECTION1 -->
     <div id="section1">
@@ -284,6 +336,7 @@
                 // LanguageDropdown and NavbarRoller here
 
           });
+
         </script>
         <!-- NAVBAR -->
         <script src="components/navbar/js/navbar_links.js"></script>
@@ -314,5 +367,6 @@
 
         <script src="js_parts/scroll_effects.js"></script>
         <script src="js_parts/section3/section3.js"></script>
+
       </body>
       </html>
