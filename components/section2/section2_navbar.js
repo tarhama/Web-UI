@@ -29,7 +29,7 @@ $(function () {
   var NavArray = navb.buttons;
   var btnNavbar = document.createDocumentFragment();
 
-    $.each( NavArray, function ( i, val ) {
+    NavArray.map(function ( val ) {
 
       var anchor = document.createElement('a');
       anchor.className = 'tabs_item';
