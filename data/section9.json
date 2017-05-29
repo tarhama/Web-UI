@@ -7,6 +7,7 @@
     "ListImg": "./assets/images/circle-check.svg",
     "ListLeft": {
       "SheetList": [
+        "Website",
         "Simple drag & drop editor",
         "Step-by-step guidance",
         "Pre-designed layout options",
@@ -14,12 +15,12 @@
         "Video backgrounds",
         "Site stats",
         "Create a blog"
-      ],
-      "ListHeader": "Website"
+      ]
     },
     "ListCenter": {
       "ListImg": "./assets/images/circle-check.svg",
       "SheetList": [
+        "eCommerce",
         "Unlimited products",
         "Optimized one-page checkout",
         "Automatic tax calculator",
@@ -27,12 +28,12 @@
         "Abandoned cart recovery",
         "Coupon codes",
         "Digital gift cards"
-      ],
-      "ListHeader": "eCommerce"
+      ]
     },
     "ListRight": {
       "ListImg": "./assets/images/circle-check.svg",
       "SheetList": [
+        "Marketing",
         "Fully integrated with site & store",
         "Suggested emails created automatically",
         "Email to sales insights",
@@ -40,8 +41,7 @@
         "Powerful app integrations",
         "SEO Guide & scorecard",
         "Automation for marketing autopilot"
-      ],
-      "ListHeader": "Marketing"
+      ]
     }
   },
   "Button": {

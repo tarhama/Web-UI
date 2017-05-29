@@ -2,7 +2,7 @@ function loadJSON(callback, JSONpath) {
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', JSONpath, true); // Replace 'my_data' with the path to your file
+    xobj.open('GET', JSONpath, true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") callback(xobj.responseText);
     };
@@ -17,7 +17,10 @@ loadJSON(function(response) {
     footerJSON = JSON.parse(response);
 },JSONpath =  './data/footer.json' );
 
-window.onload = function () {
+
+let footerOnLoad = function () {
+
+    console.log("onload");
 
     var leftList = section9JSON.Lists.ListLeft.SheetList;
     var centerList = section9JSON.Lists.ListCenter.SheetList;
@@ -54,10 +57,10 @@ window.onload = function () {
             var listHeadId = document.getElementById(elementHeadId);
             var imgIndex = document.getElementsByTagName('h3').length;
             var h3Tag = document.getElementsByTagName('h3');
-
-            listHeadId.appendChild(h3);
-            listHeadId.appendChild(h3).innerHTML = '<span>' + elementText + '</span>';
-            h3Tag[imgIndex].className += 'large-35px flex align-ithem_center';
+            //
+            // listHeadId.appendChild(h3);
+            // listHeadId.appendChild(h3).innerHTML = '<span>' + elementText + '</span>';
+            // h3Tag[imgIndex].className += 'large-35px flex align-ithem_center';
 
         }
 

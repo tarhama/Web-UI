@@ -76,4 +76,29 @@
     padding-left: 0.3rem;
     padding-right: 0.3rem;
 }
+
+#LeftList > li:nth-child(1),
+#CenterList > li:nth-child(1),
+#RightList > li:nth-child(1){
+    font-size: 35px;
+    padding-left: 45px;
+
+}
+
+#LeftList > li:nth-child(1)::before,
+#CenterList > li:nth-child(1):before,
+#RightList > li:nth-child(1)::before{
+    content: ' ';
+    transform: translate(-110%,0);
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-image: url(../assets/images/circle-check.svg);
+    background-size: 100%;
+
+}
+
+.flex-forLi > li{
+    display: flex;
+}
 /* END OF STYLES FOR SECTION 9 */
