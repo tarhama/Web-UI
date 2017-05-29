@@ -9,9 +9,7 @@
 
 .section5-container {
     text-align: center;
-    max-width: 1360px;
-    margin: 0 auto;
-    width: calc(100% - 440px);
+    //margin: 0 auto;
 }
 
 .landing-page-content {
@@ -21,18 +19,21 @@
     text-align: left;
     position: relative;
     z-index: 5;
-    opacity: 1; // change to 0
+    opacity: 1;
+    margin: 0 auto;
 }
 
 .section5-title {
     color: #fff;
-    font-size: 45px;
+    //font-size: 45px;
     font-weight: 900;
-    line-height: 1.2em;
+    //line-height: 1.2em;
     margin-bottom: 30px;
+    text-align: center;
 }
 
-.section5-text {
+.section5-text,
+.section7-text {
     color: rgba(255,255,255,0.75);
     margin-bottom: 40px;
     font-size: 20px;
@@ -41,25 +42,18 @@
     max-width: 740px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.section5 .opacity {
-    opacity: 0;
-    transform: translateY(60px);
+    text-align: center;
 }
 
 .state-btn {
     position: relative;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.purple {
-    color: #807FFF;
-}
-
-.raise-btn {
+.section5-container .state-btn .raise-btn {
     background-color: #fff;
+    color: #807FFF;
     display: inline-block;
     padding: 0 40px;
     font-size: 14px;
@@ -73,14 +67,16 @@
     text-decoration: none;
 }
 
-.raise-btn:hover {
+.section5-container .state-btn .raise-btn:hover {
     cursor: pointer;
+    color: #807FFF;
     transform: scale(1.1);
     transition-duration: 0.5s;
 }
 
 .app-icon {
     margin-top: 50px;
+    text-align: center;
 }
 
 .app-icon img {
@@ -96,15 +92,15 @@
     z-index: 4;
     display: block;
     top: 220px;
-    left: calc(50% + 100px);
+    left: calc(50% + 150px);
     width: 492px;
     height: 821px;
 }
 
 .mobile-iphone02 {
     z-index: 3;
-    top: -460px;
-    left: calc(50% - 200px);
+    top: -740px;
+    left: calc(50% - 300px);
     width: 538px;
     height: 795px;
 }
@@ -113,7 +109,7 @@
     z-index: 2;
     display: block;
     top: -750px;
-    left: calc(50% - 10px);
+    left: calc(50% + 100px);
     width: 388px;
     height: 815px;
     position: absolute;
@@ -127,32 +123,40 @@
     height: 1025px;
 }
 
-.section5 .tabs-transition {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-}
+@media only screen and (min-width: 992px) {
+    .section5-container {
+        text-align: center;
+        max-width: 1360px;
+        margin: 0 auto;
+        width: calc(100% - 440px);
+    }
 
-.section5 .is-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
-    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
-}
+    .landing-page-content {
+        margin-left: 0;
+    }
 
-.section5 .btn-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
-    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
-}
+    .section5-title {
+        text-align: left; 
+    }
 
-.section5 .app-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.45s;
-    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.45s;
+    .section5-text {
+        text-align: left;
+    }
+
+    .state-btn {
+        text-align: left;
+    }
+
+    .app-icon {
+        text-align: left;
+    }
+
+    .mobile-iphone02 {
+        text-align: center;
+        margin: 0 auto;
+        top: -460px;
+        left: calc(50% - 80px);
+    }
 }
 
 /* END OF STYLES FOR SECTION 5 */

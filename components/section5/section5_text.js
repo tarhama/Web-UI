@@ -12,7 +12,7 @@ var Section5Features = (function (val) {
     var showBtn = val.button;
     var BtnFragment = document.createDocumentFragment();
     var anchorBtn = document.createElement("a");
-    anchorBtn.className = "raise-btn" + " " + "purple";
+    anchorBtn.className = "raise-btn";
 
     anchorBtn.append(showBtn);
     BtnFragment.append(anchorBtn);

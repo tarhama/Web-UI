@@ -10,7 +10,7 @@ $(function () {
 
       //IMAGE ELEMENTS IN GALLERY
       var div1 = document.createElement("div");
-      div1.className = "theme-container";
+      div1.className = "col-md-6 theme-container";
       var div2 = document.createElement("div");
       div2.className = "theme-poster";
       var itemImg = document.createElement("img");
@@ -31,7 +31,6 @@ $(function () {
       gallBtnAnchor.append( galleryBtn );
       myBtn.append( gallBtnAnchor );
     };
-
     
     var featuredFrag = document.createDocumentFragment();
     var featuredBtn = gall.gallery[ 0 ].btn_name;
@@ -51,10 +50,10 @@ $(function () {
     var tabContentItemClass = document.createElement("div");
     tabContentItemClass.className = "tab-content_item";
     var tabContentItemContainer = document.createElement("div");
-    tabContentItemContainer.className = "section2-item-container";
+    tabContentItemContainer.className = "row section2-item-container";
 
-    tabContentItemContainer.append( galleryFrag, featuredFrag );
-    tabContentItemClass.append( tabContentItemContainer );
+    tabContentItemContainer.append( galleryFrag );
+    tabContentItemClass.append( tabContentItemContainer, featuredFrag );
     homeThemeClass.append( tabContentItemClass );
 
   
@@ -79,7 +78,9 @@ $(function () {
     //CALL FUNCTION TO SHOW THIS GALLERY WHICH BUTTON WAS CLICKED
     galleryFunc (showGallery, myGall);
     
-    $(".section2-item-container").html( myGall ).append(myBtn);
+    $(".section2-item-container").html( myGall );
+    $(".tab-content_item").children().last().remove();
+    $(".tab-content_item").append(myBtn);
   });
   })(Section2Gallery);
 

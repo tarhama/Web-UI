@@ -10,19 +10,21 @@ $(function () {
     $.each( backgPhones, function (i, value) {
 
       var mobileDiv = document.createElement("div");
-      mobileDiv.className = "mobile-item" + " " + value.class;
+      if (value.class == "mobile-iphone" || value.class == "mobile-android") {
+        mobileDiv.className = "mobile-item hidden-md-down" + " " + value.class;
+      } else {
+        mobileDiv.className = "mobile-item" + " " + value.class;
+      };
       var mobilImg = document.createElement("img");
       mobilImg.className = "home-apps-img";
       mobilImg.src = value.url;
 
       mobileDiv.append(mobilImg);
       phoneFrag.append(mobileDiv);
-
     });
 
     $(".section5 .section5-container").append(phoneFrag);
   })(FeaturesSec5);
-
 
   var scrollFunction = (function (val) {
 
@@ -36,7 +38,7 @@ $(function () {
       var body = document.body,
       html = document.documentElement;
       var height = Math.max( body.scrollHeight, body.offsetHeight,
-      html.clientHeight, html.scrollHeight, html.offsetHeight );
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
 
       height -= $(window).height();
 

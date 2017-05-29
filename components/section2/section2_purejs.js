@@ -23,7 +23,7 @@
     NavArray.forEach(function (nav) {
       
       var anchor = document.createElement('a');
-      anchor.className = 'tabs_item';
+      anchor.className = 'tabs_item'; //tabs_item
       anchor.href = '#' + nav.title;
       anchor.text = nav.title;
       anchor.title = nav.title;
@@ -37,7 +37,7 @@
     navSec2.appendChild(btnNavbar);
  
     //HIGHLIGHT FIRST NAVBAR BUTTON
-    var navActive = document.getElementsByClassName("tabs_item")[0];
+    var navActive = document.getElementsByClassName("nav-link")[0];
     navActive.className += " active_class";
     
 
