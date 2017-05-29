@@ -7,12 +7,12 @@ $(function () {
 
     /* SECTION 2 ANIMATE */
     if (height > 500) {
-        $('.home-themes .tabs-container').addClass('tabs-transition');
-        $('.tabs-content').addClass('is-active');
+      $('.home-themes .tabs-container').addClass('tabs-transition');
+      $('.tabs-content').addClass('is-active');
     }
     /* END OF SECTION 2 ANIMATE */
 
-});
+  });
 
   //TITLE + TEXT
   var ShowText = (function (txt) {
@@ -26,8 +26,8 @@ $(function () {
 
   //NAVBAR
   var ShowNavbar = (function (navb) {
-  var NavArray = navb.buttons;
-  var btnNavbar = document.createDocumentFragment();
+    var NavArray = navb.buttons;
+    var btnNavbar = document.createDocumentFragment();
 
     NavArray.map(function ( val ) {
 

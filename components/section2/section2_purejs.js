@@ -37,7 +37,7 @@
     navSec2.appendChild(btnNavbar);
  
     //HIGHLIGHT FIRST NAVBAR BUTTON
-    var navActive = document.getElementsByClassName("nav-link")[0];
+    var navActive = document.querySelector(".tabs a");
     navActive.className += " active_class";
     
 

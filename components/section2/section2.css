@@ -86,6 +86,10 @@
     -webkit-transition: color 0.2s ease-in-out; //SAFARI 3.1 TO 6.0
 }
 
+.tabs_item:focus {
+    color: #fff;
+}
+
 .active_class {
     color: #fff;
 }

@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
   <title>Weebly website Builder: Create a Free Website, Store or Blog</title>
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-    crossorigin="anonymous"
-  >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
+<link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="components/main/main.css">
   <link rel="stylesheet" href="components/navbar/css/navbar.css">
   <link rel="stylesheet" href="components/section2/section2.css">
@@ -22,14 +20,15 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/section9.css">
   <link rel="stylesheet" href="css/footer.css">
+    
 
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <!-- <script
+  <script
     src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
     integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
     crossorigin="anonymous">
-  </script> -->
+  </script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
     integrity="        sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
@@ -41,6 +40,7 @@
     crossorigin="anonymous">
   </script>
 
+  <script src="js_parts/section9_footer.js"></script>
   <script src="components/section1/section1-data.js"></script>
   <script src="components/section1/section1Scripts.js"></script>
   <script src="data/section3.js"></script>
@@ -49,12 +49,10 @@
   <script src="data/navbar.js"></script>
   <script src="data/section8.js"></script>
   <script src="data/section2.js"></script>
-  <script src="js_parts/section9_footer.js"></script>
   <script src="data/section5.js"></script>
   <script src="data/section7.js"></script>
+  <script src="components/onLoad.js"></script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -192,6 +190,7 @@
             <!-- SECTION 5 -->
             <div id="section5" class="section5">
               <div class="section5-container">
+                <div class="container">
                 <div class="landing-page-content">
                   <h2 class="h1 section5-title opacity"></h2>
                   <p class="section5-text opacity"></p>
@@ -199,6 +198,7 @@
                   </div>
                   <div class="app-icon opacity">
                   </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -224,7 +224,7 @@
               <!-- SECTION 7 -->
               <div id="section7" class="section7">
                 <section class="home-apps relative">
-                  <div class="section7-container">
+                  <div class="section7-container container">
                     <div class="section7-content-centered">
                       <h1 class="h1 section7-title black opacity"></h1>
                       <p class="section7-text gray opacity">
@@ -261,52 +261,59 @@
               </div>
               <!-- END OF SECTION 8 -->
 
-              <!-- SECTION 9 -->
-              <div id="section9">
-                <div class="section9-container m-a">
-                  <h2 class="section9-h2 text-center"></h2>
-                  <div>
-                    <div class="flex justify-content_space-between align-ithem_center font-weight-700" id="section9-list-head"></div>
-                    <div class="flex justify-content_space-between align-ithem_center">
-                      <ul id="LeftList" class="grey-li line-height-1_5-li"></ul>
-                      <ul id="CenterList" class="grey-li line-height-1_5-li"></ul>
-                      <ul id="RightList" class="grey-li line-height-1_5-li"></ul>
-                    </div>
-                    <div class="flex justify-content_center align-ithem_center" style="margin-top: 100px;" id="secetion9Btn"></div>
+  <!-- SECTION 9 -->
+  <div id="section9">
+      <div class="section9-container m-a">
+          <h2 class="section9-h2 text-center"></h2>
+          <div>
+              <div class="flex justify-content_space-between align-ithem_center font-weight-700"
+                   id="section9-list-head"></div>
+              <div class="flex justify-content_space-between align-ithem_center flex-wrap section9-flex-list pt-3 pb-3">
+                  <div class="flex">
+                      <ul id="LeftList" class="grey-li line-height-1_5-li flex-forLi pl-4"></ul>
                   </div>
-                </div>
+                  <div class="flex">
+                      <ul id="CenterList" class="grey-li line-height-1_5-li flex-forLi pl-4"></ul>
+                  </div>
+                  <div class="flex ">
+                      <ul id="RightList" class="grey-li line-height-1_5-li flex-forLi pl-4"></ul>
+                  </div>
               </div>
-              <!-- END OF SECTION 9 -->
+              <div class="flex justify-content_center align-ithem_center" style="margin-top: 100px;"
+                   id="secetion9Btn"></div>
+          </div>
+      </div>
+  </div>
+  <!-- END OF SECTION 9 -->
 
             <!-- SECTION FOOTER -->
             <footer id="footer" class="small">
               <div class="footer-content m-a">
-                <div class="flex justify-content_space-around align-ithem_baseline ">
-                  <span>
+                <div class="flex justify-content-between align-ithem_baseline row flex-wrap ml-3 mr-3">
+                  <span class="flex pl-2 pr-2">
                     <ul class="footer_list" id="Product"></ul>
                   </span>
-                  <span>
+                  <span class="flex pl-2 pr-2">
                     <ul class="footer_list" id="Resources"></ul>
                   </span>
-                  <span>
+                  <span class="flex pl-2 pr-2">
                     <ul class="footer_list" id="Support"></ul>
                   </span>
-                  <span>
+                  <span class="flex pl-2 pr-2">
                     <ul class="footer_list" id="Partners"></ul>
                   </span>
-                  <span>
+                  <span class="flex pl-2 pr-2">
                     <ul class="footer_list" id="Company"></ul>
                   </span>
                 </div>
                 <hr style="border-bottom-width: 0">
-                <div class="flex justify-content_space-between align-ithem_center down_footer">
-                  <span class="footer_links pl-2" id="Footer_Links"></span>
-                  <span class="footer-social-network" id="FooterSocialLinks">
-                  </span>
-                  <span class="footer_dropdown pr-2">
+                <div class="flex justify-content_space-between align-ithem_center down_footer flex-wrap">
+                  <span class="footer_links pl-2 flex" id="Footer_Links"></span>
+                  <span class="footer-social-network flex" id="FooterSocialLinks"></span>
+                  <span class="footer_dropdown pr-2 flex col-sm-auto ">
                     <span class="footer_links footer_dropdown_links pointer"><a id="ActualLanguage"></a><span class="small">&#9660;</span></span>
                     <div class="footer_dropdown__content">
-                      <ul class="li_no-decoration" id="LanguageList"></ul>
+                      <ul class="li_no-decoration " id="LanguageList"></ul>
                     </div>
                   </span>
                 </div>
@@ -351,7 +358,7 @@
         <!-- END OF SECTION 8 -->
 
         <!-- SECTION 2 -->
-        <!-- <script src="components/section2/section2_navbar.js"></script>-->
+        <!--  <script src="components/section2/section2_navbar.js"></script> -->
         <script src="components/section2/section2_gallery.js"></script>
         <!-- pure javascript -->
         <script src="components/section2/section2_purejs.js"></script>

@@ -1,4 +1,4 @@
-/* STYLES FOR SECTION 7 */
+ STYLES FOR SECTION 7 */
 
 .section7-container {
     text-align: center;
@@ -57,9 +57,9 @@
 
 .item-container {
     position: relative;
-    width: 100%;
+    width: 240%;
     max-width: 1136px;
-    margin: auto;
+    margin: auto -70%;
 }
 
 .bottom {
@@ -85,4 +85,18 @@
     height: 100%;
 }
 
-/* END OF STYLES FOR SECTION 7 */
+@media only screen and (min-width: 992px) {
+    .item-container {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .item-container {
+        margin: auto -25%;
+        width: 150%;
+    }
+}
+
+/* END OF STYLES FOR SECTION 7 
