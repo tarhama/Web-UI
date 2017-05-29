@@ -6,7 +6,7 @@ renderSection.generateCheckList = function (checkListItems, checklistParentId) {
     var items = "";
     for (i = 0; i < checkListItems.length; i++) {
         text = checkListItems[i];
-        items += '<li class="checklist__item">' + text + '</li>';
+        items += '<div class="flex"><div class="li_image"></div><li class="mb-4 align-item_center"><span>' + text + '</span></li></div>';
     }
     document.getElementById(checklistParentId).innerHTML = items;
 };
@@ -65,7 +65,7 @@ $(function () {
     renderSection.generateButton('section4', section4_data.buttons[0].btn_link_text, 'btn-link');
     renderSection.generateImages('section4', 'image-items', section4_data.images);
     renderSection.generateTextEl('section4', section4_data.title, 'page-title');
-    renderSection.generateTextEl('section6', '<h2 class="white m-0">' + section6_data.title + '</h2>', 'page-title');
+    renderSection.generateTextEl('section6', '<p class="white m-0">' + section6_data.title + '</p>', 'page-title');
     renderSection.generateTextEl('section6', section6_data.subText, 'subText');
     renderSection.generateVideo('section6', section6_data.videoLink);
     renderSection.generateButton('section6', section6_data.buttons[0].btn_text, 'btn');

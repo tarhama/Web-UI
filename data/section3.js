@@ -1,9 +1,9 @@
 var section3_data = {
     "title": "Sell more with powerful eCommerce",
     "checklistTexts": [
-        "<strong>Beautiful design</strong> to customize your storefront and showcase your products",
-        "<strong>Complete platform</strong> to manage inventory, track orders and handle taxes",
-        "<strong>Advanced tools</strong>: real time shipping, abandoned cart, coupons and currencies"
+        "<strong>Beautiful design </strong> to customize your storefront and showcase your products",
+        "<strong>Complete platform </strong> to manage inventory, track orders and handle taxes",
+        "<strong>Advanced tools </strong>: real time shipping, abandoned cart, coupons and currencies"
     ],
     "buttons": [
         {

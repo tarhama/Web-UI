@@ -9,7 +9,7 @@ $(window).scroll(function () {
     /* END OF SECTION 2 ANIMATE */
 
     if (height > 1800) {
-        $('.page-section-3 .page-content').addClass('checklist-transition');
+        $('.page-width').addClass('checklist-transition');
         $('.page-section-3 .image-items').addClass('image-transition');
         $('.page-section-3 .item-orders').addClass('image-transition1');
         $('.page-section-3 .item-iphone').addClass('image-transition2');

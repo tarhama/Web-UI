@@ -1,3 +1,6 @@
+body {
+    font-size: 16px;
+}
 .no-decoration {
     text-decoration: none;
 }
@@ -104,6 +107,8 @@ ul {
     bottom: 0;
     right: 0;
     z-index: -100;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .ml-a {
@@ -241,3 +246,40 @@ div {
     /*padding-bottom: 60px;*/
 /*}*/
 /* END OF STYLES FOR SECTION 6 */
+
+
+.tabs-transition {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.is-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
+    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
+}
+
+.btn-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+}
+
+.app-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.45s;
+    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.45s;
+}
+
+.align-item_center {
+    align-items: center;
+}
+
+.absolute {
+    position: absolute;
+}
