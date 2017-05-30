@@ -22,7 +22,7 @@ ul {
 }
 
 .link-btn {
-    text-decoration: underline;
+    text-decoration: underline !important;
     font-size: 14px;
     font-weight: 600;
     line-height: 44px;
@@ -102,7 +102,6 @@ ul {
     position: absolute;
     min-height: 100%;
     min-width: 100%;
-    top: -200px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -135,6 +134,14 @@ div {
 #section1 {
     min-height: 600px;
     position: relative;
+}
+
+#section1 > div > div.img {
+    min-height: 500px;
+}
+
+#section1 img {
+    max-width: 70%;
 }
 
 #text-animation {
@@ -255,11 +262,11 @@ div {
     transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.is-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
-    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
+.page-section-6 .is-ative {
+    opacity: 1 !important;
+    transform: translateY(0)!important;
+    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s!important;;
+    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s!important;;
 }
 
 .btn-active {

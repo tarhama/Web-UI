@@ -1,4 +1,4 @@
-ul li {
+ul.checklist li {
     max-width: 400px;
     padding-left: 1.5rem;
 }
@@ -49,6 +49,10 @@ ul li {
 
 .page-section-4 .checklist .checklist__item ::before {
     background-image: url("../../assets/images/circle-check-white.png");
+}
+
+#checklist-section4 .li_image {
+    background:  url(../../assets/images/circle-check-white.png) no-repeat;
 }
 
 @media (max-width: 1400px) {

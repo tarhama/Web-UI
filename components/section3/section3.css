@@ -1,10 +1,25 @@
 .li_image{
     display: block;
     content: "";
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     background:  url(../../assets/images/circle-check.png) no-repeat;
     background-size: contain;
+}
+
+.page-section-3 .btn:hover,
+.page-section-4 .btn:hover,
+.page-section-6 .btn:hover{
+    cursor: pointer;
+    color: #807FFF;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.page-section-3 .link-btn,
+.page-section-4 .link-btn,
+.page-section-6 .link-btn{
+    margin-left: 2rem;
 }
 
 .page-section-3 {
@@ -48,6 +63,10 @@
     width: 60%;
     opacity: 0;
     transform: translateX(50px);
+}
+
+.page-section-3 .link-btn {
+    color: #2990ea !important;
 }
 
 .page-section-4 .page-title,
