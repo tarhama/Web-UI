@@ -145,9 +145,11 @@ div {
 }
 
 #text-animation {
-    font-size: 40px;
-    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 60px;
     color: white;
+    text-align: center;
 }
 
 .section1_overlay {
@@ -170,13 +172,6 @@ div {
     display: flex;
     align-items: center;
     margin: 0 auto;
-}
-
-.text-animation {
-    font-weight: bold;
-    font-size: 60px;
-    color: white;
-    text-align: center;
 }
 
 .section1_video {
