@@ -1,18 +1,31 @@
 #section6 {
     height: 80vh;
+    overflow-x: hidden;
     overflow-y: hidden;
-    z-index: 1
+    z-index: 1;
 }
 
-.content-text {
-    max-width: 1150px;
-    margin: auto;
-    text-align: center;
-    line-height: 1.75
+.page-section-6 {
+    width: 100%;
 }
 
-.page-text {
-    font-size: 20px;
-    line-height: 1.75em;
-    font-weight: 300;
+.w-60 {
+    max-width: 60%;
+}
+
+.page-section-6 .page-text,
+.page-section-6 .page-title,
+.page-section-6 .page-btns{
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+
+
+
+
+@media (max-width: 1400px) {
+    .w-60 {
+        max-width: 80%;
+    }
 }

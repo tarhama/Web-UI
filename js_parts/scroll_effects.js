@@ -1,23 +1,16 @@
 $(window).scroll(function () {
     var height = $(window).scrollTop();
 
-    /* SECTION 2 ANIMATE */
-    if (height > 500) {
-        $('.home-themes .home-themes_tabs-container').addClass('tabs-transition');
-        $('.home-themes_tabs-content').addClass('is-active');
-    }
-    /* END OF SECTION 2 ANIMATE */
-
-    if (height > 1800) {
-        $('.page-section-3 .page-content').addClass('checklist-transition');
+    if (height > 1500) {
+        $('.page-section-3 .page-width').addClass('checklist-transition');
         $('.page-section-3 .image-items').addClass('image-transition');
         $('.page-section-3 .item-orders').addClass('image-transition1');
         $('.page-section-3 .item-iphone').addClass('image-transition2');
         $('.page-section-3 .item-sales').addClass('image-transition3');
     }
 
-    if (height > 2800) {
-        $('.page-section-4 .page-content').addClass('checklist-transition');
+    if (height > 2300) {
+        $('.page-section-4 .page-width').addClass('checklist-transition');
         $('.page-section-4 .item-shades').addClass('image-transition');
         $('.page-section-4 .item-email-roi').addClass('image-transition1');
         $('.page-section-4 .item-email-performance').addClass('image-transition2');
@@ -35,9 +28,10 @@ $(window).scroll(function () {
 
     /* SECTION 6 ANIMATE */
     if (height > 4660) {
-        $('.page-section-6 .page-text.opacity').addClass('is-active');
+        console.log("sp,ti");
         $('.page-section-6 .page-title.opacity').addClass('tabs-transition');
         $('.page-section-6 .page-btns.opacity').addClass('btn-active');
+        $('.page-section-6 .page-text.opacity').addClass('is-active');
     }
     /* END OF SECTION 6 ANIMATE */
 
@@ -47,5 +41,7 @@ $(window).scroll(function () {
         $('.section7 .gray.opacity').addClass('is-active');
     }
     /* END OF SECTION 7 ANIMATE */
+
+
 
 });

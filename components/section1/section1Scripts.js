@@ -16,6 +16,7 @@ var Section1Processor = function () {
         data = configForSection1;
         videoSrc = configForSection1.videoAttributes.videoSrc;
         videoType = configForSection1.videoAttributes.videoType;
+        videoType = configForSection1.videoAttributes.videoType;
         splitedText= configForSection1.title.split("");
     };
 
