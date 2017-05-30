@@ -11,9 +11,13 @@
 .page-section-4 .btn:hover,
 .page-section-6 .btn:hover{
     cursor: pointer;
-    color: #807FFF;
     transform: scale(1.1);
     transition-duration: 0.5s;
+}
+
+.page-section-3 .btn:hover
+{
+    color: #807FFF;
 }
 
 .page-section-3 .link-btn,
