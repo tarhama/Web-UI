@@ -3,7 +3,7 @@ var Section1Processor = function () {
     var data;
     var counter = 0;
     var animatedText;
-    var splitedText;
+    //var splitedText;
     var videoElem;
     var publicMethods = {};
     var videoSrc;
@@ -17,7 +17,7 @@ var Section1Processor = function () {
         videoSrc = configForSection1.videoAttributes.videoSrc;
         videoType = configForSection1.videoAttributes.videoType;
         videoType = configForSection1.videoAttributes.videoType;
-        splitedText= configForSection1.title.split("");
+        //splitedText= configForSection1.title.split("");
     };
 
     publicMethods.addVideoSrc = function () {
