@@ -49,3 +49,8 @@ $(function () {
   })(NavbarSec2);  
 
 });
+
+// $(function()
+// {
+//   $('.tabs').jScrollPane();
+// });
