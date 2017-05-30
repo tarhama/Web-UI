@@ -55,6 +55,11 @@ ul.checklist li {
     background:  url(../../assets/images/circle-check-white.png) no-repeat;
 }
 
+.page-section-4 .btn:hover
+{
+    color: #56d090;
+}
+
 @media (max-width: 1400px) {
     .page-section-4 .item-email-performance,
     .page-section-4 .item-email-roi,

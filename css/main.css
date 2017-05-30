@@ -256,21 +256,21 @@ div {
 
 
 .tabs-transition {
-    opacity: 1;
+    opacity: 1!important;
     transform: translateY(0);
     transition: opacity 0.75s cubic-bezier(0.19, 1, 0.22, 1);
     transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.page-section-6 .is-ative {
+.is-ative {
     opacity: 1 !important;
-    transform: translateY(0)!important;
-    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s!important;;
-    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s!important;;
+    transform: translateY(0);
+    transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.6s;;
+    transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.6s;;
 }
 
 .btn-active {
-    opacity: 1;
+    opacity: 1!important;
     transform: translateY(0);
     transition: opacity .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
     transition: transform .75s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;

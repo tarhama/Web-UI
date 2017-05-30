@@ -12,17 +12,15 @@
 .w-60 {
     max-width: 60%;
 }
-
-.page-section-6 .page-text,
-.page-section-6 .page-title,
-.page-section-6 .page-btns{
+.page-section-6 {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(+100px);
 }
 
-
-
-
+.page-section-6 .btn:hover
+{
+    color: #F1C40F;
+}
 
 @media (max-width: 1400px) {
     .w-60 {

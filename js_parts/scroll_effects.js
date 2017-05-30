@@ -28,10 +28,7 @@ $(window).scroll(function () {
 
     /* SECTION 6 ANIMATE */
     if (height > 4660) {
-        console.log("sp,ti");
-        $('.page-section-6 .page-title.opacity').addClass('tabs-transition');
-        $('.page-section-6 .page-btns.opacity').addClass('btn-active');
-        $('.page-section-6 .page-text.opacity').addClass('is-active');
+        $('.page-section-6').addClass('tabs-transition');
     }
     /* END OF SECTION 6 ANIMATE */
 
