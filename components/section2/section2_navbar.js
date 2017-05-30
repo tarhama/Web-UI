@@ -50,7 +50,7 @@ $(function () {
 
 });
 
-// $(function()
-// {
-//   $('.tabs').jScrollPane();
-// });
+$(function()
+{
+  $('.tabs').jScrollPane();
+});

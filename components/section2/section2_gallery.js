@@ -79,6 +79,9 @@ $(function () {
     galleryFunc (showGallery, myGall);
     
     $(".section2-item-container").html( myGall );
+    // $(".section2-item-container").append( myGall );
+    // $(".section2-item-container").remove();
+    
     $(".tab-content_item").children().last().remove();
     $(".tab-content_item").append(myBtn);
   });
