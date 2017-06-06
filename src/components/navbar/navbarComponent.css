@@ -1,0 +1,16 @@
+.navbarTransparent {
+  background-color: red;
+}
+
+.navbarBlueBackground {
+  background-color: #0275d8;
+}
+
+.navbarComponent {
+  height: 85px;
+  position: absolute;
+  width: 100%;
+  padding: 0 10% 0 10%;
+  display: flex;
+}
+
