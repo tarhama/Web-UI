@@ -29,4 +29,4 @@ export default class SectionContainer1 extends React.Component {
 			</div>
 		)
 	}
-};
+}
