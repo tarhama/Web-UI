@@ -8,10 +8,14 @@ import styles from './navbarComponent.css';
 class NavbarComponent extends Component {
   render() {
     return(
-      <div className="navbarTransparent navbarComponent">
-        <NavbarLeftComponent />
-        <NavbarCenterComponent />
-        <NavbarRightComponent />
+      <div className="navbarTransparent navbarContainer">
+        <div className="navbarComponent">
+          <nav>
+            <NavbarLeftComponent />
+            <NavbarCenterComponent />
+            <NavbarRightComponent />
+          </nav>
+        </div>
       </div>
       )
   }

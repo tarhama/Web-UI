@@ -1,0 +1,19 @@
+.navLeftComponent ul {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  text-transform: capitalize;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.navLeftComponent li {
+  margin-right: 2em;
+  color: rgba(255,255,255,0.8);
+}
+
+.navLeftComponent li:hover {
+  cursor: pointer;
+  color: #fff;
+}

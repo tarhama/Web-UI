@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import "./navbarCenterComponent.scss";
 
 class NavbarCenterComponent extends Component {
   render() {
     return(
-      <div>
+      <div className="navCenterComponent">
         Center component
       </div>
     )
