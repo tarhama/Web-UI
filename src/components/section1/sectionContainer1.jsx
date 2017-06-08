@@ -6,45 +6,69 @@ export default class SectionContainer1 extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			counter:0,
-			textToShow:"",
-			splitedText:[],
-			originText:"DO WHAT YOU WANT TO DO"
+			counterOfLetter: 0,
+			counterOfArray:0,
+			textToShow: "",
+			text:"",
+			textData: ["DO WHAT YOU LOVE", "RANDOM TEXT"]
 		};
-		this.setSplitedText = this.setSplitedText.bind(this);
 		this.appendLetterToTheRight = this.appendLetterToTheRight.bind(this);
-	}
-	componentWillMount(){
-		this.setSplitedText();
-	}
-	componentDidMount(){
-		setInterval(this.appendLetterToTheRight,200);
+		this.animateText = this.animateText.bind(this);
+		this.increaseCounterOfArray = this.increaseCounterOfArray.bind(this);
 	}
 
-	appendLetterToTheRight(){
-		if (this.state.counter < this.state.splitedText.length) {
+	componentWillMount(){
+		this.setState({
+			text: this.state.textData[this.state.counterOfArray]
+		});
+	}
+	componentDidMount(){
+		setInterval(this.animateText,200);
+	}
+
+	animateText(){
+		if(this.state.counterOfLetter < this.state.text.length ){
+			this.appendLetterToTheRight();
+		}
+		else{
+			this.increaseCounterOfArray();
 			this.setState({
-				textToShow: this.state.textToShow + this.state.splitedText[this.state.counter],
-				counter: this.state.counter + 1,
-			},() => {
-				console.log(this.state.textToShow);
+				textToShow: "",
+				text: this.state.textData[this.state.counterOfArray],
+				counterOfLetter: 0
 			});
 		}
 	}
-	setSplitedText(){
-		this.setState({
-			splitedText: this.state.originText.split("")
-		}, () => {
-			console.log(this.state.splitedText);
-		});
+
+	appendLetterToTheRight(){
+			this.setState({
+				textToShow: this.state.textToShow + this.state.text[this.state.counterOfLetter],
+				counterOfLetter: this.state.counterOfLetter +1
+			});
 	}
+
+	//increase counter if indexOfArray is lower than array lenght, if not set the index to 0
+	increaseCounterOfArray(){
+		if (this.state.counterOfArray < this.state.textData.length -1){
+			this.setState({
+				counterOfArray: this.state.counterOfArray +1
+			});
+		}
+		else {
+			this.setState({
+				counterOfArray: 0
+			});
+		}
+	}
+
+
 	render() {
 		return(
 			<div className="sectionContainer1">
+				<div className="sectionContainer1_animated-text">
+					{this.state.textToShow}
+				</div>
 				<div className="sectionContainer1_overlay">
-					<div>
-						{this.state.textToShow}
-					</div>
 				</div>
 				<video className="sectionContainer1_video" autoPlay loop muted>
 					<source
