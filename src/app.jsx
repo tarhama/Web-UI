@@ -7,14 +7,14 @@ import NavbarComponent from './components/navbar/navbarComponent';
 import Section2Container from './components/section2/section2_container';
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <NavbarComponent />
-		<SectionContainer1 />
-		<Section2Container />
-		<Section5Container />
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div>
+				<NavbarComponent />
+				<SectionContainer1 />
+				<Section2Container />
+				<Section5Container />
+			</div>
+		)
+	}
 }
