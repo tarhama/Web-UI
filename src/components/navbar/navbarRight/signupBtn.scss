@@ -1,0 +1,20 @@
+@import "styles/common/variables/colors";
+@import "styles/common/variables/typography";
+
+.signupBtn {
+  text-transform: capitalize;
+  border: 2px solid #D3D3D3;;
+  border-radius: 25px;
+  background-color: transparent;
+  color: $white;
+  font-size: $small-font;
+  width: 120px;
+  height: 40px;
+  transition-duration: 0.3s;
+}
+
+.signupBtn:hover {
+  border: 2px solid $white;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
