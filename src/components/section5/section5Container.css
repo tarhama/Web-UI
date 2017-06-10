@@ -1,0 +1,154 @@
+.Section5Container{
+    background-color: #807FFF;
+    position: relative;
+    padding: 280px 0;
+    overflow: hidden;
+}
+
+.section5-container {
+    text-align: center;
+    max-width: 1360px;
+    margin: 0 auto;
+    width: calc(100% - 440px);
+}
+
+.landing-page-content {
+    max-width: 500px;
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+}
+
+.section5-title {
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.section5 .opacity{
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.section5-text{
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.75em;
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.state-btn {
+    position: relative;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.app-icon {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.app-icon img{
+    width: 122px;
+    margin-right: 20px;
+}
+
+.home-apps-img{
+    width: 100%;
+    height: 100%;
+}
+
+.section5-container .state-btn .raise-btn {
+    background-color: #fff;
+    color: #807FFF;
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    /* HOVER OFF */
+    transition-duration: 0.5s;
+    text-decoration: none;
+}
+
+.section5-container .state-btn .raise-btn:hover {
+    cursor: pointer;
+    color: #807FFF;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.mobile-item {
+    position: absolute;
+}
+
+.mobile-iphone {
+    z-index: 4;
+    display: block;
+    top: 220px;
+    left: calc(50% + 150px);
+    width: 492px;
+    height: 821px;
+}
+
+.mobile-iphone02 {
+    z-index: 3;
+    width: 538px;
+    height: 795px;
+    text-align: center;
+    margin: 0 auto;
+    top: -460px;
+    left: calc(50% - 80px);
+}
+
+.mobile-android {
+    z-index: 2;
+    display: block;
+    top: -750px;
+    left: calc(50% + 100px);
+    width: 388px;
+    height: 815px;
+    position: absolute;
+}
+
+.mobile-nexus {
+    z-index: 0;
+    bottom: -495px;
+    left: calc(50% - 300px);
+    width: 1042px;
+    height: 1025px;
+}
+
+
+/*.phone1 {*/
+    /*transform: translateY(9.74089vh) rotate(16.5389deg);*/
+    /*transition-duration: 0.6s;*/
+/*}*/
+
+.phone2 {
+    transform: translateY(41.8445vh) rotate(-6.73057deg);
+    transition-duration: 0.6s;
+}
+
+.phone3 {
+    transform: translateY(37.3057vh) rotate(-6.73057deg);
+    transition-duration: 0.6s;
+}
+
+.phone4{
+    transform: translateY(-17.5907vh) rotate(1.28239deg); transition-duration: 0.6s;
+}
+
+
