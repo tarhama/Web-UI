@@ -1,5 +1,5 @@
 import React from 'react';
-import Section2ImgCard from './section2_img_card';
+import Section2ImgCard from '../section2_img_card';
 
 const GALLERY_URLS = [
   { id: 1,
@@ -26,11 +26,16 @@ const GALLERY_URLS = [
     url: 'http://cdn1.editmysite.com/merchandised-screenshots/57e067d941a6e_tablet_1x.jpg',
     title: 'designing typography'
   }
-]
+];
 
 const Section2ImgCards = () => {
   const imgList = GALLERY_URLS.map(card =>
-    <Section2ImgCard key={String(card.id)} url={card.url} title={card.title} />
+    <Section2ImgCard
+      className="img-item"
+      key={String(card.id)}
+      url={card.url}
+      title={card.title}
+    />
   );
   return (
     <div className="section2-img-cards">
