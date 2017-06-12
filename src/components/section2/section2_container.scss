@@ -1,0 +1,9 @@
+// variables
+$padding-coontainer-top: 80px;
+$padding-container-bottom: 40px;
+$background-grey: #363b3e;
+
+.section2-container {
+  background-color: $background-grey;
+  padding: $padding-coontainer-top 0 $padding-container-bottom;
+}
