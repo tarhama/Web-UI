@@ -22,10 +22,10 @@
   display: block;
   border-bottom: 1px solid #555;
   margin-left: 0;
-}
 
-.langDropdown .langList:hover {
-  background-color: #D3D3D3;
-  color: #555;
+  &:hover {
+    background-color: #D3D3D3;
+    color: #555;
+  }
 }
 
