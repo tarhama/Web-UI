@@ -1,22 +1,23 @@
 import React from 'react';
 import './sectionContainer1.css';
 
-
 export default class SectionContainer1 extends React.Component {
 	constructor(){
 		super();
 		this.state = {
 			counterOfLetter: 0,
-			counterOfArray:0,
+			counterOfArray: 0,
 			timeOfTick:200,
 			textToShow: "",
-			text:"",
-			textData: ["DO WHAT YOU LOVE", "RANDOM TEXT"]
+			text: "",
+			textData: ["DO WHAT YOU LOVE", "RANDOM TEXT"],
+			calc: 1,
 		};
 		this.appendLetterToTheRight = this.appendLetterToTheRight.bind(this);
 		this.animateText = this.animateText.bind(this);
 		this.increaseCounterOfArray = this.increaseCounterOfArray.bind(this);
 		this.animateNextWorld = this.animateNextWorld.bind(this);
+		this.handleScroll = this.handleScroll.bind(this)
 	}
 
 	componentWillMount(){
@@ -25,7 +26,11 @@ export default class SectionContainer1 extends React.Component {
 		});
 	}
 	componentDidMount(){
-			setInterval(this.animateText, 200);
+		window.addEventListener('scroll', this.handleScroll);
+		setInterval(this.animateText, 200);
+	}
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll(this.container1));
 	}
 
 	animateText(){
@@ -49,15 +54,15 @@ export default class SectionContainer1 extends React.Component {
 	appendLetterToTheRight(){
 			this.setState({
 				textToShow: this.state.textToShow + this.state.text[this.state.counterOfLetter],
-				counterOfLetter: this.state.counterOfLetter +1
+				counterOfLetter: this.state.counterOfLetter + 1
 			});
 	}
 
 	//increase counter if indexOfArray is lower than array lenght, if not set the index to 0
 	increaseCounterOfArray(){
-		if (this.state.counterOfArray < this.state.textData.length -1){
+		if (this.state.counterOfArray < this.state.textData.length - 1){
 			this.setState({
-				counterOfArray: this.state.counterOfArray +1
+				counterOfArray: this.state.counterOfArray + 1
 			});
 		}
 		else {
@@ -66,11 +71,28 @@ export default class SectionContainer1 extends React.Component {
 			});
 		}
 	}
+	handleScroll() {
+	const range = 200;
+	const scrollTop = window.scrollY;
+	const containerNode = this.container1;
+	const nodeHeight = containerNode.offsetHeight;
+	const offsetFromTop = containerNode.offsetTop;
+	let offsetTop = offsetFromTop;
+	offsetTop = offsetTop + nodeHeight / 1.5;
+	const calc = 1 - (scrollTop - offsetTop + range) / range;
+	let scrollPosition = this.state.calc;
+  containerNode.style.opacity = scrollPosition;
+  this.setState({ calc });
 
-
+	if (calc > 1) {
+    containerNode.style.opacity = scrollPosition;
+  } else if (calc < 0) {
+    containerNode.style.opacity = scrollPosition;
+  }
+	}
 	render() {
 		return(
-			<div className="sectionContainer1">
+			<div className="sectionContainer1" ref={div => this.container1 = div}>
 				<div className="sectionContainer1_animated-text">
 					{this.state.textToShow}
 				</div>

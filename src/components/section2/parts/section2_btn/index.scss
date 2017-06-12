@@ -1,0 +1,29 @@
+// variables
+$sky-blue: #2990ea;
+$btn-width: 270px;
+$btn-padding: 10px;
+$btn-border-radius: 50px;
+$dark-grey: #363b3e;
+$color-snow-white: #fff;
+$btn-border-width: 2px;
+
+.section2-btn {
+  .btn-featured {
+    text-align: center;
+    padding: $btn-padding;
+    margin: auto;
+    display: block;
+    background: inherit;
+    width: $btn-width;
+    cursor: pointer;
+    font-weight: bolder;
+    border: $btn-border-width solid $color-snow-white;
+    border-radius: $btn-border-radius;
+    color: white;
+    &:hover {
+      color: $dark-grey;
+      background: $color-snow-white;
+      transition: all 0.3s ease-in 0s;
+    }
+  }
+}
