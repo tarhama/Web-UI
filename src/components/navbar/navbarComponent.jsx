@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import NavbarLeftComponent from './navbarLeft/navbarLeftComponent';
 import NavbarCenterComponent from './navbarCenter/navbarCenterComponent';
 import NavbarRightComponent from './navbarRight/navbarRightComponent';
-
 import './navbarComponent.scss';
 
 class NavbarComponent extends Component {

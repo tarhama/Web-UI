@@ -1,5 +1,21 @@
 body {
-  background: #ece7e7;
+  background-color: #ece7e7;
+  background-color: #363b3e;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: sans-serif, Georgia;
+  font-size: 16px;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
 }
 
 #bootstrap-overrides .container-fluid {

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/index.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../styles/index.scss';
 import SectionContainer1 from './components/section1/sectionContainer1';
 import {Section5Container} from "./components/section5/section5Container";
 import NavbarComponent from './components/navbar/navbarComponent';
