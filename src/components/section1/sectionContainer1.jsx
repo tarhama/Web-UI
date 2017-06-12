@@ -1,5 +1,7 @@
 import React from 'react';
+import Section2Btn from './../section2/parts/section2_btn/index.js'
 import './sectionContainer1.css';
+
 
 export default class SectionContainer1 extends React.Component {
 	constructor(){
@@ -93,8 +95,13 @@ export default class SectionContainer1 extends React.Component {
 	render() {
 		return(
 			<div className="sectionContainer1" ref={div => this.container1 = div}>
-				<div className="sectionContainer1_animated-text">
-					{this.state.textToShow}
+				<div className="section1-wrapper">
+					<div className="sectionContainer1_animated-text">
+						{this.state.textToShow}
+					</div>
+					<div className="sectionContainer1-button">
+						<Section2Btn />
+					</div>
 				</div>
 				<div className="sectionContainer1_overlay">
 				</div>
