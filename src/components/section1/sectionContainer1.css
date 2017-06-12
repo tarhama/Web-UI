@@ -1,5 +1,5 @@
 .sectionContainer1 {
-    height: 845px;
+    min-height: 845px;
     position: relative;
     display: block;
     text-align: center;
@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     margin: 0;
-    z-index: -1;
+    z-index: -10;
     opacity: 0.8;
     background: #2297e6;
     width: 100%;
@@ -19,14 +19,14 @@
 
 .sectionContainer1_video {
   position: absolute;
-  top: 50%;
+  /*top: -200px;*/
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1000;
+  z-index: -20;
   overflow: hidden;
 }
 

@@ -14,12 +14,20 @@ export default class SectionContainer1 extends React.Component {
 			text: "",
 			textData: ["DO WHAT YOU LOVE", "RANDOM TEXT"],
 			calc: 1,
+			heightDiff: 0
 		};
 		this.appendLetterToTheRight = this.appendLetterToTheRight.bind(this);
 		this.animateText = this.animateText.bind(this);
 		this.increaseCounterOfArray = this.increaseCounterOfArray.bind(this);
 		this.animateNextWorld = this.animateNextWorld.bind(this);
+		this.moveUpVideo = this.moveUpVideo.bind(this);
+<<<<<<< .mine
+		this.animateNextWorld = this.animateNextWorld.bind(this);
 		this.handleScroll = this.handleScroll.bind(this)
+=======
+		this.handleScroll = this.handleScroll.bind(this);
+		this.moveUpVideo = this.moveUpVideo.bind(this);
+>>>>>>> .theirs
 	}
 
 	componentWillMount(){
@@ -29,10 +37,12 @@ export default class SectionContainer1 extends React.Component {
 	}
 	componentDidMount(){
 		window.addEventListener('scroll', this.handleScroll);
+		window.addEventListener('resize', this.moveUpVideo);
 		setInterval(this.animateText, 200);
 	}
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this.handleScroll(this.container1));
+		window.removeEventListener('resize', this.moveUpVideo);
 	}
 
 	animateText(){
@@ -73,6 +83,13 @@ export default class SectionContainer1 extends React.Component {
 			});
 		}
 	}
+	moveUpVideo() {
+		const videoHeight = this.video.clientHeight;
+		const containerHeight = this.container1.offsetHeight;
+		const heightDiff = videoHeight - containerHeight;
+		this.setState({ heightDiff });
+		this.video.style.top = `-${heightDiff}px`;
+	}
 	handleScroll() {
 	const range = 200;
 	const scrollTop = window.scrollY;
@@ -105,7 +122,7 @@ export default class SectionContainer1 extends React.Component {
 				</div>
 				<div className="sectionContainer1_overlay">
 				</div>
-				<video className="sectionContainer1_video" autoPlay loop muted>
+				<video className="sectionContainer1_video" ref={video => this.video = video} autoPlay loop muted>
 					<source
 						src="http://cdn2.editmysite.com/videos/landing-pages/global/home/masthead/masthead-720.mp4"
 						type="video/mp4"
