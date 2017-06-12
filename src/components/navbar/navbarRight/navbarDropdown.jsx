@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./NavbarDropdown.scss";
+import "./navbarDropdown.scss";
 import FaCaretDown from "react-icons/lib/fa/caret-down";
 import FaGlobe from "react-icons/lib/fa/globe";
 import Languages from "./languages";
@@ -31,20 +31,20 @@ class NavbarDropdown extends Component {
       <div className="navbarDropdown" tabIndex="0" onBlur={this.collapse}>
         <a onClick={this.showDropdown}>
           <FaGlobe />
-          <FaCaretDown />          
+          <FaCaretDown />
         </a>
         <ul className="langDropdown" style={{display: this.state.expanded ? 'block' : 'none'}}>
           {Languages.map((name, index) => {
             return this.renderDropdown(name, index)
           })}
-        </ul>       
+        </ul>
       </div>
     )
   }
 
   renderDropdown(name, index) {
     return(
-      <li key={index} className="langList">{name.name}</li>     
+      <li key={index} className="langList">{name.name}</li>
     )
   }
 }
