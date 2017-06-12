@@ -17,3 +17,8 @@ a:hover,
 a:active {
   text-decoration: none;
 }
+
+#bootstrap-overrides .container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}

@@ -1,0 +1,41 @@
+@import "styles/common/variables/typography";
+@import "styles/common/variables/colors";
+
+.navbarTransparent {
+  background-color: transparent;
+  color: $ghost-white;
+}
+
+.navbarWhiteBackground {
+  background-color: $white;
+  color: $light-black;
+}
+
+.navbarWhiteBackground:hover {
+  color: $black;
+}
+
+.navbarContainer {
+  height: 85px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  position: fixed;
+  font-size: $small-font;
+}
+
+.navbarComponent {
+  width: 90%;
+  flex-direction: row;
+  display: flex;
+  border-bottom: 1px solid rgba(255,255,255,0.8);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
