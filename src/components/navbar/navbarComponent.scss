@@ -3,10 +3,16 @@
 
 .navbarTransparent {
   background-color: transparent;
+  color: $ghost-white;
 }
 
-.navbarWhiteackground {
+.navbarWhiteBackground {
   background-color: $white;
+  color: $light-black;
+}
+
+.navbarWhiteBackground:hover {
+  color: $black;
 }
 
 .navbarContainer {
@@ -17,7 +23,6 @@
   z-index: 1;
   position: fixed;
   font-size: $small-font;
-  color: $ghost-white;
 }
 
 .navbarComponent {
