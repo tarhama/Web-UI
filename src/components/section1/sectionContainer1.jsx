@@ -8,6 +8,7 @@ export default class SectionContainer1 extends React.Component {
 		this.state = {
 			counterOfLetter: 0,
 			counterOfArray:0,
+			timeOfTick:200,
 			textToShow: "",
 			text:"",
 			textData: ["DO WHAT YOU LOVE", "RANDOM TEXT"]
@@ -15,6 +16,7 @@ export default class SectionContainer1 extends React.Component {
 		this.appendLetterToTheRight = this.appendLetterToTheRight.bind(this);
 		this.animateText = this.animateText.bind(this);
 		this.increaseCounterOfArray = this.increaseCounterOfArray.bind(this);
+		this.animateNextWorld = this.animateNextWorld.bind(this);
 	}
 
 	componentWillMount(){
@@ -23,21 +25,25 @@ export default class SectionContainer1 extends React.Component {
 		});
 	}
 	componentDidMount(){
-		setInterval(this.animateText,200);
+			setInterval(this.animateText, 200);
 	}
 
 	animateText(){
 		if(this.state.counterOfLetter < this.state.text.length ){
-			this.appendLetterToTheRight();
+			this.appendLetterToTheRight()
 		}
 		else{
-			this.increaseCounterOfArray();
-			this.setState({
-				textToShow: "",
-				text: this.state.textData[this.state.counterOfArray],
-				counterOfLetter: 0
-			});
+			this.animateNextWorld();
 		}
+	}
+
+	animateNextWorld(){
+		this.increaseCounterOfArray();
+		this.setState({
+			textToShow: "",
+			text: this.state.textData[this.state.counterOfArray],
+			counterOfLetter: 0
+		});
 	}
 
 	appendLetterToTheRight(){
