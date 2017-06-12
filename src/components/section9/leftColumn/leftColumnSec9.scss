@@ -1,0 +1,24 @@
+@import "styles/common/variables/_colors";
+@import "styles/common/variables/_typography";
+
+.column {
+  color: $white;
+}
+
+.columnHeader {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  align-items: center;
+}
+
+.titleSec9 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.listContent {
+
+}
