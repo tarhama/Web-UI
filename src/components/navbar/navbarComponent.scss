@@ -20,7 +20,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  z-index: 999;
   position: fixed;
   font-size: $small-font;
 }
