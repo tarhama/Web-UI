@@ -7,9 +7,7 @@ class NavbarCenterComponent extends Component {
   render() {
     return(
       <div className="navCenterComponent">
-        <div>
-          <img src={logo} height="35" alt="weebly" />
-        </div>
+        <img src={logo} height="35" alt="weebly" />
       </div>
     )
   }

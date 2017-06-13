@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HeaderSection9 from './header/headerSection9';
-import LeftColumnSec9 from './leftColumn/leftColumnSec9';
+import ColumnsSec9 from './columns/columnsSec9';
+import ButtonSec9 from './button/buttonSec9';
 import "./section9Container.scss";
 
 class Section9Container extends Component {
@@ -8,7 +9,8 @@ class Section9Container extends Component {
     return(
       <div className="container-fluid section9">
         <HeaderSection9 />
-        <LeftColumnSec9 />
+        <ColumnsSec9 />
+        <ButtonSec9 />
       </div>
     )
   }

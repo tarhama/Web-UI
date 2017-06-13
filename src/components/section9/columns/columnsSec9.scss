@@ -1,0 +1,49 @@
+@import "styles/common/variables/_colors";
+@import "styles/common/variables/_typography";
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 75px;
+}
+
+.column {
+  color: $white;
+  padding-left: 0;
+  min-width: 370px;
+}
+
+.columnHeader {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.titleSec9 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.listContent {
+  text-align: left;
+  padding-left: 5px;
+
+  li {
+    list-style: none;
+    text-indent: 0.7rem;
+    margin-bottom: 25px; 
+    font-weight: 600;
+  }
+}
+
+.listContent > li:before {
+    content: "● ";
+    color: grey;
+    margin-right: 2.0rem;
+}

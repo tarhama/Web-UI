@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from 'react';
 import "./signupBtn.scss";
 
-const SignupBtn = (props) => {
+const SignupBtn = () => {
   return(
     <div>
       <button type="button" className="signupBtn">sign up</button>
