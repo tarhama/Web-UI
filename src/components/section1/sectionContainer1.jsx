@@ -21,13 +21,9 @@ export default class SectionContainer1 extends React.Component {
 		this.increaseCounterOfArray = this.increaseCounterOfArray.bind(this);
 		this.animateNextWorld = this.animateNextWorld.bind(this);
 		this.moveUpVideo = this.moveUpVideo.bind(this);
-<<<<<<< .mine
 		this.animateNextWorld = this.animateNextWorld.bind(this);
-		this.handleScroll = this.handleScroll.bind(this)
-=======
 		this.handleScroll = this.handleScroll.bind(this);
 		this.moveUpVideo = this.moveUpVideo.bind(this);
->>>>>>> .theirs
 	}
 
 	componentWillMount(){
