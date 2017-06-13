@@ -42,12 +42,12 @@ class NavbarComponent extends Component {
         <div className="navbarComponent">
           <nav>
             <NavbarLeftComponent />
-            <NavbarCenterComponent />
-            <NavbarRightComponent />
+            <NavbarCenterComponent changeNavbar={this.state.changeNavbar} />
+            <NavbarRightComponent changeNavbar={this.state.changeNavbar}/>
           </nav>
         </div>
       </div>
-      )
+    )
   }
 }
 

@@ -1,8 +1,11 @@
 .navCenterComponent {
   margin: 5px 10px 5px 10px;
+
+  img:hover {
+    cursor: pointer;
+  }
 }
 
-.navCenterComponent img:hover {
+.whiteLogo:hover {
   opacity: 0.5;
-  cursor: pointer;
 }

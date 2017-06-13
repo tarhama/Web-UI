@@ -4,15 +4,17 @@
 .navbarTransparent {
   background-color: transparent;
   color: $ghost-white;
+  position: absolute;
 }
 
 .navbarWhiteBackground {
   background-color: $white;
   color: $light-black;
-}
+  position: fixed;
 
-.navbarWhiteBackground:hover {
-  color: $black;
+  li:hover {
+    color: $black;
+  }
 }
 
 .navbarContainer {
@@ -21,7 +23,6 @@
   display: flex;
   justify-content: center;
   z-index: 999;
-  position: fixed;
   font-size: $small-font;
 }
 
