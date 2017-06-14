@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import { gallery } from '../../../../store/section2_gallery';
+import { gallery } from '../../section2_store/index';
 import './index.scss';
 
 class Section2Gallery extends Component {

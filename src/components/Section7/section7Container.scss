@@ -1,0 +1,30 @@
+// variables
+$white-cream: #f8f8f8;
+$padding-top-bottom: 100px;
+$container-height: 900px;
+$parallax-height: 476px;
+$parallax-top: 430px;
+$background-vertical-center: 504px;
+
+.section7-container {
+  position: relative;
+  background-color: $white-cream;
+  background-repeat: no-repeat;
+  background-position: center $background-vertical-center;
+  background-attachment: fixed;
+  overflow: hidden;
+
+  padding: $padding-top-bottom 0;
+  height: $container-height;
+  text-align: center;
+}
+
+.section7-parallax {
+  width: 100%;
+  height: $parallax-height;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: $parallax-top;
+  transform: translateX(-50%);
+}

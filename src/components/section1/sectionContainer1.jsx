@@ -26,7 +26,9 @@ export default class SectionContainer1 extends React.Component {
 		});
 	}
 	componentDidMount(){
+		this.moveUpVideo();
 		window.addEventListener('scroll', this.handleScroll);
+		window.addEventListener('load', this.moveUpVideo);
 		window.addEventListener('resize', this.moveUpVideo);
 		setInterval(this.animateText, 200);
 	}
@@ -70,7 +72,7 @@ export default class SectionContainer1 extends React.Component {
 		}
 	}
 	moveUpVideo() {
-		const videoHeight = this.video.clientHeight;
+		const videoHeight = this.video.offsetHeight;
 		const containerHeight = this.container1.offsetHeight;
 		const heightDiff = videoHeight - containerHeight;
 		this.setState({ heightDiff });
