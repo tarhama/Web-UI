@@ -7,7 +7,7 @@ import "./section9Container.scss";
 class Section9Container extends Component {
   render() {
     return(
-      <div className="container-fluid section9">
+      <div className="section9 container">
         <HeaderSection9 />
         <ColumnsSec9 />
         <ButtonSec9 />

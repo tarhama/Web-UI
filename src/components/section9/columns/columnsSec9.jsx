@@ -27,7 +27,7 @@ class ColumnsSec9 extends Component {
     const logo = require('../../../../assets/images/circle-check.svg');
 
     return(
-      <div className="container columns">
+      <div className="columns">
         <div className="column">
           <div className="columnHeader">
             <img src={logo} />
