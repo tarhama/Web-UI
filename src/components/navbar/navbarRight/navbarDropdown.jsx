@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./navbarDropdown.scss";
 import FaCaretDown from "react-icons/lib/fa/caret-down";
 import FaGlobe from "react-icons/lib/fa/globe";
-import Languages from "./languages";
+import Languages from "../../../store/languages";
 
 class NavbarDropdown extends Component {
   constructor(props) {

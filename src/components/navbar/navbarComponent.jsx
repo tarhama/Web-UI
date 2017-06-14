@@ -19,7 +19,7 @@ class NavbarComponent extends Component {
 
   handleScroll(event) {
     let scrollTop = event.srcElement.body.scrollTop;
-    let navbarHeight = 260;
+    let navbarHeight = 85;
     if(scrollTop > navbarHeight) {
       this.setState({
         changeNavbar: false,
@@ -41,12 +41,12 @@ class NavbarComponent extends Component {
         <div className="navbarComponent">
           <nav>
             <NavbarLeftComponent />
-            <NavbarCenterComponent />
-            <NavbarRightComponent />
+            <NavbarCenterComponent changeNavbar={this.state.changeNavbar} />
+            <NavbarRightComponent changeNavbar={this.state.changeNavbar}/>
           </nav>
         </div>
       </div>
-      )
+    )
   }
 }
 

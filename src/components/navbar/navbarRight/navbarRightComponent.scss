@@ -1,5 +1,5 @@
-@import "styles/common/variables/colors";
-@import "styles/common/variables/typography";
+@import "styles/common/variables/_colors";
+@import "styles/common/variables/_typography";
 
 .navRightComponent{
   display: flex;
@@ -9,13 +9,14 @@
   list-style-type: none;
   margin: 0;
   align-items: center;
-}
 
-.navRightComponent li {
-  padding-left: 2em;
-}
 
-.navRightComponent li:hover {
-  cursor: pointer;
-  color: $white;
+  li {
+    padding-left: 2em;
+
+    &:hover {
+      cursor: pointer;
+      color: $white;
+    }
+  }
 }
