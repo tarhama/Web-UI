@@ -6,7 +6,7 @@ import {Section5Container} from "./components/section5/section5Container";
 import NavbarComponent from './components/navbar/navbarComponent';
 import Section2Container from './components/section2/section2_container';
 import Section7Container from './components/Section7/section7Container';
-import LeftColumnSect9 from './components/section9/parts/leftColumnSect9';
+import Section9Container from './components/section9/section9Container';
 
 export default class App extends React.Component {
 	render() {
@@ -17,7 +17,7 @@ export default class App extends React.Component {
 				<Section2Container />
 				<Section5Container />
 				<Section7Container />
-				<LeftColumnSect9 />
+				<Section9Container />
 			</div>
 		)
 	}
