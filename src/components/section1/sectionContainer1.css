@@ -1,6 +1,8 @@
 .sectionContainer1 {
-    height: 845px;
+    min-height: 845px;
     position: relative;
+    display: block;
+    text-align: center;
 }
 
 .sectionContainer1_overlay {
@@ -9,7 +11,7 @@
     top: 0;
     left: 0;
     margin: 0;
-    z-index: -1;
+    z-index: -10;
     opacity: 0.8;
     background: #2297e6;
     width: 100%;
@@ -17,23 +19,39 @@
 
 .sectionContainer1_video {
   position: absolute;
-  top: 50%;
+  /*top: -200px;*/
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1000;
+  z-index: -20;
   overflow: hidden;
 }
 
 .sectionContainer1_animated-text {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    font-size: 50px;
+    height: 65px;
+    font-size: 65px;
     font-weight: bold;
+    text-align: left;
     color: white;
     font-family: cursive;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-left: 25%;
+}
+
+.sectionContainer1-button {
+    margin-top: 10%;
+    width: auto;
+    display: block;
+}
+
+.section1-wrapper{
+    position: absolute;
+    top: 40%;
+    display: block;
+    width: 100%;
+    height: 100%;
 }

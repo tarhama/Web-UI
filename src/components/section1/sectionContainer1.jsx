@@ -1,5 +1,7 @@
 import React from 'react';
+import Section2Btn from './../section2/parts/section2_btn/index.js'
 import './sectionContainer1.css';
+
 
 export default class SectionContainer1 extends React.Component {
 	constructor(){
@@ -7,15 +9,21 @@ export default class SectionContainer1 extends React.Component {
 		this.state = {
 			counterOfLetter: 0,
 			counterOfArray: 0,
+			timeOfTick:200,
 			textToShow: "",
 			text: "",
 			textData: ["DO WHAT YOU LOVE", "RANDOM TEXT"],
 			calc: 1,
+			heightDiff: 0
 		};
 		this.appendLetterToTheRight = this.appendLetterToTheRight.bind(this);
 		this.animateText = this.animateText.bind(this);
 		this.increaseCounterOfArray = this.increaseCounterOfArray.bind(this);
-		this.handleScroll = this.handleScroll.bind(this)
+		this.animateNextWorld = this.animateNextWorld.bind(this);
+		this.moveUpVideo = this.moveUpVideo.bind(this);
+		this.animateNextWorld = this.animateNextWorld.bind(this);
+		this.handleScroll = this.handleScroll.bind(this);
+		this.moveUpVideo = this.moveUpVideo.bind(this);
 	}
 
 	componentWillMount(){
@@ -25,24 +33,30 @@ export default class SectionContainer1 extends React.Component {
 	}
 	componentDidMount(){
 		window.addEventListener('scroll', this.handleScroll);
+		window.addEventListener('resize', this.moveUpVideo);
 		setInterval(this.animateText, 200);
 	}
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this.handleScroll(this.container1));
+		window.removeEventListener('resize', this.moveUpVideo);
 	}
 
 	animateText(){
 		if(this.state.counterOfLetter < this.state.text.length ){
-			this.appendLetterToTheRight();
+			this.appendLetterToTheRight()
 		}
 		else{
-			this.increaseCounterOfArray();
-			this.setState({
-				textToShow: "",
-				text: this.state.textData[this.state.counterOfArray],
-				counterOfLetter: 0
-			});
+			this.animateNextWorld();
 		}
+	}
+
+	animateNextWorld(){
+		this.increaseCounterOfArray();
+		this.setState({
+			textToShow: "",
+			text: this.state.textData[this.state.counterOfArray],
+			counterOfLetter: 0
+		});
 	}
 
 	appendLetterToTheRight(){
@@ -64,6 +78,13 @@ export default class SectionContainer1 extends React.Component {
 				counterOfArray: 0
 			});
 		}
+	}
+	moveUpVideo() {
+		const videoHeight = this.video.clientHeight;
+		const containerHeight = this.container1.offsetHeight;
+		const heightDiff = videoHeight - containerHeight;
+		this.setState({ heightDiff });
+		this.video.style.top = `-${heightDiff}px`;
 	}
 	handleScroll() {
 	const range = 200;
@@ -87,12 +108,17 @@ export default class SectionContainer1 extends React.Component {
 	render() {
 		return(
 			<div className="sectionContainer1" ref={div => this.container1 = div}>
-				<div className="sectionContainer1_animated-text">
-					{this.state.textToShow}
+				<div className="section1-wrapper">
+					<div className="sectionContainer1_animated-text">
+						{this.state.textToShow}
+					</div>
+					<div className="sectionContainer1-button">
+						<Section2Btn />
+					</div>
 				</div>
 				<div className="sectionContainer1_overlay">
 				</div>
-				<video className="sectionContainer1_video" autoPlay loop muted>
+				<video className="sectionContainer1_video" ref={video => this.video = video} autoPlay loop muted>
 					<source
 						src="http://cdn2.editmysite.com/videos/landing-pages/global/home/masthead/masthead-720.mp4"
 						type="video/mp4"
