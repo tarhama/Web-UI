@@ -1,0 +1,68 @@
+// variables
+$tab-list-height: 40px;
+$tab-list-width: 75%;
+$tab-color: #9ba0a3;
+$tab-font-size: 0.875rem;
+$tab-margin-right: 50px;
+$card-width: 475px;
+$card-margin: 20px;
+$card-hover-zoom: 1.05;
+$cards-fade: 0.6;
+$active-color: #fff;
+
+// sass styles for tab items
+.section2-tab-items {
+  max-width: $tab-list-width;
+  height: $tab-list-height;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+
+  a:not([href]):not([tabindex]) {
+    color: $tab-color;
+  }
+
+  .tab-item {
+    font-size: $tab-font-size;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: $tab-margin-right;
+
+    &:hover {
+      cursor: pointer;
+      color: $active-color !important;
+      transition: all 0.3s ease-in 0s;
+    }
+  }
+}
+
+// style for active tab item
+.active-tab {
+  color: $active-color !important;
+}
+
+// sass styles for tab items
+.section2-img-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: $card-margin;
+
+  &:hover > .card.img-item {
+    opacity: $cards-fade;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .card.img-item {
+    border: none;
+    min-width: $card-width;
+    margin: $card-margin;
+    &:hover {
+      cursor: pointer;
+      transform: scale($card-hover-zoom, $card-hover-zoom);
+      opacity: 1;
+      transition: all 0.3s ease-in-out 0s;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "styles/common/variables/_colors";
+
+.buttonSec9 {
+  color: #fff;
+  display: inline-block;
+  padding: 0 40px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid $sky-blue;
+  border-radius: 25px;
+  background-color: transparent;
+  /* HOVER OFF */
+  transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  margin: 0 auto;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $sky-blue;
+    /* HOVER ON */
+    transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+  }
+}

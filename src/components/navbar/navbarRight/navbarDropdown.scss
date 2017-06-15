@@ -1,0 +1,33 @@
+.navbarDropdown a {
+  display: flex;
+  flex-direction: row;
+}
+
+.langDropdown {
+  display: block;
+  position: absolute;
+  min-width: 120px;
+  z-index: 1;
+  background-color: #fff;
+  overflow-y: scroll;
+  height: 200px;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.langDropdown .langList {
+  color: #555;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #555;
+  margin-left: 0;
+  font-size: 15px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #D3D3D3;
+    color: #555;
+  }
+}
+

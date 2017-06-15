@@ -1,0 +1,31 @@
+$font-size-header: 3.4375rem;
+$font-size-paragraph: 1.25rem;
+$dark-grey: #363b3e;
+$light-grey: #666c70;
+$margin-bottom-header: 30px;
+$margin-bottom-paragraph: 50px;
+$font-weight-header: 900;
+$font-weight-paragraph: 400;
+$line-height-header: 1.2rem;
+$line-height-paragraph: 1.75rem;
+$width-paragraph: 840px;
+
+.section7-header {
+  max-width: 840px;
+  margin: auto;
+
+  .section7-title {
+    font-size: $font-size-header;
+    font-weight: $font-weight-header;
+    margin-bottom: $margin-bottom-header;
+    color: $dark-grey;
+  }
+  .section7-paragraph {
+    font-size: $font-size-paragraph;
+    line-height: $line-height-paragraph;
+    font-weight: $font-weight-paragraph;
+    color: $light-grey;
+    margin-bottom: $margin-bottom-paragraph;
+    width: $width-paragraph;
+  }
+}

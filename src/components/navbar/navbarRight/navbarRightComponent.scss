@@ -1,21 +1,22 @@
 @import "styles/common/variables/_colors";
 @import "styles/common/variables/_typography";
 
-.navLeftComponent ul {
+.navRightComponent{
   display: flex;
   flex-direction: row;
   text-decoration: none;
   text-transform: capitalize;
   list-style-type: none;
-  padding-left: 0;
   margin: 0;
-}
+  align-items: center;
 
-.navLeftComponent li {
-  margin-right: 2em;
-}
 
-.navLeftComponent li:hover {
-  cursor: pointer;
-  color: $white;
+  li {
+    padding-left: 2em;
+
+    &:hover {
+      cursor: pointer;
+      color: $white;
+    }
+  }
 }
