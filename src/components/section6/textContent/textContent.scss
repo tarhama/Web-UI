@@ -4,14 +4,15 @@
 .textSec6 {
   color: $white;
   text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 50px;
+  // position: relative;
+  // top: 50%;
+  // transform: translateY(-50%);
   
   h1 {
-    margin-bottom: 50px;
-    font-weight: 900;
-    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2rem;
   }
 
   p {
@@ -20,5 +21,29 @@
     font-size: $small-font;
     line-height: 1.75em;
     font-weight: 400;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .textSec6 {
+    margin-top: 150px;
+
+    h1 {
+      margin-bottom: 50px;
+      font-weight: 900;
+      font-size: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .textSec6 {
+    margin-top: 100px;
+
+    h1 {
+      margin-bottom: 50px;
+      font-weight: 900;
+      font-size: 2.5rem;
+    }
   }
 }

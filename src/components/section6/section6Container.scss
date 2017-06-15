@@ -1,5 +1,31 @@
 .containerSec6 {
-  height: 80vh;
+  height: 90vh;
   overflow-x: hidden;
   overflow-y: hidden;
+  position: relative;
+  padding: 0 25px;
+}
+
+.videoSec6 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -99;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+  .containerSec6 {
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .containerSec6 {
+    height: 80vh;
+  }
 }

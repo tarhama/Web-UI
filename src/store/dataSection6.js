@@ -1,14 +1,15 @@
 
 export const DataSec6 = {
     title: "We've got your back",
+    videoLink: "../../assets/videos/cs.mp4",
     buttons: [
       {
         id: 1,
-        title: "get started",
+        name: "get started",
       },
       {
         id: 2,
-        title: "learn more",
+        name: "learn more",
       } 
     ],  
     text: "Talk to our award-winning Success Team available to help you create " +
