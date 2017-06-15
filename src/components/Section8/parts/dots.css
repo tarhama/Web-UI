@@ -1,0 +1,25 @@
+.dots > svg {
+     margin: 0 10px;
+     font-size: 1rem;
+     fill: #666c70;
+     cursor: pointer;
+ }
+
+.dots > svg:hover {
+    fill: #ff6d3a;
+    opacity: 0.5;
+    transition-duration: 0.5s;
+}
+
+.dots > .active {
+    fill: #ff6d3a;
+}
+
+.dots{
+    position: absolute;
+    bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}

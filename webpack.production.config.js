@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-var path = require('path');
+var path = require('parts');
 var loaders = require('./webpack.loaders');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var WebpackCleanupPlugin = require('webpack-cleanup-plugin');
@@ -17,7 +17,7 @@ module.exports = {
     './styles/index.scss'
   ],
   output: {
-    publicPath: './',		
+    publicPath: './',
     path: path.join(__dirname, 'public'),
     filename: '[chunkhash].js'
   },

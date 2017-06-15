@@ -1,0 +1,27 @@
+h2{
+    margin: 50px 20px;
+    color: #FF6D3A;;
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+h4{
+    line-height: 1.2;
+    margin: 0 0 .75em;
+    color: rgba(255,109,58,0.5);
+    font-size: 19px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.hideCarouse {
+    opacity: 0;
+    transition: opacity 0.325s ease-out 0.25s, transform 0.325s ease-out 0.25s;
+}
+.showCarouse {
+    opacity: 1;
+    transition: opacity 0.325s ease-out 0.25s, transform 0.325s ease-out 0.25s;
+}

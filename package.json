@@ -21,6 +21,7 @@
     "node-sass": "^4.3.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
+    "react-fontawesome": "^1.6.1",
     "sass-loader": "^6.0.2"
   },
   "devDependencies": {
@@ -46,6 +47,8 @@
     "webpack-cleanup-plugin": "^0.4.2",
     "webpack-dashboard": "^0.3.0",
     "webpack-dev-server": "^2.4.1",
-    "bootstrap": "^4.0.0-alpha.6"
+    "bootstrap": "^4.0.0-alpha.6",
+    "classnames": "^2.2.5",
+    "fbemitter": "^2.1.1"
   }
 }

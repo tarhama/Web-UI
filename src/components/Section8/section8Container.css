@@ -1,0 +1,15 @@
+.section8Container .row{
+    height: 650px;
+    border: 1px solid black
+}
+
+.section8Container *{
+    text-align: center;
+}
+
+.vCenter{
+    display: inline-grid;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 3px;
+}
