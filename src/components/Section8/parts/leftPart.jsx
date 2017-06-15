@@ -31,6 +31,7 @@ export default class LeftPart extends React.Component {
 					videoSrc: index,});
 			}, 1000);
 
+
 			setTimeout(() => {
 				this.setState({
 					class: 'showVideo' });
