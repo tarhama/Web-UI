@@ -9,7 +9,7 @@ export default class SectionContainer1 extends React.Component {
 		this.state = {
 			counterOfLetter: 0,
 			counterOfArray: 0,
-			timeOfTick:200,
+			timeOfTick: 200,
 			textToShow: "",
 			text: "",
 			textData: ["DO WHAT YOU LOVE", "RANDOM TEXT"],
@@ -39,8 +39,9 @@ export default class SectionContainer1 extends React.Component {
 		setInterval(this.animateText, 200);
 	}
 	componentWillUnmount() {
-		window.removeEventListener('scroll', this.handleScroll(this.container1));
+		window.removeEventListener('scroll', this.handleScroll);
 		window.removeEventListener('resize', this.moveUpVideo);
+		window.addEventListener('resize', this.moveUpVideo);
 	}
 
 	animateText(){

@@ -41,9 +41,10 @@ class Section2Gallery extends Component {
         className={tabClass}
         key={tab.id}
         onClick={(e) => {
+          e.preventDefault();
+          console.log('clicked');
           const currentTab = e.target;
           const fullClassName = currentTab.className;
-          classNames
           const imgSetId = Section2Gallery.getIdFromTabItem(fullClassName);
           const activeImageSet = Section2Gallery.fetchImageSetByID(gallery, imgSetId);
           this.setState({ activeImageSet, activeTabID: tab.id });

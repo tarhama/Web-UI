@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import *as data from '../../../store/dataSection9';
-import './ColumnsSec9.scss';
+import './columnsSec9.scss';
 
 class ColumnsSec9 extends Component {
 
@@ -23,7 +23,7 @@ class ColumnsSec9 extends Component {
         return myList(name, index);
       })
     );
-    
+
     const logo = require('../../../../assets/images/circle-check.svg');
 
     return(

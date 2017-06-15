@@ -11,6 +11,9 @@ $line-height-paragraph: 1.75rem;
 $width-paragraph: 840px;
 
 .section7-header {
+  max-width: 840px;
+  margin: auto;
+
   .section7-title {
     font-size: $font-size-header;
     font-weight: $font-weight-header;
@@ -18,7 +21,6 @@ $width-paragraph: 840px;
     color: $dark-grey;
   }
   .section7-paragraph {
-    margin: auto;
     font-size: $font-size-paragraph;
     line-height: $line-height-paragraph;
     font-weight: $font-weight-paragraph;
