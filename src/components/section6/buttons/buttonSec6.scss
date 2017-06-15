@@ -1,0 +1,71 @@
+@import "styles/common/variables/_colors";
+
+.buttonSec6 {
+   margin-top: 50px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+
+  .btnRightSec6 {
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: underline;
+    white-space: nowrap;
+    font-weight: 600;
+
+  }
+}
+
+.btnLeftSec6 {
+  color: #FFA500;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border: 2px solid $white;
+  border-radius: 25px;
+  background-color: $white;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  /* HOVER OFF */
+  transition-duration: 0.75s;
+
+  &:hover {
+    cursor: pointer;
+    /* HOVER ON */
+    transition-duration: 0.75s;
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .buttonSec6 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btnLeftSec6 {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .buttonSec6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btnLeftSec6 {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
