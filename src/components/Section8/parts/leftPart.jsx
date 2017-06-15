@@ -28,13 +28,14 @@ export default class LeftPart extends React.Component {
 
 			setTimeout(() => {
 				this.setState({
-					videoSrc: index,});
+					videoSrc: index,
+				});
 			}, 1000);
-
 
 			setTimeout(() => {
 				this.setState({
-					class: 'showVideo' });
+					class: 'showVideo'
+				});
 			}, 750);
 
 		});

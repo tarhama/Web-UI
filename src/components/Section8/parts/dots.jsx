@@ -26,12 +26,12 @@ export default class Dots extends React.Component {
 
 	}
 
-	onClick(data, keyId){
+	onClick(data, keyId) {
 		this.setFilter(data);
 		this.handleClick(keyId);
 	}
 
-	handleClick = (keyId) =>{
+	handleClick = (keyId) => {
 		sec8Emitter.emit('changeId', keyId);
 	};
 
@@ -39,7 +39,6 @@ export default class Dots extends React.Component {
 		this.setState({
 			speaker: speaker
 		});
-
 	}
 
 	isActive(value) {
@@ -51,14 +50,14 @@ export default class Dots extends React.Component {
 			<Fadot key={index}
 						 size="15px"
 						 className={this.isActive(obj.speaker)}
-						 onClick={()=> this.onClick(obj.speaker, index) }
+						 onClick={() => this.onClick(obj.speaker, index) }
 			/>
 		));
 
 		return (
-				<div className="dots">
-					{addFaDots}
-				</div>
+			<div className="dots">
+				{addFaDots}
+			</div>
 		)
 	}
 }

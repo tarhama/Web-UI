@@ -9,7 +9,6 @@ import './leftPart';
 
 export default class SoundIcon extends React.Component {
 
-
 	constructor(props) {
 		super(props);
 

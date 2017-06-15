@@ -1,6 +1,5 @@
 .section8Container .row{
     height: 650px;
-    border: 1px solid black
 }
 
 .section8Container *{
@@ -11,5 +10,9 @@
     display: inline-grid;
     align-items: center;
     padding-left: 0;
-    padding-right: 3px;
+    padding-right: 0;
+}
+
+.whitebg{
+    background-color: white;
 }
