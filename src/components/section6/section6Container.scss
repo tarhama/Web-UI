@@ -1,5 +1,5 @@
 .containerSec6 {
-  height: 90vh;
+  height: 80vh;
   overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
@@ -16,16 +16,4 @@
   height: auto;
   z-index: -99;
   overflow: hidden;
-}
-
-@media only screen and (min-width: 992px) {
-  .containerSec6 {
-    height: 80vh;
-  }
-}
-
-@media only screen and (max-width: 992px) and (min-width: 768px) {
-  .containerSec6 {
-    height: 80vh;
-  }
 }

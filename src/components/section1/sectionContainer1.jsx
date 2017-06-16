@@ -34,7 +34,7 @@ export default class SectionContainer1 extends React.Component {
 	componentDidMount(){
 		this.moveUpVideo();
 		window.addEventListener('scroll', this.handleScroll);
-		window.addEventListener('load', this.moveUpVideo);
+		window.addEventListener('scroll', this.moveUpVideo);
 		window.addEventListener('resize', this.moveUpVideo);
 		setInterval(this.animateText, 200);
 	}
