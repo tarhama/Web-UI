@@ -1,22 +1,51 @@
 import React from 'react';
 
 import './footerList.css';
+import '../footer';
 
 export default class FooterList extends React.Component {
 
 	constructor(props) {
 		super(props);
 
-		this.state ={
-			footerListData: this.props.footerListJSON
+		this.state = {
+			footerListData: this.props.footerListJSON,
+			footerDataLength: this.props.footerListJSON.length
 		};
-		//console.log(this.state.footerListData)
+		this.footerList = this.footerList.bind(this);
+		this.listRender = this.listRender.bind(this);
+	}
+
+	footerList() {
+
+		var test = [];
+
+		for (let i = 0; i < this.state.footerDataLength; i++) {
+		let testObj =
+			<span className="flex pl-2 pr-2">
+						<ul className="footer_list">
+							{this.listRender(i)}
+						</ul>
+				</span>;
+						test.push(testObj)
+		}
+		return test
+	}
+
+	listRender (value){
+	const ListRender =	this.state.footerListData[value].map((object) => (
+			<li key={object}>{object}</li>
+		));
+	return ListRender;
 	}
 
 	render() {
 		return (
-			<div>list</div>
+			<div>
+				<div className="footer_listContnet ml-3 mr-3 row">
+					{this.footerList()}
+				</div>
+			</div>
 		)
 	}
-
 }

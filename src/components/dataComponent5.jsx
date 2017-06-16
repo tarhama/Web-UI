@@ -66,7 +66,8 @@ export const footerJson = {
 		"HeaderText": "Features to start, sell & grow,"
 	},
 	"Lists": {
-			"PRODUCT": [
+		"List": [
+			[
 				"Product",
 				"Features",
 				"Themes",
@@ -74,19 +75,19 @@ export const footerJson = {
 				"App Center",
 				"Mobile Apps"
 			],
-			"RESOURCE": [
+			[
 				"resource",
 				"Weebly Blog",
 				"Inspiration Center",
 				"Success Stories",
 				"Developer Docs"
 			],
-			"SUPPORT": [
+			[
 				"Support",
 				"Support Center",
 				"Community"
 			],
-			"PARTNERS": [
+			[
 				"partners",
 				"Ambassadors",
 				"Resellers",
@@ -95,13 +96,14 @@ export const footerJson = {
 				"Developer",
 				"Education"
 			],
-			"COMPANY": [
+			[
 				"company",
 				"About",
 				"Careers",
 				"Press",
 				"Contact"
-			],
+			]
+		],
 	"Links": {
 		"Links": [
 			"© Weebly, Inc.",

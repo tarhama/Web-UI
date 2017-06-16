@@ -12,19 +12,18 @@ export default class Footer extends React.Component {
 		super();
 
 		this.state = {
-			footerDataJson: data.footerJson
-		}
+			footerDataJson: data.footerJson,
+		};
 	}
 
 	render() {
 		return (
 			<div className="footer">
 				<div className="container">
-					<FooterList footerListJSON={this.state.footerDataJson.Lists} />
+					<FooterList footerListJSON={this.state.footerDataJson.Lists.List} />
 					<FooterNavbar footerNavbarJSON={this.state.footerDataJson.Lists.Links} />
 				</div>
 			</div>
 		)
 	}
-
 }
