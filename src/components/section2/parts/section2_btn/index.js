@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import Section3Btn from './index.scss';
 
 const Section2Btn = () => {
   return (

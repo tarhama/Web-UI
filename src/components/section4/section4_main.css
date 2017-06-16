@@ -1,0 +1,87 @@
+ul.checklist li {
+    max-width: 400px;
+    padding-left: 1.5rem;
+}
+
+.page-section-4 {
+    padding: 80px 0;
+    background-color: #56d090;
+}
+
+.page-section-4. page-container. transform-X {
+    transform: translateX(-50px);
+}
+
+.page-section-4 .page-container {
+    padding: 90px 0;
+}
+
+.image-items2 {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.page-section-4 .item-email {
+    position: absolute;
+    top: calc(50% - 350px);
+    left: 40%;
+}
+
+.page-section-4 .item-email-roi {
+    position: absolute;
+    top: calc(50% - 135px);
+    left: 17%;
+    width: 522px;
+    height: 348px;
+}
+
+.page-section-4 .item-email-performance {
+    position: absolute;
+    top: calc(50% - 250px);
+    left: 13%;
+}
+
+.page-section-4 .item-shades {
+    left:180px;
+    top: calc(50% + 10px);
+    position: relative;
+}
+
+.page-section-4 .checklist .checklist__item ::before {
+    background-image: url("../../assets/images/circle-check-white.png");
+}
+
+#checklist-section4 .li_image {
+    background:  url(./../../../assets/images/circle-check-white.png) no-repeat;
+}
+
+.page-section-4 .btn:hover
+{
+    color: #56d090;
+}
+
+@media (max-width: 1400px) {
+    .page-section-4 .item-email-performance,
+    .page-section-4 .item-email-roi,
+    .page-section-4 .item-shades,
+    .page-section-4 .item-email
+    {
+        transform: scale(0.7);
+    }
+
+    .page-section-4 {
+        padding-bottom: 30px;
+    }
+
+    .page-section-4 .item-shades {
+        top:calc(50% - 100px);
+    }
+
+    .page-section-4 .item-email{
+        top: calc(50% - 425px);
+    }
+    .page-section-4 .page-container {
+        padding: 20px 0;
+    }
+
+}

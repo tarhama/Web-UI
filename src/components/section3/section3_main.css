@@ -1,0 +1,156 @@
+.li_image{
+    display: block;
+    content: "";
+    width: 45px;
+    height: 45px;
+    background:  url(./../../../assets/images/circle-check.png) no-repeat;
+    background-size: contain;
+}
+
+.relative {
+    position: relative;
+}
+
+.checklist li {
+    list-style-type: none;
+}
+
+.checklist {
+    padding-left: 0;
+}
+
+.page-section-3 .btn:hover,
+.page-section-4 .btn:hover,
+.page-section-6 .btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.page-section-3 .btn:hover
+{
+    color: #807FFF;
+}
+
+.page-section-3 .link-btn,
+.page-section-4 .link-btn,
+.page-section-6 .link-btn{
+    margin-left: 2rem;
+}
+
+.page-section-3 {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.page-section-3. page-container. transform-X {
+    transform: translateX(500px);
+}
+
+.page-section-3 .item-iphone {
+    position: absolute;
+    top: calc(50% - 500px);
+    left: 150px;
+}
+
+.page-section-3 .item-box {
+    position: relative;
+    transform: translateX(50px);
+}
+
+.page-section-3 .item-orders {
+    position: absolute;
+    top: calc(50% - 90px);
+    left: -150px;
+}
+
+.page-section-3 .item-sales {
+    position: absolute;
+    top: calc(50% - 290px);
+    left: -250px;
+}
+
+.image-items {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+ul.checklist li {
+    max-width: 400px;
+    padding-left: 1.5rem;
+}
+
+.page-width {
+    width: 60%;
+    /*opacity: 0;*/
+    transform: translateX(50px);
+}
+
+.page-section-4 .page-title,
+.page-section-3 .page-title,
+.page-title{
+    color: #363b3e;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin-bottom: 30px;
+}
+
+.page-section-3 .image-transition,
+.page-section-4 .image-transition{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: opacity 0.425s ease-out 0.2s, transform 0.425s ease-out 0.2s;
+}
+
+.page-section-3 .image-transition1,
+.page-section-4 .image-transition1{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.3s, transform 0.425s ease-out 0.3s;
+}
+
+.page-section-3 .image-transition2,
+.page-section-4 .image-transition2{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.35s, transform 0.425s ease-out 0.35s;
+}
+
+.page-section-3 .image-transition3,
+.page-section-4 .image-transition3 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.425s ease-out 0.4s, transform 0.425s ease-out 0.4s;
+}
+
+.checklist-transition{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s;
+}
+
+@media (max-width: 1400px) {
+    .page-section-3 .item-iphone,
+    .page-section-3 .item-sales,
+    .page-section-3 .item-box,
+    .page-section-3 .item-orders
+    {
+        transform: scale(0.7);
+    }
+
+    .page-section-3 {
+        padding-bottom: 0;
+    }
+
+    .page-section-3 .item-sales {
+        left: -50px;
+    }
+
+    .page-section-3 .item-iphone{
+        top: calc(50% - 400px);
+    }
+}
+
+
