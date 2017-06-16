@@ -7,7 +7,8 @@
   border-radius: 25px;
   background-color: transparent;
   // color: $white;
-  font-size: $small-font;
+  font-size: $tiny-font;
+  font-weight: 600;
   width: 120px;
   height: 40px;
   transition-duration: 0.3s;
@@ -21,18 +22,28 @@
 
 .colorBtnWhite {
   color: $white;
-  border: 2px solid #D3D3D3;
-
-  &:hover {
-    border: 2px solid $white;
-  }
+  border: none;
 }
 
 .colorBtnBlue {
   color: $sky-blue;
-  border: 1px solid #D3D3D3;
+  border: none;
+}
 
-  &:hover {
-    border: 2px solid #696969;
+@media only screen and (min-width: 992px) {
+  .colorBtnWhite {
+    border: 2px solid #D3D3D3;
+
+    &:hover {
+      border: 2px solid $white;
+    }
+  }
+
+  .colorBtnBlue {
+    border: 1px solid #D3D3D3;
+
+    &:hover {
+      border: 2px solid #696969;
+    }
   }
 }

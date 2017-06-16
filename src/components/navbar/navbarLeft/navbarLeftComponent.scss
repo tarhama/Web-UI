@@ -12,10 +12,18 @@
 }
 
 .navLeftComponent li {
-  margin-right: 2em;
+  margin-right: 1em;
 }
 
 .navLeftComponent li:hover {
   cursor: pointer;
   color: $white;
+}
+
+.navIcon {
+  margin-right: 60px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

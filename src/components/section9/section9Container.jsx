@@ -7,10 +7,12 @@ import "./section9Container.scss";
 class Section9Container extends Component {
   render() {
     return(
-      <div className="section9 container">
+      <div className="section9">
+      <div className="container">
         <HeaderSection9 />
         <ColumnsSec9 />
         <ButtonSec9 />
+      </div>
       </div>
     )
   }

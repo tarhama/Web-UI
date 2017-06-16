@@ -23,7 +23,8 @@
   display: flex;
   justify-content: center;
   z-index: 999;
-  font-size: $small-font;
+  font-size: $tiny-font;
+  font-weight: 600;
 }
 
 .navbarComponent {
