@@ -1,0 +1,32 @@
+.footer_listContnet{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+}
+
+.footer_list {
+    list-style: none;
+    padding: 0;
+    margin-top:0;
+    margin-bottom: 1rem;
+    color: lightgray;
+}
+
+.footer_list > li{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.footer_list > li:nth-child(1){
+    text-transform: uppercase;
+    padding: 10px 0px;
+    color: #fff;
+    cursor: auto;
+}
+
+.footer_list > li:hover{
+    color: #ffffff;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}

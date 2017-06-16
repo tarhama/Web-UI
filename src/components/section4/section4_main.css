@@ -48,7 +48,7 @@ ul.checklist li {
 }
 
 .page-section-4 .checklist .checklist__item ::before {
-    background-image: url("../../assets/images/circle-check-white.png");
+    background-image: url("./../../../assets/images/circle-check-white.png");
 }
 
 #checklist-section4 .li_image {

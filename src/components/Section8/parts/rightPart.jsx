@@ -2,7 +2,7 @@ import React from 'react'
 
 import './rightPart.css'
 import Carousel from './Carousel.jsx';
-import Dots from './Dots'
+import Dots from './dots'
 
 export default class RightPar extends React.Component {
 

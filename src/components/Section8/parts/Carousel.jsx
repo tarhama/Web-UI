@@ -43,8 +43,8 @@ export default class Carousel extends React.Component {
 		return (
 			<div className={this.state.class}>
 				<h3 dangerouslySetInnerHTML={{__html: this.subtitle}}/>
-				<h2>{data.section8Json.slider[this.state.sliderId].quotation}</h2>
-				<h4>{data.section8Json.slider[this.state.sliderId].speaker}</h4>
+				<h2 className="h2">{data.section8Json.slider[this.state.sliderId].quotation}</h2>
+				<h4 className="h4">{data.section8Json.slider[this.state.sliderId].speaker}</h4>
 			</div>
 		)
 	}

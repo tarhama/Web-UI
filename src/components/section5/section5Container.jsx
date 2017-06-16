@@ -4,7 +4,7 @@ import './section5Container.css';
 import SectionContent5 from './parts/sectionContent5';
 import * as Data from '../dataComponent5';
 
-export class Section5Container extends React.Component {
+export default class Section5Container extends React.Component {
 
 	constructor() {
 		super();

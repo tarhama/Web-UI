@@ -15,8 +15,8 @@ export default class RenderImages extends Component {
 
 	renderImages(image) {
 		return (
-			<div className={"image-items image-transition " + image.className}>
-				<img src={image.src} alt={image.name}/>
+			<div className={"image-items image-transition " + image.className} key={image.name}>
+				<img src={image.src} alt={image.name} />
 			</div>
 		)
 	}

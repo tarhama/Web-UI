@@ -17,30 +17,30 @@ export const  DataSect4 = {
             text: 'SEO tools to find customers, climb the ranks & stay on top'
         }
     ],
-    buttons: [
+    buttons:
         {
             btn_text: "GET STARTED",
             btn_link_text: "LEARN MORE"
-        }
-    ],
+        },
+
     images : [
         {
-            src: "./assets/images/shades.jpg",
+            src: "http://cdn2.editmysite.com/images/landing-pages/global/home-weebly4/v2/promote/shades.jpg",
             name: "shades",
             className: " item-shades"
         },
         {
-            src: "./assets/images/email-roi.png",
+            src: "http://cdn2.editmysite.com/images/landing-pages/global/home-weebly4/v2/promote/email-roi.png",
             name: "email-roi",
             className: " item-email-roi"
         },
         {
-            src: "./assets/images/email-performance.png",
+            src: "http://cdn2.editmysite.com/images/landing-pages/global/home-weebly4/v2/promote/email-performance.png",
             name: "performance",
             className: " item-email-performance"
         },
         {
-            src: "./assets/images/email.png",
+            src: "http://cdn2.editmysite.com/images/landing-pages/global/home-weebly4/v2/promote/email.png",
             name: "email",
             className: " item-email"
         }
