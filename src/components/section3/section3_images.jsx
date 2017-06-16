@@ -26,6 +26,7 @@ class Section3Images extends Component {
 	}
 }
 
+
 export  default Section3Images;
 
 
