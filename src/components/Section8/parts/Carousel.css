@@ -1,4 +1,4 @@
-h2{
+.h2{
     margin: 50px 20px;
     color: #FF6D3A;;
     text-align: center;
@@ -6,7 +6,7 @@ h2{
     font-weight: bold;
 }
 
-h4{
+.h4{
     line-height: 1.2;
     margin: 0 0 .75em;
     color: rgba(255,109,58,0.5);
