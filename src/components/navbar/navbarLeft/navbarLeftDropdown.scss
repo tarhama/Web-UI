@@ -1,0 +1,28 @@
+@import "styles/common/variables/_colors";
+
+.leftDropdown {
+  display: block;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #363b3e;
+  padding-left: 0;
+  margin-top: 28px;
+  margin-left: 0;
+}
+
+.leftDropdown .leftList {
+  color: $white;
+  padding: 10px 0 10px 0;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #555;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+    color: $white;
+  }
+}
