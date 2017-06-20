@@ -1,3 +1,5 @@
+@import "styles/common/variables/_typography";
+
 .navbarDropdown a {
   display: flex;
   flex-direction: row;
@@ -10,19 +12,19 @@
   z-index: 1;
   background-color: #fff;
   overflow-y: scroll;
-  height: 200px;
+  height: 250px;
   padding-left: 0;
   margin-top: 10px;
 }
 
 .langDropdown .langList {
-  color: #555;
+  color: #666c70;
   padding: 10px;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid #555;
   margin-left: 0;
-  font-size: 15px;
+  font-size: $tiny-font;
   font-weight: 600;
 
   &:hover {
