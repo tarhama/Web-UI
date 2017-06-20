@@ -1,8 +1,7 @@
 import React from 'react';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../styles/index.scss'
-	;
+import '../styles/index.scss';
 import NavbarComponent from './components/navbar/navbarComponent';
 import SectionContainer1 from './components/section1/sectionContainer1';
 import Section2Container from './components/section2/section2_container';
@@ -16,11 +15,16 @@ import Section9Container from './components/section9/section9Container';
 import Footer from './components/footer/footer';
 
 export default class App extends React.Component {
+
+	constructor(){
+		super();
+	}
+
 	render() {
 		return (
 			<div>
 				<NavbarComponent />
-				<SectionContainer1 />
+				<SectionContainer1/>
 				<Section2Container />
 				<Section3Container />
 				<Section4Container />

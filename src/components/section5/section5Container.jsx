@@ -2,7 +2,8 @@ import React from 'react';
 
 import './section5Container.css';
 import SectionContent5 from './parts/sectionContent5';
-import * as Data from '../dataComponent5';
+
+import {SelectedSection} from '../serviceComponent'
 
 export default class Section5Container extends React.Component {
 
@@ -12,6 +13,12 @@ export default class Section5Container extends React.Component {
 		this.state = {
 			transform: 'translateY(9.74089vh) rotate(16.5389deg)',
 			transitionDuration: '0.6s',
+			titleSection5: null,
+			headingSection5: null,
+			btnSection5: null,
+			apple: null,
+			google: null,
+			images: null,
 		};
 		this.handleScroll = this.handleScroll.bind(this);
 		this.renderImgTags = this.renderImgTags.bind(this);
@@ -22,11 +29,16 @@ export default class Section5Container extends React.Component {
 	}
 
 	componentWillMount() {
-		this.titleSection5 = Data.dataComponent5.titleSection5;
-		this.headingSection5 = Data.dataComponent5.headingSection5;
-		this.btnSection5 = Data.dataComponent5.btnSection5;
-		this.apple = Data.dataComponent5.apple;
-		this.google = Data.dataComponent5.google;
+		SelectedSection('Section5').then((result) => {
+			this.setState({
+				titleSection5: result.data.titleSection5,
+				headingSection5: result.data.headingSection5,
+				btnSection5: result.data.btnSection5,
+				apple: result.data.apple,
+				google: result.data.google,
+				images: result.data.Images
+			})
+		});
 	}
 
 	handleScroll(event) {
@@ -78,26 +90,33 @@ export default class Section5Container extends React.Component {
 			},
 		];
 
-		const arrayOfImage = Data.myobject.map((obj, index) => (
-			<div className={'mobile-item hidden-md-down ' + obj.className}
-					 style={atributes[index]}
-					 key={obj.id}>
-				<img
-					className="home-apps-img"
-					src={obj.url}/>
-			</div>
-		));
+		const arrayOfImage = this.state.images? (
+			this.state.images.map((obj, index) => (
+				<div className={'mobile-item hidden-md-down ' + obj.className}
+						 style={atributes[index]}
+						 key={obj.id}>
+					<img
+						className="home-apps-img"
+						src={obj.url}/>
+				</div>
+			))
+		):null;
+
+		const section5 = this.state.google ? (
+			<SectionContent5
+				titleSection5={this.state.titleSection5}
+				headingSection5={this.state.headingSection5}
+				btnSection5={this.state.btnSection5}
+				apple={this.state.apple}
+				google={this.state.google}
+			/>
+		): null;
+
 		return (
 			<div className="Section5Container">
 				<div className="section5-container">
 					<div className="container">
-						<SectionContent5
-							titleSection5={this.titleSection5}
-							headingSection5={this.headingSection5}
-							btnSection5={this.btnSection5}
-							apple={this.apple}
-							google={this.google}
-						/>
+						{section5}
 					</div>
 					{arrayOfImage}
 				</div>

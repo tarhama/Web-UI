@@ -18,25 +18,25 @@ export default class FooterList extends React.Component {
 
 	footerList() {
 
-		var test = [];
+		var footerListArray = [];
 
 		for (let i = 0; i < this.state.footerDataLength; i++) {
-		let testObj =
-			<span className="flex pl-2 pr-2">
+			let testObj =
+				<span className="flex pl-2 pr-2">
 						<ul className="footer_list">
 							{this.listRender(i)}
 						</ul>
 				</span>;
-						test.push(testObj)
+			footerListArray.push(testObj)
 		}
-		return test
+		return footerListArray
 	}
 
-	listRender (value){
-	const ListRender =	this.state.footerListData[value].map((object) => (
+	listRender(value) {
+		const ListRender = this.state.footerListData[value].map((object) => (
 			<li key={object}>{object}</li>
 		));
-	return ListRender;
+		return ListRender;
 	}
 
 	render() {

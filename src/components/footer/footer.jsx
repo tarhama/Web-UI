@@ -1,10 +1,11 @@
 import React from 'react';
 
+import Axios from 'axios';
+import {SelectedSection} from '../serviceComponent'
+
 import './footer.css';
 import FooterList from './parts/footerList'
 import FooterNavbar from './parts/footerNavbar'
-
-import * as data from '../dataComponent5';
 
 export default class Footer extends React.Component {
 
@@ -12,16 +13,34 @@ export default class Footer extends React.Component {
 		super();
 
 		this.state = {
-			footerDataJson: data.footerJson,
+			footerDataJson:null,
+			footerArray: null
 		};
 	}
 
+	componentWillMount(){
+		SelectedSection('Footer').then((result)=>{
+			this.setState({
+				footerDataJson:result.data.Lists.Links,
+				footerArray: result.data.Lists.List
+			})
+		});
+	}
+
 	render() {
+		const footerList = this.state.footerArray ? (
+			<FooterList footerListJSON={this.state.footerArray} />
+		) : null;
+
+		const footerNavbar = this.state.footerDataJson ? (
+			<FooterNavbar footerNavbarJSON={this.state.footerDataJson} />
+		): null;
+
 		return (
 			<div className="footer">
 				<div className="container">
-					<FooterList footerListJSON={this.state.footerDataJson.Lists.List} />
-					<FooterNavbar footerNavbarJSON={this.state.footerDataJson.Lists.Links} />
+					{footerList}
+					{footerNavbar}
 				</div>
 			</div>
 		)
