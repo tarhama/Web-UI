@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import FaBars from "react-icons/lib/fa/bars";
-// import FaClose from "react-icons/lib/fa/close";
-// import NavbarLeftDropdown from './navbarLeftDropdown';
 import LeftDropdownButton from './leftDropdownButton';
 import "./navbarLeftComponent.scss";
 
@@ -35,7 +32,9 @@ class NavbarLeftComponent extends Component {
           <li>pricing</li>
           <li>more</li>
         </ul>
-        <LeftDropdownButton showDropdown={this.showDropdown} expanded={this.state.expanded} shortIcon={this.props.shortIcon} />
+        <LeftDropdownButton showDropdown={this.showDropdown}
+                            expanded={this.state.expanded}
+                            shortIcon={this.props.shortIcon} />
       </div>
     )
   }

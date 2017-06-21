@@ -11,6 +11,10 @@
   margin: 0;
 }
 
+.navLeftComponent:focus {
+  outline: 0;
+}
+
 .navLeftComponent li {
   margin-right: 1em;
 }
@@ -19,11 +23,3 @@
   cursor: pointer;
   color: $white;
 }
-
-// .navIcon {
-//   margin-right: 10px;
-
-//   &:hover {
-//     cursor: pointer;
-//   }
-// }

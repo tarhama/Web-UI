@@ -12,7 +12,10 @@ class NavbarRightComponent extends Component {
             <NavbarDropdown />
           </li>
           <li><a>log&nbsp;in</a></li>
-          <li><SignupBtn changeNavbar={this.props.changeNavbar} shortIcon={this.props.shortIcon}/></li>
+          <li>
+            <SignupBtn changeNavbar={this.props.changeNavbar}
+                       shortIcon={this.props.shortIcon}/>
+          </li>
         </ul>
       </div>
     )

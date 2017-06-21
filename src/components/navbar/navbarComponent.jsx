@@ -71,8 +71,10 @@ class NavbarComponent extends Component {
         <div className="navbarComponent">
           <nav>
             <NavbarLeftComponent shortIcon={this.state.shortIcon}/>
-            <NavbarCenterComponent changeNavbar={this.state.changeNavbar} shortIcon={this.state.shortIcon}/>
-            <NavbarRightComponent changeNavbar={this.state.changeNavbar} shortIcon={this.state.shortIcon}/>
+            <NavbarCenterComponent changeNavbar={this.state.changeNavbar}
+                                   shortIcon={this.state.shortIcon}/>
+            <NavbarRightComponent changeNavbar={this.state.changeNavbar}
+                                  shortIcon={this.state.shortIcon}/>
           </nav>
         </div>
       </div>

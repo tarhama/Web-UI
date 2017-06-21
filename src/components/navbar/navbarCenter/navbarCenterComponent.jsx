@@ -16,9 +16,11 @@ class NavbarCenterComponent extends Component {
     return(
       <div className={this.changeClass()}>
         <img style={{display: this.props.shortIcon ? 'block' : 'none'}} 
-             src={this.props.changeNavbar ? logoWhite : logoBlue } height="35" alt="weebly" />
+             src={this.props.changeNavbar ? logoWhite : logoBlue }
+             height="35" alt="weebly" />
         <img style={{display: !this.props.shortIcon ? 'block' : 'none'}} 
-             src={this.props.changeNavbar ? smallLogoWhite : smallLogoBlue } height="35" alt="weebly" />
+             src={this.props.changeNavbar ? smallLogoWhite : smallLogoBlue }
+             height="35" alt="weebly" />
       </div>
     )
   }
