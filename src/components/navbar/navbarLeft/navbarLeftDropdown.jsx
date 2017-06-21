@@ -5,8 +5,7 @@ import './navbarLeftDropdown.scss';
 class NavbarLeftDropdown extends Component {
   render() {
     const navList = data.DataNavbar.leftNavbar;
-    console.log(navList);
-
+    
     const leftList = (name, index) => {
       let li = <li key={index} className="leftList">{name.title}</li>;
       return li;
