@@ -54,6 +54,6 @@
     "webpack-cleanup-plugin": "^0.4.2",
     "webpack-dashboard": "^0.3.0",
     "webpack-dev-server": "^2.4.1",
-    "react-asios": "^0.16.2"
+    "axios": "^0.16.2"
   }
 }
