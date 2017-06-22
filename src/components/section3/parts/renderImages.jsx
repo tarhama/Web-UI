@@ -1,36 +1,17 @@
 import React, {Component} from 'react';
 import './../section3_images';
-
-export default class RenderImages extends Component {
-
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			imageProps: this.props.dataImage
-		};
-
-		this.renderImages = this.renderImages.bind(this);
-	}
-
-	renderImages(image) {
-		return (
-			<div className={"image-items image-transition " + image.className} key={image.name}>
-				<img src={image.src} alt={image.name} />
-			</div>
-		)
-	}
-
-	render() {
-		return (
-			<div>
-				{this.state.imageProps.map(this.renderImages)}
-			</div>
-
-		)
-	}
-}
+import ImageItem from './renderImage'
 
 
+const RenderImages = ({dataImage}) => {
+
+    return (
+        <div>
+            {dataImage.map((image, index) =>
+                <ImageItem key={index} image={image}/>)}
+        </div>
+    );
+};
 
 
+export  default RenderImages;

@@ -15,4 +15,82 @@ export const section8Json = {
 	}]
 };
 
+export const footerJson = {
+	"Footer": {
+		"HeaderText": "Features to start, sell & grow,"
+	},
+	"Lists": {
+			"PRODUCT": [
+				"Product",
+				"Features",
+				"Themes",
+				"Pricing",
+				"App Center",
+				"Mobile Apps"
+			],
+			"RESOURCE": [
+				"resource",
+				"Weebly Blog",
+				"Inspiration Center",
+				"Success Stories",
+				"Developer Docs"
+			],
+			"SUPPORT": [
+				"Support",
+				"Support Center",
+				"Community"
+			],
+			"PARTNERS": [
+				"partners",
+				"Ambassadors",
+				"Resellers",
+				"Affiliates",
+				"Designers",
+				"Developer",
+				"Education"
+			],
+			"COMPANY": [
+				"company",
+				"About",
+				"Careers",
+				"Press",
+				"Contact"
+			],
+	"Links": {
+		"Links": [
+			"© Weebly, Inc.",
+			"Terms",
+			"Privacy Policy"
+		],
+		"SocialLink": [
+			"twitter",
+			"Facebook",
+			"youtube-square",
+			"google-plus",
+			"instagram"
+		],
+		"LANGUAGE": {
+			"SheetList": [
+				"English",
+				"Dansk",
+				"Deutsch",
+				"Español",
+				"Français",
+				"Italiano",
+				"日本語",
+				"한국어",
+				"Nederlands",
+				"Norsk",
+				"Polski",
+				"Português",
+				"Pусский",
+				"Svenska",
+				"Türkçe",
+				"中文 (繁體)",
+				"中文 (简体)"
+			]
+		}
+	}
+	}
+};
 

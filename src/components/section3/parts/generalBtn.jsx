@@ -1,12 +1,11 @@
 import React from 'react';
 import './section3Btns.css';
 
-const GeneralBtn = (props) => {
-    return (
+const GeneralBtn = ({style, btnText}) =>
+
         <div className="button">
-            <a className="btn" style={props.style}>{props.btnText}</a>
-        </div>
-    );
-};
+            <a className="btn" style={style}>{btnText}</a>
+        </div>;
+
 
 export default GeneralBtn;

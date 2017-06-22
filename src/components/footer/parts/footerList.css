@@ -1,3 +1,7 @@
+.blue-circle-border {
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
 .footer_listContnet{
     display: flex;
     align-items: baseline;
@@ -29,4 +33,28 @@
     color: #ffffff;
     cursor: pointer;
     transition-duration: 0.3s;
+}
+
+.blue-circle-border  {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer-social-network {
+    display: inline-flex;
+    color: #ffffff;
+}
+
+.footer-social-network:hover {
+    cursor: pointer;
+}
+
+.footer-social-network span {
+    margin-left: 3px;
+    margin-right: 3px;
 }

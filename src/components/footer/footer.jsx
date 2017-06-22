@@ -13,7 +13,6 @@ export default class Footer extends React.Component {
 		super();
 
 		this.state = {
-			footerDataJson:null,
 			footerArray: null
 		};
 	}
@@ -21,7 +20,6 @@ export default class Footer extends React.Component {
 	componentWillMount(){
 		SelectedSection('Footer').then((result)=>{
 			this.setState({
-				footerDataJson:result.data.Lists.Links,
 				footerArray: result.data.Lists.List
 			})
 		});
@@ -32,17 +30,14 @@ export default class Footer extends React.Component {
 			<FooterList footerListJSON={this.state.footerArray} />
 		) : null;
 
-		const footerNavbar = this.state.footerDataJson ? (
-			<FooterNavbar footerNavbarJSON={this.state.footerDataJson} />
-		): null;
-
 		return (
 			<div className="footer">
 				<div className="container">
 					{footerList}
-					{footerNavbar}
+					<FooterNavbar />
 				</div>
 			</div>
 		)
 	}
+
 }

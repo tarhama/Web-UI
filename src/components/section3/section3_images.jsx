@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import * as data from '../../store/dataSection3';
 import './section3_main.css';
-import RenderImage from './parts/renderImages';
+import RenderImages from './parts/renderImages';
 
 class Section3Images extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			image: data.DataSect3.images,
@@ -14,16 +14,16 @@ class Section3Images extends Component {
 	}
 
 	render() {
+
 		return (
 			<div className="d-flex justify-content-center">
 				<div className="image-wrapper relative">
-					<RenderImage dataImage={this.state.image}/>
+					<RenderImages dataImage={this.state.image}/>
 				</div>
 			</div>
 		);
 	}
 }
-
 
 export  default Section3Images;
 

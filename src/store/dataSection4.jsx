@@ -1,5 +1,5 @@
 export const  DataSect4 = {
-    title: "Sell more with powerful eCommerce",
+    title: "Grow faster with built-in marketing",
     checklistTexts: [
         {
             id: 1,

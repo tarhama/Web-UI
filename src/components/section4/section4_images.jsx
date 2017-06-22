@@ -4,8 +4,8 @@ import './section4_main.css';
 import RenderImage from './../section3/parts/renderImages';
 
 class Section4Images extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             image: data.DataSect4.images,
