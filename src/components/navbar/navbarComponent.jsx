@@ -19,12 +19,14 @@ class NavbarComponent extends Component {
   componentDidMount() {
     this.resizePage();
     window.addEventListener('scroll', this.handleScroll);
+    //set this with media query !!!
     window.addEventListener('resize', this.resizePage);
   }
 
   handleScroll(event) {
     let scrollTop = event.srcElement.body.scrollTop;
     let navbarHeight = 85;
+
     if(scrollTop > navbarHeight) {
       this.setState({
         changeNavbar: false,
@@ -43,20 +45,12 @@ class NavbarComponent extends Component {
     if(currentWidth < minWidth) {
       this.setState({
         shortIcon: false,
+        changeIcon: true,
       });
     } else {
       this.setState({
         shortIcon: true,
-      });
-    }
-
-    if(currentWidth > minWidth) {
-      this.setState({
         changeIcon: false,
-      });
-    } else {
-      this.setState({
-        changeIcon: true,
       });
     }
   }

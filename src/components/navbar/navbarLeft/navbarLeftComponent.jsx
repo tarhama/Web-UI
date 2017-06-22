@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import LeftDropdownButton from './leftDropdownButton';
+import DropdownComponent from './dropdownComponent';
+import *as data from '../../../store/dataNavbar';
 import "./navbarLeftComponent.scss";
 
 class NavbarLeftComponent extends Component {
@@ -23,16 +24,29 @@ class NavbarLeftComponent extends Component {
       expanded: false,
     });
   }
+  
   render() {
+    const navLeft = data.DataNavbar.leftNav;
+
+    const renderLeftNav = (name, index) => {
+      let leftLi = <li key={index}>{name.name}</li>;
+      return leftLi;
+    };
+
+    const leftNavUl = (x) => (
+      x.map((name, index) => {
+        return renderLeftNav(name, index);
+      })
+    );
+
     return(
-      <div className="navLeftComponent" tabIndex="0" onBlur={this.collapse}>
+      <div className="navLeftComponent"
+           tabIndex="0"
+           onBlur={this.collapse}>
         <ul style={{display: this.props.shortIcon ? 'flex' : 'none'}}>
-          <li>features</li>
-          <li>themes</li>
-          <li>pricing</li>
-          <li>more</li>
+          {leftNavUl(navLeft)}
         </ul>
-        <LeftDropdownButton showDropdown={this.showDropdown}
+        <DropdownComponent showDropdown={this.showDropdown}
                             expanded={this.state.expanded}
                             shortIcon={this.props.shortIcon} />
       </div>

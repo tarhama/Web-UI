@@ -10,7 +10,8 @@ class ButtonSec6 extends Component {
 
     return(
       <div className="buttonSec6">
-        <button type="button" className="btnLeftSec6">{btnLeft}</button>
+        <button type="button"
+                className="btnLeftSec6">{btnLeft}</button>
         <a href className="btnRightSec6">{btnRight}</a>
       </div>
     );
