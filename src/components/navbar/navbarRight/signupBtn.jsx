@@ -10,7 +10,8 @@ class SignupBtn extends Component {
   render() {
     return(
       <div>
-        <button type="button" className={this.isActive()} 
+        <button type="button"
+                className={this.isActive()} 
                 style={{display: this.props.shortIcon ? 'block' : 'none'}}>
           sign up
         </button>

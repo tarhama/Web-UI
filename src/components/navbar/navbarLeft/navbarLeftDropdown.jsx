@@ -19,7 +19,9 @@ class NavbarLeftDropdown extends Component {
 
     return(
       <div className="leftDropdown">
-        <ul style={{display: this.props.expanded ? 'block' : 'none'}}>{leftUlList(navList)}</ul>
+        <ul style={{display: this.props.expanded ? 'block' : 'none'}}>
+          {leftUlList(navList)}
+        </ul>
       </div>
     )
   }

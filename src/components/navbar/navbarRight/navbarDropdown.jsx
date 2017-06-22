@@ -27,24 +27,31 @@ class NavbarDropdown extends Component {
   }
 
   render() {
+    const renderDropdown = (name, index) => {
+      return(
+        <li key={index} className="langList">{name.name}</li>
+      )
+    }
+   
+    const renderLang = (x) => (
+      x.map((name, index) => {
+        return renderDropdown(name, index);
+      })
+    )
+
     return(
-      <div className="navbarDropdown" tabIndex="0" onBlur={this.collapse}>
+      <div className="navbarDropdown"
+           tabIndex="0"
+           onBlur={this.collapse}>
         <a onClick={this.showDropdown}>
           <FaGlobe />
           <FaCaretDown />
         </a>
-        <ul className="langDropdown" style={{display: this.state.expanded ? 'block' : 'none'}}>
-          {Languages.map((name, index) => {
-            return this.renderDropdown(name, index)
-          })}
+        <ul className="langDropdown"
+            style={{display: this.state.expanded ? 'block' : 'none'}}>
+          {renderLang(Languages)}
         </ul>
       </div>
-    )
-  }
-
-  renderDropdown(name, index) {
-    return(
-      <li key={index} className="langList">{name.name}</li>
     )
   }
 }

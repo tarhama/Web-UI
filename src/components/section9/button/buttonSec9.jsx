@@ -5,7 +5,10 @@ import './buttonSec9.scss';
 const ButtonSec9 = () => {
   return(
     <div>
-      <button type="button" className="buttonSec9">{data.DataSect9.button}</button>
+      <button type="button"
+              className="buttonSec9">
+        {data.DataSect9.button}
+      </button>
     </div>
   );
 }

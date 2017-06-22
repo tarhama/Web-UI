@@ -2,15 +2,21 @@ import React, { Component } from 'react';
 import NavbarLeftDropdown from './navbarLeftDropdown';
 import FaBars from "react-icons/lib/fa/bars";
 import FaClose from "react-icons/lib/fa/close";
-import './leftDropdownButton.scss';
+import './dropdownComponent.scss';
 
-class LeftDropdownButton extends Component {
+class DropdownComponent extends Component {
   render() {
+    const addClass = () => {
+      return 'navIcon ' + (!this.props.shortIcon ? 'navIconShow' : 'navIconNone');
+    }
+
     return(
-      <div className="navIcon" style={{display: !this.props.shortIcon ? 'block' : 'none'}}>
-        <FaBars size={28} onClick={this.props.showDropdown}
+      <div className={addClass()}>
+        <FaBars size={28}
+                onClick={this.props.showDropdown}
                 style={{display: this.props.expanded ? 'none' : 'block'}}/>
-        <FaClose size={28} onClick={this.props.showDropdown}
+        <FaClose size={28}
+                 onClick={this.props.showDropdown}
                  style={{display: this.props.expanded ? 'block' : 'none'}}/>
         <NavbarLeftDropdown expanded={this.props.expanded}/>
       </div>
@@ -18,4 +24,4 @@ class LeftDropdownButton extends Component {
   }
 }
 
-export default LeftDropdownButton;
+export default DropdownComponent;
