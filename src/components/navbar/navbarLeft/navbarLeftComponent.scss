@@ -2,7 +2,7 @@
 @import "styles/common/variables/_typography";
 
 .navLeftComponent ul {
-  display: flex;
+  display: none;
   flex-direction: row;
   text-decoration: none;
   text-transform: capitalize;
@@ -22,4 +22,10 @@
 .navLeftComponent li:hover {
   cursor: pointer;
   color: $white;
+}
+
+@media only screen and (min-width: 768px) {
+  .navLeftComponent ul {
+    display: flex;
+  }
 }

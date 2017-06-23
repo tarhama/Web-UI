@@ -3,28 +3,7 @@ import DropdownComponent from './dropdownComponent';
 import *as data from '../../../store/dataNavbar';
 import "./navbarLeftComponent.scss";
 
-class NavbarLeftComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      expanded: false,
-    };
-    this.showDropdown = this.showDropdown.bind(this);
-    this.collapse = this.collapse.bind(this);
-  }
-
-  showDropdown() {
-    this.setState({
-      expanded: !this.state.expanded,
-    });
-  }
-
-  collapse() {
-    this.setState({
-      expanded: false,
-    });
-  }
-  
+class NavbarLeftComponent extends Component {  
   render() {
     const navLeft = data.DataNavbar.leftNav;
 
@@ -40,15 +19,11 @@ class NavbarLeftComponent extends Component {
     );
 
     return(
-      <div className="navLeftComponent"
-           tabIndex="0"
-           onBlur={this.collapse}>
-        <ul style={{display: this.props.shortIcon ? 'flex' : 'none'}}>
+      <div className="navLeftComponent">
+        <ul>
           {leftNavUl(navLeft)}
         </ul>
-        <DropdownComponent showDropdown={this.showDropdown}
-                            expanded={this.state.expanded}
-                            shortIcon={this.props.shortIcon} />
+        <DropdownComponent /*shortIcon={this.props.shortIcon}*/ />
       </div>
     )
   }

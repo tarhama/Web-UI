@@ -12,7 +12,7 @@ class SignupBtn extends Component {
       <div>
         <button type="button"
                 className={this.isActive()} 
-                style={{display: this.props.shortIcon ? 'block' : 'none'}}>
+                /*style={{display: this.props.shortIcon ? 'block' : 'none'}}*/>
           sign up
         </button>
       </div>

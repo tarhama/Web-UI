@@ -14,7 +14,7 @@ class NavbarRightComponent extends Component {
           <li><a>log&nbsp;in</a></li>
           <li>
             <SignupBtn changeNavbar={this.props.changeNavbar}
-                       shortIcon={this.props.shortIcon}/>
+                       /*shortIcon={this.props.shortIcon}*//>
           </li>
         </ul>
       </div>

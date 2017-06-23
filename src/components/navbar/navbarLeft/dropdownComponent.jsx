@@ -1,24 +1,41 @@
 import React, { Component } from 'react';
-import NavbarLeftDropdown from './navbarLeftDropdown';
-import FaBars from "react-icons/lib/fa/bars";
-import FaClose from "react-icons/lib/fa/close";
+import DropdownMenu from './dropdownMenu';
+import DropdownButton from './dropdownButton';
 import './dropdownComponent.scss';
 
 class DropdownComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: true,
+    };
+   this.isExpanded = this.isExpanded.bind(this);
+   this.collapse = this.collapse.bind(this);
+  }
+ 
+  isExpanded() {
+    this.setState({
+      expanded: !this.state.expanded,
+    })
+  }
+
+  collapse() {
+    this.setState({
+      expanded: true,
+    });
+  }
   render() {
-    const addClass = () => {
-      return 'navIcon ' + (!this.props.shortIcon ? 'navIconShow' : 'navIconNone');
-    }
+    // const addClass = () => {
+    //   return 'navIcon ' + (!this.props.shortIcon ? 'navIconShow' : 'navIconNone');
+    //}
 
     return(
-      <div className={addClass()}>
-        <FaBars size={28}
-                onClick={this.props.showDropdown}
-                style={{display: this.props.expanded ? 'none' : 'block'}}/>
-        <FaClose size={28}
-                 onClick={this.props.showDropdown}
-                 style={{display: this.props.expanded ? 'block' : 'none'}}/>
-        <NavbarLeftDropdown expanded={this.props.expanded}/>
+      <div className="navIcon"
+           tabIndex="0"
+           onBlur={this.collapse}>
+        <DropdownButton isExpanded={this.isExpanded}                        
+                        expanded={this.state.expanded}/>
+        <DropdownMenu expanded={this.state.expanded}/>
       </div>
     )
   }

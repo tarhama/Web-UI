@@ -9,3 +9,21 @@
 .whiteLogo:hover {
   opacity: 0.5;
 }
+
+.navShortLogo {
+  display: block;
+}
+
+.navLogo {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .navShortLogo {
+    display: none;
+  }
+
+  .navLogo {
+    display: block;
+  }
+}

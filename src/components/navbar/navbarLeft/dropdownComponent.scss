@@ -1,15 +1,27 @@
 .navIcon {
   margin-right: 10px;
+  display: block;
 
   &:hover {
     cursor: pointer;
   }
 }
 
-.navIconShow {
-  display: block;
+//don't allow to show border around clicked element in chrome
+.navIcon:focus {
+  outline: 0;
 }
 
-.navIconNone {
-  display: none;
+// .navIconShow {
+//   display: block;
+// }
+
+// .navIconNone {
+//   display: none;
+// }
+
+@media only screen and (min-width: 768px) {
+  .navIcon {
+    display: none;
+  }
 }

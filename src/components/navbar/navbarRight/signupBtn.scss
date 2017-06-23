@@ -12,6 +12,7 @@
   width: 120px;
   height: 40px;
   transition-duration: 0.3s;
+  display: none;
 
   &:hover {
     //border: 2px solid $white;
@@ -30,7 +31,33 @@
   border: none;
 }
 
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .signupBtn {
+    display: block;
+  }
+
+  .colorBtnWhite {
+    border: 2px solid #D3D3D3;
+
+    &:hover {
+      border: 2px solid $white;
+    }
+  }
+
+  .colorBtnBlue {
+    border: 1px solid #D3D3D3;
+
+    &:hover {
+      border: 2px solid #696969;
+    }
+  }
+}
+
 @media only screen and (min-width: 992px) {
+  .signupBtn {
+    display: block;
+  }
+
   .colorBtnWhite {
     border: 2px solid #D3D3D3;
 

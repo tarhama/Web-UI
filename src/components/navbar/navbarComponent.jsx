@@ -10,17 +10,17 @@ class NavbarComponent extends Component {
     this.state = {
       changeNavbar: true,
       changeIcon: true,
-      shortIcon: true,
+      //shortIcon: true,
     };
     this.handleScroll = this.handleScroll.bind(this);
-    this.resizePage = this.resizePage.bind(this);
+    //this.resizePage = this.resizePage.bind(this);
   }
 
   componentDidMount() {
-    this.resizePage();
+    //this.resizePage();
     window.addEventListener('scroll', this.handleScroll);
     //set this with media query !!!
-    window.addEventListener('resize', this.resizePage);
+    //window.addEventListener('resize', this.resizePage);
   }
 
   handleScroll(event) {
@@ -38,22 +38,22 @@ class NavbarComponent extends Component {
     }
   }
 
-  resizePage() {
-    let minWidth = 768;
-    let currentWidth = window.innerWidth;
+  // resizePage() {
+  //   let minWidth = 768;
+  //   let currentWidth = window.innerWidth;
 
-    if(currentWidth < minWidth) {
-      this.setState({
-        shortIcon: false,
-        changeIcon: true,
-      });
-    } else {
-      this.setState({
-        shortIcon: true,
-        changeIcon: false,
-      });
-    }
-  }
+  //   if(currentWidth < minWidth) {
+  //     this.setState({
+  //       shortIcon: false,
+  //       changeIcon: true,
+  //     });
+  //   } else {
+  //     this.setState({
+  //       shortIcon: true,
+  //       changeIcon: false,
+  //     });
+  //   }
+  // }
 
   isActive(){
     return 'navbarContainer ' + (this.state.changeNavbar ? 'navbarTransparent' : 'navbarWhiteBackground');
@@ -64,11 +64,11 @@ class NavbarComponent extends Component {
       <div className={this.isActive()}>
         <div className="navbarComponent">
           <nav>
-            <NavbarLeftComponent shortIcon={this.state.shortIcon}/>
+            <NavbarLeftComponent /*shortIcon={this.state.shortIcon}*//>
             <NavbarCenterComponent changeNavbar={this.state.changeNavbar}
-                                   shortIcon={this.state.shortIcon}/>
+                                   /*shortIcon={this.state.shortIcon}*//>
             <NavbarRightComponent changeNavbar={this.state.changeNavbar}
-                                  shortIcon={this.state.shortIcon}/>
+                                  /*shortIcon={this.state.shortIcon}*//>
           </nav>
         </div>
       </div>

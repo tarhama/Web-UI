@@ -1,6 +1,6 @@
 @import "styles/common/variables/_colors";
 
-.leftDropdown {
+.dropdownContainer {
   display: block;
   width: 100%;
   position: absolute;
@@ -11,7 +11,7 @@
   margin-left: 0;
 }
 
-.leftDropdown .leftList {
+.dropdownContainer .list {
   color: $white;
   padding: 10px 0 10px 0;
   text-decoration: none;

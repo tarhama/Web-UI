@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import *as data from '../../../store/dataNavbar';
-import './navbarLeftDropdown.scss';
+import './dropdownMenu.scss';
 
-class NavbarLeftDropdown extends Component {
+class DropdownMenu extends Component {
   render() {
     const navList = data.DataNavbar.leftNavbar;
     
     const leftList = (name, index) => {
-      let li = <li key={index} className="leftList">{name.title}</li>;
+      let li = <li key={index} className="list">{name.title}</li>;
       return li;
     };
 
@@ -18,8 +18,8 @@ class NavbarLeftDropdown extends Component {
     );
 
     return(
-      <div className="leftDropdown">
-        <ul style={{display: this.props.expanded ? 'block' : 'none'}}>
+      <div className="dropdownContainer">
+        <ul style={{display: !this.props.expanded ? 'block' : 'none'}}>
           {leftUlList(navList)}
         </ul>
       </div>
@@ -27,4 +27,4 @@ class NavbarLeftDropdown extends Component {
   }
 }
 
-export default NavbarLeftDropdown;
+export default DropdownMenu;
