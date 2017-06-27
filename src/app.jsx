@@ -13,14 +13,61 @@ import Section7Container from './components/Section7/section7Container';
 import Section8Container from './components/Section8/section8Container';
 import Section9Container from './components/section9/section9Container';
 import Footer from './components/footer/footer';
+import {SelectedSection} from './components/serviceComponent';
 
 export default class App extends React.Component {
 
-	constructor(){
+	constructor() {
 		super();
+
+		this.state = {
+			NavbarJson: null,
+			Section1JSON: null,
+			Section2JSON: null,
+			Section3JSON: null,
+			Section4JSON: null,
+			Section5JSON: null,
+			Section6JSON: null,
+			Section7JSON: null,
+			Section8JSON: null,
+			Section9JSON: null,
+			Footer: null
+		};
+	}
+
+
+	componentWillMount() {
+		SelectedSection().then((result) => {
+			this.setState({
+				NavbarJson: null,
+				Section1JSON: null,
+				Section2JSON: null,
+				Section3JSON: null,
+				Section4JSON: null,
+				Section5JSON: result.data.Section5,
+				Section6JSON: null,
+				Section7JSON: null,
+				Section8JSON: result.data.Section8,
+				Section9JSON: null,
+				FooterJSON: result.data.Footer
+			})
+		});
 	}
 
 	render() {
+
+		const section8 = this.state.Section8JSON ? (
+			<Section8Container Section8JSON={this.state.Section8JSON}/>
+		) : null;
+
+		const section5 = this.state.Section5JSON ? (
+			<Section5Container Section5JSON={this.state.Section5JSON}/>
+		) : null;
+
+		const footer = this.state.Section8JSON ? (
+			<Footer FooterJSON={this.state.FooterJSON}/>
+		) : null;
+
 		return (
 			<div>
 				<NavbarComponent />
@@ -28,12 +75,12 @@ export default class App extends React.Component {
 				<Section2Container />
 				<Section3Container />
 				<Section4Container />
-				<Section5Container />
+				{section5}
 				<Section6Container />
 				<Section7Container />
-				<Section8Container/>
+				{section8}
 				<Section9Container />
-				<Footer/>
+				{footer}
 			</div>
 		)
 	}

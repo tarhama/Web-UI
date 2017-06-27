@@ -1,24 +1,23 @@
 import React from 'react';
 
 import './section5Container.css';
-import SectionContent5 from './parts/sectionContent5';
-
-import {SelectedSection} from '../serviceComponent'
+import SectionContent5 from './parts/sectionContent5'
+import '../../app';
 
 export default class Section5Container extends React.Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			transform: 'translateY(9.74089vh) rotate(16.5389deg)',
 			transitionDuration: '0.6s',
-			titleSection5: null,
-			headingSection5: null,
-			btnSection5: null,
-			apple: null,
-			google: null,
-			images: null,
+			titleSection5: this.props.Section5JSON.titleSection5,
+			headingSection5: this.props.Section5JSON.headingSection5,
+			btnSection5: this.props.Section5JSON.btnSection5,
+			apple: this.props.Section5JSON.apple,
+			google: this.props.Section5JSON.google,
+			images: this.props.Section5JSON.Images,
 		};
 		this.handleScroll = this.handleScroll.bind(this);
 		this.renderImgTags = this.renderImgTags.bind(this);
@@ -26,19 +25,6 @@ export default class Section5Container extends React.Component {
 
 	componentDidMount() {
 		window.addEventListener('scroll', this.handleScroll);
-	}
-
-	componentWillMount() {
-		SelectedSection('Section5').then((result) => {
-			this.setState({
-				titleSection5: result.data.titleSection5,
-				headingSection5: result.data.headingSection5,
-				btnSection5: result.data.btnSection5,
-				apple: result.data.apple,
-				google: result.data.google,
-				images: result.data.Images
-			})
-		});
 	}
 
 	handleScroll(event) {
@@ -90,7 +76,7 @@ export default class Section5Container extends React.Component {
 			},
 		];
 
-		const arrayOfImage = this.state.images? (
+		const arrayOfImage = this.state.images ? (
 			this.state.images.map((obj, index) => (
 				<div className={'mobile-item hidden-md-down ' + obj.className}
 						 style={atributes[index]}
@@ -100,17 +86,16 @@ export default class Section5Container extends React.Component {
 						src={obj.url}/>
 				</div>
 			))
-		):null;
+		) : null;
 
-		const section5 = this.state.google ? (
+		const section5 =
 			<SectionContent5
 				titleSection5={this.state.titleSection5}
 				headingSection5={this.state.headingSection5}
 				btnSection5={this.state.btnSection5}
 				apple={this.state.apple}
 				google={this.state.google}
-			/>
-		): null;
+			/>;
 
 		return (
 			<div className="Section5Container">
@@ -124,6 +109,3 @@ export default class Section5Container extends React.Component {
 		)
 	}
 }
-
-
-

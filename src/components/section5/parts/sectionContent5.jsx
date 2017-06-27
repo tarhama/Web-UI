@@ -5,8 +5,8 @@ const SectionContent5 = ({
 													 headingSection5,
 													 btnSection5,
 													 apple: {src: src1, alt: alt1},
-													 google: {src:src2, alt:alt2}}
-													 ) => (
+													 google: {src: src2, alt: alt2}
+												 }) => (
 
 	<div className="landing-page-content">
 		<h2 className="h1 section5-title opacity">{titleSection5}</h2>
@@ -24,9 +24,6 @@ const SectionContent5 = ({
 );
 
 export default SectionContent5;
-
-
-
 
 
 
