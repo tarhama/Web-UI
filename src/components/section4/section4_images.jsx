@@ -25,5 +25,4 @@ class Section4Images extends React.Component {
 	}
 }
 
-
 export  default Section4Images;
