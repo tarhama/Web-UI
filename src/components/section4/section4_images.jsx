@@ -1,27 +1,28 @@
-import React, {Component} from 'react';
+import React from 'react';
 import * as data from '../../store/dataSection4';
 import './section4_main.css';
 import RenderImage from './../section3/parts/renderImages';
 
-class Section4Images extends Component {
-    constructor(props) {
-        super(props);
+class Section4Images extends React.Component {
 
-        this.state = {
-            image: data.DataSect4.images,
-            scrollTop: 0,
-        };
-    }
+	constructor(props) {
+		super(props);
 
-    render() {
-        return (
-            <div className="d-flex justify-content-center">
-                <div className="image-wrapper relative">
-                    <RenderImage dataImage={this.state.image}/>
-                </div>
-            </div>
-        );
-    }
+		this.state = {
+			image: this.props.ImagesJSON.images,
+			scrollTop: 0,
+		};
+	}
+
+	render() {
+		return (
+			<div className="d-flex justify-content-center">
+				<div className="image-wrapper relative">
+					<RenderImage dataImage={this.state.image}/>
+				</div>
+			</div>
+		);
+	}
 }
 
 
