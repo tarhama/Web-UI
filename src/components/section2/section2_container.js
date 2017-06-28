@@ -16,12 +16,11 @@ class Section2Container extends Component {
 		};
 	}
 
-
   render() {
     return (
       <div className="section2-container">
         <Section2Header />
-        <Section2Gallery />
+        <Section2Gallery GalleryJSON = {this.state.Section2JSON} />
         <Section2Btn />
       </div>
     );
