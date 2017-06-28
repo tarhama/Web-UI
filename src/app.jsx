@@ -39,16 +39,16 @@ export default class App extends React.Component {
 	componentWillMount() {
 		SelectedSection().then((result) => {
 			this.setState({
-				NavbarJson: null,
+				NavbarJSON: result.data.Navbar,
 				Section1JSON: null,
-				Section2JSON: null,
-				Section3JSON: null,
-				Section4JSON: null,
+				Section2JSON: result.data.Section1,
+				Section3JSON: result.data.Section3,
+				Section4JSON: result.data.Section4,
 				Section5JSON: result.data.Section5,
-				Section6JSON: null,
-				Section7JSON: null,
+				Section6JSON: result.data.Section6,
+				Section7JSON: result.data.Section7,
 				Section8JSON: result.data.Section8,
-				Section9JSON: null,
+				Section9JSON: result.data.Section9,
 				FooterJSON: result.data.Footer
 			})
 		});
@@ -56,12 +56,40 @@ export default class App extends React.Component {
 
 	render() {
 
-		const section8 = this.state.Section8JSON ? (
-			<Section8Container Section8JSON={this.state.Section8JSON}/>
+		const navbarComponent = this.state.NavbarJSON ? (
+			<NavbarComponent NavbarJSON={this.state.NavbarJSON}/>
+		) : null;
+
+		const section2 = this.state.Section2JSON ? (
+			<Section2Container Section2JSON={this.state.Section2JSON}/>
+		) : null;
+
+		const section3 = this.state.Section3JSON ? (
+			<Section3Container Section3JSON={this.state.Section3JSON}/>
+		) : null;
+
+		const section4 = this.state.Section4JSON ? (
+			<Section4Container Section4JSON={this.state.Section4JSON}/>
 		) : null;
 
 		const section5 = this.state.Section5JSON ? (
 			<Section5Container Section5JSON={this.state.Section5JSON}/>
+		) : null;
+
+		const section6 = this.state.Section6JSON ? (
+			<Section6Container Section6JSON={this.state.Section6JSON}/>
+		) : null;
+
+		const section7 = this.state.Section7JSON ? (
+			<Section7Container Section7JSON={this.state.Section7JSON}/>
+		) : null;
+
+		const section8 = this.state.Section8JSON ? (
+			<Section8Container Section8JSON={this.state.Section8JSON}/>
+		) : null;
+
+		const section9 = this.state.Section8JSON ? (
+			<Section9Container Section9JSON={this.state.Section9JSON}/>
 		) : null;
 
 		const footer = this.state.Section8JSON ? (
@@ -70,16 +98,16 @@ export default class App extends React.Component {
 
 		return (
 			<div>
-				<NavbarComponent />
+				{navbarComponent}
 				<SectionContainer1/>
-				<Section2Container />
-				<Section3Container />
-				<Section4Container />
+				{section2}
+				{section3}
+				{section4}
 				{section5}
-				<Section6Container />
-				<Section7Container />
+				{section6}
+				{section7}
 				{section8}
-				<Section9Container />
+				{section9}
 				{footer}
 			</div>
 		)
