@@ -27,3 +27,26 @@ $btn-border-width: 2px;
     }
   }
 }
+
+
+.section9 .btn-featured {
+  color: #fff;
+  display: inline-block;
+  padding: 0 40px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid #2990ea;
+  border-radius: 25px;
+  background-color: transparent;
+  transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  margin: 0 auto;
+}
+
+.section9 .btn-featured:hover {
+  background-color: #2990ea;
+  color: #fff;
+}

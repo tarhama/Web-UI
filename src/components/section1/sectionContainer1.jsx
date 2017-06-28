@@ -1,5 +1,5 @@
 import React from 'react';
-import Section2Btn from './../section2/parts/section2_btn/index.js'
+import GeneralBtn from './../buttons/generalBtn';
 import './sectionContainer1.css';
 
 
@@ -116,7 +116,7 @@ export default class SectionContainer1 extends React.Component {
 						{this.state.textToShow}
 					</div>
 					<div className="sectionContainer1-button">
-						<Section2Btn />
+						<GeneralBtn  btnText="More Featured Themes"/>
 					</div>
 				</div>
 				<div className="sectionContainer1_overlay">

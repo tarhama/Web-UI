@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Section2Header from './parts/section2_header';
 import Section2Gallery from './parts/section2_gallery';
-import Section2Btn from './parts/section2_btn';
+import GeneralBtn from './../buttons/generalBtn';
 import './section2_container.scss';
 
 import '../../app'
@@ -21,7 +21,7 @@ class Section2Container extends Component {
       <div className="section2-container">
         <Section2Header />
         <Section2Gallery GalleryJSON = {this.state.Section2JSON} />
-        <Section2Btn />
+        <GeneralBtn btnText="More featured Themes" />
       </div>
     );
   }

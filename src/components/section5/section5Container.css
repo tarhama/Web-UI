@@ -67,29 +67,6 @@
     height: 100%;
 }
 
-.section5-container .state-btn .raise-btn {
-    background-color: #fff;
-    color: #807FFF;
-    display: inline-block;
-    padding: 0 40px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 44px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 25px;
-    /* HOVER OFF */
-    transition-duration: 0.5s;
-    text-decoration: none;
-}
-
-.section5-container .state-btn .raise-btn:hover {
-    cursor: pointer;
-    color: #807FFF;
-    transform: scale(1.1);
-    transition-duration: 0.5s;
-}
-
 .mobile-item {
     position: absolute;
 }

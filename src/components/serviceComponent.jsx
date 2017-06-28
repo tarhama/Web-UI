@@ -5,7 +5,7 @@ export function fetchJson(section) {
 		return Axios.get('https://test-741bd.firebaseio.com/data.json');
 	}
 	else {
-		return Axios.get('https://test-741bd.firebaseio.com/data/' + section + '.json');
+		return Axios.get('.json' + section + '.json');
 	}
 }
 
