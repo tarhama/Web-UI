@@ -41,7 +41,7 @@ export default class App extends React.Component {
 			this.setState({
 				NavbarJSON: result.data.Navbar,
 				Section1JSON: null,
-				Section2JSON: result.data.Section1,
+				Section2JSON: result.data.Section2,
 				Section3JSON: result.data.Section3,
 				Section4JSON: result.data.Section4,
 				Section5JSON: result.data.Section5,
