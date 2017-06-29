@@ -1,5 +1,5 @@
 import React from 'react';
-import './section3Btns.css';
+import './../../../styles/buttons/buttons.css';
 
 
 const LinkBtn = (props) => {

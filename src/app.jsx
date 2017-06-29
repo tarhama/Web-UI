@@ -17,8 +17,8 @@ import {SelectedSection} from './components/serviceComponent';
 
 export default class App extends React.Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			NavbarJson: null,

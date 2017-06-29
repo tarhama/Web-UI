@@ -10,6 +10,8 @@ export default class Footer extends React.Component {
 	constructor(props) {
 		super(props);
 
+		console.log(props.FooterJSON.Lists);
+
 		this.state = {
 			footerDataJson: this.props.FooterJSON.Lists.Links,
 			footerArray: this.props.FooterJSON.Lists.List

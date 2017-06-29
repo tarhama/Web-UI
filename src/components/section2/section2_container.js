@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Section2Header from './parts/section2_header';
 import Section2Gallery from './parts/section2_gallery';
-import Section2Btn from './parts/section2_btn';
+import GeneralBtn from './../buttons/generalBtn';
 import './section2_container.scss';
 
 import '../../app'
 
 class Section2Container extends Component {
-	constructor(props) {
+	constructor(props){
 		super(props);
 
 		this.state = {
@@ -16,15 +16,15 @@ class Section2Container extends Component {
 		};
 	}
 
-	render() {
-		return (
-			<div className="section2-container">
-				<Section2Header />
-				<Section2Gallery GalleryJSON={this.state.Section2JSON}/>
-				<Section2Btn />
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className="section2-container">
+        <Section2Header />
+        <Section2Gallery GalleryJSON = {this.state.Section2JSON} />
+        <GeneralBtn btnText="More featured Themes" />
+      </div>
+    );
+  }
 }
 
 export default Section2Container;

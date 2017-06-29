@@ -1,15 +1,9 @@
 import React, {Component} from 'react';
-import GeneralBtn from './parts/generalBtn';
-import LinkBtn from './parts/linkBtn';
-import * as data from '../../store/dataSection3';
+import GeneralBtn from './../buttons/generalBtn';
+import LinkBtn from './../buttons/linkBtn';
 import './section3_main.css';
 import ChecklistItem from './parts/checklistItem';
 
-
-const btnStyleBlue = {
-    color: 'white',
-    backgroundColor: '#2990ea',
-};
 
 const btnStyleGreen = {
     color: '#2990ea',
@@ -21,18 +15,17 @@ class Section3Checklist extends Component {
         super(props);
 
         this.state = {
-            texts: data.DataSect3.checklistTexts,
-            title: data.DataSect3.title,
-            btn_text: data.DataSect3.buttons.btn_text,
-            btn_link_text: data.DataSect3.buttons.btn_link_text,
-            scrollTop: 0,
+            texts: this.props.data.checklistTexts,
+            title: this.props.data.title,
+            btn_text: this.props.data.buttons.btn_text,
+            btn_link_text: this.props.data.buttons.btn_link_text,
         };
+
     }
 
 
     render() {
         const {texts, title, btn_text, btn_link_text} = this.state;
-
         return (
             <div className="page-content transform-X d-inline-flex justify-content-center align-content-center">
                 <div className="page-width">
@@ -46,7 +39,7 @@ class Section3Checklist extends Component {
                         }
                     </ul>
                     <div className="pt-4 d-flex">
-                        <GeneralBtn style={btnStyleBlue} btnText={btn_text}/>
+                        <GeneralBtn style='filled' btnText={btn_text}/>
                         <LinkBtn style={btnStyleGreen} btnText={btn_link_text}/>
                     </div>
                 </div>

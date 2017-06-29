@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import * as data from '../../store/dataSection3';
 import './section3_main.css';
 import RenderImages from './parts/renderImages';
 
@@ -8,8 +7,7 @@ class Section3Images extends Component {
 		super(props);
 
 		this.state = {
-			image: data.DataSect3.images,
-			scrollTop: 0,
+			image: this.props.images,
 		};
 	}
 

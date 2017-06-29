@@ -3,26 +3,22 @@ import Section4Checklist from './../section4/section4_checklist';
 import Section4Images from './../section4/section4_images';
 
 
-class Section4Container extends Component {
-	constructor(props) {
-		super(props);
+const Section4Container = (props) => {
 
-		this.state = {
-			ImagesJSON: this.props.Section4JSON
-		}
-	}
+    const data = props.Section4JSON;
+    const images = props.Section4JSON.images;
 
-	render() {
-		return (
-			<div className="section4">
-				<div className="page-section-4">
-					<div className="page-container d-flex flex-xl-row flex-sm-column justify-content-lg-around">
-						<Section4Images ImagesJSON={this.state.ImagesJSON}/>
-						<Section4Checklist />
-					</div>
-				</div>
-			</div>)
-	}
-}
+    return (
+        <div className="section4">
+            <div className="page-section-4">
+                <div className="page-container d-flex flex-xl-row flex-sm-column justify-content-lg-around">
+                    <Section4Images images={images}/>
+                    <Section4Checklist data={data} />
+                </div>
+            </div>
+        </div>
+
+    )
+};
 
 export default  Section4Container;
