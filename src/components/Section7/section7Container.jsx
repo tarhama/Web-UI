@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 import Section7Header from './parts/section7_header';
 import classNames from 'classnames';
-import { images, bckgImage } from './section7_store';
 import './section7Container.scss';
 
 export default class Section7Container extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			bckg: {},
 			imgs: [],
 			scrollParallax: 0,
 			scrollFade: 0,
+			images: this.props.Section7JSON.images,
+		  bckgImage: this.props.Section7JSON.bckgImage,
 		};
+
 		this.handleScrollParallax = this.handleScrollParallax.bind(this);
 		this.handleScrollFade = this.handleScrollFade.bind(this);
 		this.renderImages = this.renderImages.bind(this);
 	}
 	componentWillMount() {
-		const imgs = images.map(image => image);
-		const bckg = bckgImage;
+		const imgs = this.state.images.map(image => image);
+		const bckg = this.state.bckgImage;
 		this.setState({ imgs, bckg });
 	}
 	componentDidMount() {

@@ -19,7 +19,7 @@ class Section2Container extends Component {
   render() {
     return (
       <div className="section2-container">
-        <Section2Header />
+        <Section2Header HeaderJSON = {this.state.Section2JSON}/>
         <Section2Gallery GalleryJSON = {this.state.Section2JSON} />
         <GeneralBtn btnText="More featured Themes" />
       </div>

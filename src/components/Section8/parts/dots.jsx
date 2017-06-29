@@ -1,6 +1,6 @@
 import React from 'react'
 
-import * as data from '../../dataComponent5';
+import './rightPart'
 import './dots.css'
 import Fadot from 'react-icons/lib/fa/circle';
 
@@ -46,7 +46,7 @@ export default class Dots extends React.Component {
 	};
 
 	render() {
-		const addFaDots = data.section8Json.slider.map((obj, index) => (
+		const addFaDots = this.props.DotsJSON.slider.map((obj, index) => (
 			<Fadot key={index}
 						 size="15px"
 						 className={this.isActive(obj.speaker)}

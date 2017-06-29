@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import *as data from '../../../store/dataSection9';
 import './columnsSec9.scss';
+import '../section9Container'
 
 class ColumnsSec9 extends Component {
+	constructor(props){
+		super(props);
+
+}
+
 
   render() {
-    const titleLeft = data.DataSect9.columns.find(col => col.id === 1).title;
-    const titleCenter = data.DataSect9.columns.find(col => col.id === 2).title;
-    const titleRight = data.DataSect9.columns.find(col => col.id === 3).title;
+    const titleLeft = this.props.ColumnsJSON.find(col => col.id === 1).title;
+    const titleCenter = this.props.ColumnsJSON.find(col => col.id === 2).title;
+    const titleRight = this.props.ColumnsJSON.find(col => col.id === 3).title;
 
-    const listLeft = data.DataSect9.columns.find(col => col.id === 1).list;
-    const listCenter = data.DataSect9.columns.find(col => col.id === 2).list;
-    const listRight = data.DataSect9.columns.find(col => col.id === 3).list;
+    const listLeft = this.props.ColumnsJSON.find(col => col.id === 1).list;
+    const listCenter = this.props.ColumnsJSON.find(col => col.id === 2).list;
+    const listRight = this.props.ColumnsJSON.find(col => col.id === 3).list;
 
     const myList = (name, index) => {
       let li = <li key={index}>{name.name}</li>;

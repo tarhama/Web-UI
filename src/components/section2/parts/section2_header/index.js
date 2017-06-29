@@ -1,15 +1,20 @@
 import React from 'react';
 import './index.scss';
+import '../../section2_container'
 
-const Section2Header = () => {
-  return (
-    <div className="section2-header">
-      <h1 className="title">A beautiful website starts here</h1>
-      <h2 className="subtitle">Weebly&lsquo;s powerful drag and drop website builder and guided set up
-        get you to the finish line faster, no coding needed
-      </h2>
-    </div>
-  );
-};
+class Section2Header extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div className="section2-header">
+				<h1 className="title">{this.props.HeaderJSON.header.title}</h1>
+				<h2 className="subtitle">{this.props.HeaderJSON.header.subtitle}</h2>
+			</div>
+		);
+	};
+}
 
 export default Section2Header;

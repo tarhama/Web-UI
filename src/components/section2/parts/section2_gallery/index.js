@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import { gallery } from '../../section2_store/index';
+// import { gallery } from '../../section2_store/index';
 import './index.scss';
 
 class Section2Gallery extends Component {
@@ -26,7 +26,7 @@ class Section2Gallery extends Component {
     this.renderTabs = this.renderTabs.bind(this);
   }
   componentWillMount() {
-    const initialImgSet = Section2Gallery.fetchImageSetByID(gallery, 1);
+    const initialImgSet = Section2Gallery.fetchImageSetByID(this.props.GalleryJSON.gallery, 1);
     this.setState({ activeImageSet: initialImgSet });
   }
   renderTabs(tab, index) {
@@ -67,7 +67,7 @@ class Section2Gallery extends Component {
     }
     const { activeImageSet } = this.state;
     const imageSet = activeImageSet.map(set => set);
-    const allTabs = Section2Gallery.fetchTabs(gallery);
+    const allTabs = Section2Gallery.fetchTabs(this.props.GalleryJSON.gallery);
     return (
       <div className="section2-gallery">
         <nav className="section2-tab-items">

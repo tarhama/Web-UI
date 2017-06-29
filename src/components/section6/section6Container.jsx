@@ -25,8 +25,8 @@ class Section6Container extends Component {
                     <source src={videoLink} type="video/mp4"/>
                 </video>
                 <div className="Container">
-                    <TextContent />
-                    <div className="pt-4 d-flex align-items-center">
+                    <TextContent ContentJSON = {this.props.Section6JSON} />
+                    <div className="pt-4 d-flex align-items-center justify-content-center">
                         <GeneralBtn style='filled' btnText="Get Started"/>
                         <LinkBtn btnText="More Info"/>
                     </div>

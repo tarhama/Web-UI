@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import * as data from '../../../store/dataSection9';
 import './headerSection9.scss';
 
 class HeaderSection9 extends Component {
+	constructor(props){
+		super(props);
+	}
   render() {
     return(
       <div>
-        <h1 className="headerSec9">{data.DataSect9.title}</h1>
+        <h1 className="headerSec9">{this.props.HeaderJSON}</h1>
       </div>
-    )    
-  }  
+    )
+  }
 }
 
 export default HeaderSection9;

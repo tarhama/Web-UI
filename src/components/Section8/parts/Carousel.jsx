@@ -1,23 +1,23 @@
 import React from 'react'
 
-import * as data from '../../dataComponent5';
 import './Carousel.css'
-
+import './rightPart'
 import sec8Emitter from '../section8Emitter';
 
 export default class Carousel extends React.Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			sliderId: 0,
-			class: ''
+			class: '',
+			data: this.props.SubtitleJSON
 		}
 	};
 
 	componentWillMount() {
-		this.subtitle = data.section8Json.subtitle;
+		this.subtitle = this.props.SubtitleJSON.subtitle;
 
 		let Subscription = sec8Emitter.addListener('changeId', (index) => {
 
@@ -43,8 +43,8 @@ export default class Carousel extends React.Component {
 		return (
 			<div className={this.state.class}>
 				<h3 dangerouslySetInnerHTML={{__html: this.subtitle}}/>
-				<h2 className="h2">{data.section8Json.slider[this.state.sliderId].quotation}</h2>
-				<h4 className="h4">{data.section8Json.slider[this.state.sliderId].speaker}</h4>
+				<h2 className="h2">{this.state.data.slider[this.state.sliderId].quotation}</h2>
+				<h4 className="h4">{this.state.data.slider[this.state.sliderId].speaker}</h4>
 			</div>
 		)
 	}

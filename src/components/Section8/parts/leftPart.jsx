@@ -2,19 +2,20 @@ import React from 'react'
 
 import './leftPart.css'
 import SoundIcon from './soundIcon';
-import * as data from '../../dataComponent5'
-
+// import * as data from '../../dataComponent5'
+import '../section8Container';
 import sec8Emitter from './../section8Emitter';
 
 export default class LeftPart extends React.Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			videoSrc: 0,
 			soundOn: true,
-			class: ''
+			class: '',
+			data: this.props.Section8JSON
 		};
 
 		this.changeChild = this.changeChild.bind(this);
@@ -56,7 +57,7 @@ export default class LeftPart extends React.Component {
 						 muted={this.state.soundOn}
 						 poster="image"
 						 preload="true"
-						 src={data.section8Json.slider[this.state.videoSrc].video}
+						 src={this.state.data.slider[this.state.videoSrc].video}
 						 type="video/mp4">
 			</video>;
 		return (

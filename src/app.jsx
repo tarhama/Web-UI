@@ -49,7 +49,8 @@ export default class App extends React.Component {
 				Section7JSON: result.data.Section7,
 				Section8JSON: result.data.Section8,
 				Section9JSON: result.data.Section9,
-				FooterJSON: result.data.Footer
+				FooterJSON: result.data.Footer,
+				LangugageJSON: result.data.Languages
 			})
 		});
 	}
@@ -57,7 +58,9 @@ export default class App extends React.Component {
 	render() {
 
 		const navbarComponent = this.state.NavbarJSON ? (
-			<NavbarComponent NavbarJSON={this.state.NavbarJSON}/>
+			<NavbarComponent
+				NavbarJSON={this.state.NavbarJSON}
+				LangugageJSON={this.state.LangugageJSON}/>
 		) : null;
 
 		const section2 = this.state.Section2JSON ? (

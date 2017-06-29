@@ -6,8 +6,12 @@ import  LeftPart from './parts/leftPart';
 
 export default class Section8Container extends React.Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			Section8JSON: this.props.Section8JSON
+		}
 	}
 
 	render() {
@@ -15,10 +19,10 @@ export default class Section8Container extends React.Component {
 			<div className="container-fluid p-0 section8Container">
 				<div className="row">
 					<div className="col-md-6 vCenter">
-						<LeftPart/>
+						<LeftPart Section8JSON = {this.state.Section8JSON}/>
 					</div>
 					<div className="col-md-6 vCenter whitebg">
-						<RightPart/>
+						<RightPart Section8JSON = {this.state.Section8JSON}/>
 					</div>
 				</div>
 			</div>

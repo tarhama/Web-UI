@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./navbarDropdown.scss";
 import FaCaretDown from "react-icons/lib/fa/caret-down";
 import FaGlobe from "react-icons/lib/fa/globe";
-import Languages from "../../../store/languages";
+import './navbarRightComponent'
 
 class NavbarDropdown extends Component {
   constructor(props) {
@@ -27,6 +27,7 @@ class NavbarDropdown extends Component {
   }
 
   render() {
+
     return(
       <div className="navbarDropdown" tabIndex="0" onBlur={this.collapse}>
         <a onClick={this.showDropdown}>
@@ -34,7 +35,7 @@ class NavbarDropdown extends Component {
           <FaCaretDown />
         </a>
         <ul className="langDropdown" style={{display: this.state.expanded ? 'block' : 'none'}}>
-          {Languages.map((name, index) => {
+          {this.props.LanguageJSON.map((name, index) => {
             return this.renderDropdown(name, index)
           })}
         </ul>

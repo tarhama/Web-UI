@@ -12,9 +12,6 @@ const SectionContent5 = ({
 	<div className="landing-page-content">
 		<h2 className="h1 section5-title opacity">{titleSection5}</h2>
 		<p className="section5-text opacity">{headingSection5}</p>
-		{/*<div className="state-btn opacity">*/}
-			{/*<a className="raise-btn">{btnSection5}</a>*/}
-		{/*</div>*/}
 		<GeneralBtn style="filled" btnText={btnSection5}/>
 		<div className="app-icon opacity">
 			<img src={src1}

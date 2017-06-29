@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import *as data from '../../../store/dataNavbar';
 import './navbarLeftDropdown.scss';
+import './navbarLeftComponent'
 
 class NavbarLeftDropdown extends Component {
+	constructor(props){
+		super(props);
+	}
   render() {
-    const navList = data.DataNavbar.leftNavbar;
-    
+
+    const navList = this.props.leftDropdownJSON;
+
     const leftList = (name, index) => {
       let li = <li key={index} className="leftList">{name.title}</li>;
       return li;
