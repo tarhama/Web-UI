@@ -19,7 +19,6 @@ const title = (props) => {
 			center = {props.center}
 		/> : null;
 
-
 	return (
 		<div>
 			{title}
