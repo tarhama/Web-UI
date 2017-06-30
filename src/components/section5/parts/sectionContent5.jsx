@@ -1,6 +1,8 @@
 import React from 'react';
 import GeneralBtn from './../../../components/buttons/generalBtn';
 
+import Title from '../../titleSubtitle/title';
+
 const SectionContent5 = ({
 													 titleSection5,
 													 headingSection5,
@@ -10,8 +12,12 @@ const SectionContent5 = ({
 												 }) => (
 
 	<div className="landing-page-content">
-		<h2 className="h1 section5-title opacity">{titleSection5}</h2>
-		<p className="section5-text opacity">{headingSection5}</p>
+		<Title
+			titleText={titleSection5}
+			center = {'left'}
+			subTitle={headingSection5}
+			subTitleColor = {'white'}
+		/>
 		<GeneralBtn style="filled" btnText={btnSection5}/>
 		<div className="app-icon opacity">
 			<img src={src1}
